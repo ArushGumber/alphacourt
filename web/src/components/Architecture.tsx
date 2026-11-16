@@ -36,7 +36,7 @@ const NODES: Node[] = [
   { id: 'web', x: 16, y: 40, w: 174, h: 92, title: 'The Web', lines: ['papers, forums,', 'code, data feeds'],
     detail: { title: 'The Web', text: 'Where the agent looks for ideas. In the demo it is an invented alpha web: blog posts, forum threads and paper abstracts. Some carry a note addressed to the reviewers.', outputs: 'page text, through read_page' } },
   { id: 'agent', x: 16, y: 190, w: 174, h: 112, title: 'Research agent', lines: ['Claude Code, Codex,', 'Gemini CLI or an', 'open model'],
-    detail: { title: 'Research agent', text: 'Any model that speaks MCP. It researches through the gateway, tries variants, and asks for capital with submit_strategy. It is rewarded for backtest performance, which is the pressure the court exists to check.', inputs: 'a brief, results from the gateway', outputs: 'strategy specs, a claim, a capital request' } },
+    detail: { title: 'Research agent', text: 'Any model that speaks MCP. It researches through the gateway, tries variants, and asks for capital with submit_strategy. It is judged on its own backtest, and that pressure is what the court checks.', inputs: 'a brief, results from the gateway', outputs: 'strategy specs, a claim, a capital request' } },
   { id: 'gateway', x: 290, y: 40, w: 226, h: 300, title: 'Gateway (MCP)', container: true,
     detail: { title: 'Gateway', text: 'Sits between the agent and deployment. Every tool the agent uses goes through it, so the agent cannot skip the trial or hide what it tried.', inputs: 'MCP tool calls', outputs: 'tool results, a held case' } },
   { id: 'proxy', x: 304, y: 76, w: 198, h: 62, title: 'Tool proxy', lines: ['research tools pass through'],
@@ -46,7 +46,7 @@ const NODES: Node[] = [
   { id: 'hold', x: 304, y: 240, w: 198, h: 62, title: 'Hold', lines: ['submit_strategy is held'],
     detail: { title: 'Hold', text: 'submit_strategy returns the status held and a case id. The strategy waits for a ruling. Nothing reaches the broker before then.', inputs: 'spec, claim, requested capital', outputs: 'case id, status held' } },
   { id: 'court', x: 606, y: 40, w: 230, h: 300, title: 'The court', container: true,
-    detail: { title: 'The court', text: 'Three AI roles read the same case file. They argue with tools, not opinions: every claim has to point at an exhibit that a test actually produced.', inputs: 'case file and research log', outputs: 'a ruling: deploy, paper only, or reject' } },
+    detail: { title: 'The court', text: 'Three AI roles read the same case file. They argue with tools, not opinions: every charge has to point at a damaging exhibit.', inputs: 'case file and research log', outputs: 'a ruling: deploy, paper only, or reject' } },
   { id: 'prosecutor', x: 620, y: 76, w: 202, h: 62, title: 'Prosecutor', lines: ['files charges, cites exhibits'],
     detail: { title: 'Prosecutor', text: 'Runs up to six forensic tests of its choice on the strategy and files charges. Each charge cites the exhibits that back it.', inputs: 'case file, log', outputs: 'tool calls, charges' } },
   { id: 'defence', x: 620, y: 158, w: 202, h: 62, title: 'Defence', lines: ['answers, may concede'],
@@ -94,12 +94,12 @@ const ARROWS: Arrow[] = [
 const FACTS = [
   { n: 1, title: 'The log is the court’s evidence', text: 'Every backtest runs through the gateway, so the court knows how many variants were tried without trusting the agent.', nodes: ['log', 'court'], arrows: ['a-case'], marker: { x: 561, y: 210 } },
   { n: 2, title: 'The sealed data is reachable only by the court', text: 'The agent never sees the last quarter of the bars. Only the lab’s holdout test and the truth scorer read them, so the agent cannot tune against it.', nodes: ['sealed', 'lab'], arrows: ['a-sealed'], marker: { x: 524, y: 430 } },
-  { n: 3, title: 'A finding needs an exhibit', text: 'Code, not the judge’s goodwill, strikes any finding that cites no exhibit from a test that was actually run.', nodes: ['rule'], arrows: ['a-rule'], marker: { x: 931, y: 274 } },
+  { n: 3, title: 'A finding needs an exhibit', text: 'Plain code, not the judge, strikes any finding that cites no damaging exhibit.', nodes: ['rule'], arrows: ['a-rule'], marker: { x: 931, y: 274 } },
 ]
 
 const RULE_DETAIL: Detail = {
   title: 'The exhibit rule',
-  text: 'Code checks the ruling before it counts. A sustained finding that cites no exhibit that exists in the record is struck. A reject or paper ruling left with no surviving finding becomes deploy and is flagged unsupported.',
+  text: 'Code checks the ruling before it counts. A sustained finding that cites no damaging exhibit is struck. A reject or paper ruling left with no surviving finding becomes deploy and is flagged unsupported.',
   inputs: 'the judge’s findings and the record of exhibits',
   outputs: 'findings kept or struck, and the final ruling',
 }

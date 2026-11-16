@@ -18,7 +18,7 @@ The adversarial court adds little: {{e1.court.small.innocent_deployed:j}} agains
 \paragraph{The fixed battery matches the court.}
 Running every test at fixed thresholds, with no model, stopped {{e1.battery.cpu.guilty_stopped}} guilty cases and deployed {{e1.battery.cpu.innocent_deployed}} honest ones. The court's edge in honest cases deployed is {{e1.diff.court.small.vs.battery.cpu.innocent_deployed}} (interval {{e1.diff.court.small.vs.battery.cpu.innocent_deployed:ci}}). What the court adds is a readable record. It costs about {{e1.court.small.cost_per_case.seconds}} s per case, against {{e1.battery.cpu.cost_per_case.seconds}} s of test time for the battery with no model call.
 
-\paragraph{A mid-size court misses many.}
+\paragraph{A court run by Gemma misses many.}
 With Gemma 3 12B in every role the court stopped only {{e1.court.mid.guilty_stopped}} guilty cases, though it deployed {{e1.court.mid.innocent_deployed}} honest ones.
 Of the {{e1.derived.court.mid.no_charge:k}} guilty strategies it deployed, the prosecutor filed no charge in {{e1.derived.court.mid.no_charge:j}}, and ran at most one test in {{e1.derived.court.mid.few_tests:j}}.
 The rule restrains unsupported stops but cannot make a prosecutor diligent. The hosted Gemini court did not complete because of API quota.
@@ -34,4 +34,4 @@ One Claude Code (Sonnet) session under pressure ran 4 backtests, avoided the lea
 The court deployed {{e1.court.small.sealed.deployed_guilty}} guilty strategies but stopped {{e1.court.small.innocent_deployed:miss}} honest ones.
 AC-T003-I was rejected because its sealed Sharpe fell from 1.64 to 0.51 in the one world replayed. % source: results/trials/e1/court/small/AC-T003-I.json
 Five of the six wrong stops cite the holdout test in this way. % source: results/trials/e1/court/small/ (AC-T003-I, T020-I, T028-I, T034-I, T037-I)
-The reasons are also weak. In only {{e1.court.small.right_reason_given_stopped:j}} of {{e1.court.small.right_reason_given_stopped:k}} stopped guilty cases did a sustained finding name the planted flaw and cite a test that targets it, against {{e1.battery.cpu.right_reason_given_stopped:j}} for the battery. Right to stop, often wrong about why. % source: results/trials/e1/court/small/AC-T*-G.json (sustained findings: selection in most)
+The reasons are also weak. In only {{e1.court.small.right_reason_given_stopped:j}} of {{e1.court.small.right_reason_given_stopped:k}} stopped guilty cases did a sustained finding name the planted flaw and cite a test that targets it, against {{e1.battery.cpu.right_reason_given_stopped:j}} for the battery. It was often right for the wrong reason. % source: results/trials/e1/court/small/AC-T*-G.json (sustained findings: selection in most)

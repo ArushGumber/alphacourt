@@ -66,10 +66,10 @@ export default function HowItWorks() {
       <section className="mt-16 max-w-[760px]" aria-labelledby="rule-h">
         <SectionTitle title="The exhibit rule" id="rule-h" />
         <div className="space-y-3 text-[15.5px] leading-relaxed text-ink-2 text-pretty">
-          <p>A finding counts only if it cites an exhibit that exists in the record, that is, the output of a test that was actually run. Code checks this after the judge rules, not the judge.</p>
+          <p>A charge counts only if it cites a damaging exhibit: the output of a test the strategy failed. Plain code checks this after the judge rules.</p>
         </div>
         <ol className="mt-5 space-y-3 text-[15px] text-ink-2">
-          <li className="flex gap-3"><span className="serif w-5 shrink-0 text-[22px] font-semibold leading-none text-accent" aria-hidden="true">1</span><span>A sustained finding that cites no valid exhibit is <span className="font-medium text-ink">struck</span>, and shown struck.</span></li>
+          <li className="flex gap-3"><span className="serif w-5 shrink-0 text-[22px] font-semibold leading-none text-accent" aria-hidden="true">1</span><span>A sustained finding that cites no damaging exhibit is <span className="font-medium text-ink">struck</span>, and shown struck.</span></li>
           <li className="flex gap-3"><span className="serif w-5 shrink-0 text-[22px] font-semibold leading-none text-accent" aria-hidden="true">2</span><span>If a reject or paper ruling is left with no surviving finding, it becomes <span className="font-medium text-ink">deploy</span> and is flagged unsupported.</span></li>
           <li className="flex gap-3"><span className="serif w-5 shrink-0 text-[22px] font-semibold leading-none text-accent" aria-hidden="true">3</span><span>The share of unsupported rulings is reported with the results.</span></li>
         </ol>

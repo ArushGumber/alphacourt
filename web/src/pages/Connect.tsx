@@ -8,7 +8,7 @@ const TOOLS = [
   { n: 'list_fields()', d: 'The fields in the data room, with when each is available.' },
   { n: 'field_info(name)', d: 'The description and availability of one field. Honest, but a careless agent can still use a leaky field.' },
   { n: 'read_page(url)', d: 'A page from the alpha web: a blog post, a forum thread or a paper abstract. The gateway records which pages were read.' },
-  { n: 'run_backtest(spec)', d: 'Backtest a strategy on the research period. Naive mode, logged as a trial. This is what the court counts.' },
+  { n: 'run_backtest(spec)', d: 'Runs a plain backtest on the research period, with no extra checks. Each run is logged, and the court counts how many were tried.' },
   { n: 'submit_strategy(spec, claim, requested_capital)', d: 'Ask for capital. Returns a case id with status held and a link to watch the trial.' },
   { n: 'get_verdict(case_id)', d: 'The ruling once the trial ends: deploy, paper only or reject, with the findings.' },
 ]
@@ -34,7 +34,7 @@ export default function Connect() {
   return (
     <Page>
       <PageHeader title="Connect your agent">
-        <p>AlphaCourt speaks MCP over streamable HTTP. Add one line to your agent, ask it for a trading strategy, and it researches through the gateway. When it submits, you can watch the trial.</p>
+        <p>Any AI agent that supports MCP can connect to AlphaCourt with one line. Ask it for a trading strategy, and it will do its research through AlphaCourt. When it submits, you can watch the trial.</p>
       </PageHeader>
 
       <section id="attach" aria-labelledby="line-h">
@@ -70,7 +70,7 @@ export default function Connect() {
             </div>
           ))}
         </dl>
-        <p className="mt-4 max-w-[720px] text-[14px] leading-relaxed text-ink-3">A strategy is data, never code: a JSON spec with a signal formula that the gateway&rsquo;s own interpreter evaluates. That is what lets every test re-run the strategy exactly.</p>
+        <p className="mt-4 max-w-[720px] text-[14px] leading-relaxed text-ink-3">A strategy is a fixed recipe, never free code: a signal formula plus settings such as delay and costs. That is what lets every test re-run it exactly.</p>
       </section>
     </Page>
   )

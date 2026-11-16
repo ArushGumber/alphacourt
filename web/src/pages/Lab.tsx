@@ -97,7 +97,7 @@ function TruthPanel({ claimed, truth, ruling, rulingLabel }: { claimed: number; 
     <section aria-label="The truth" className="panel p-5 md:p-6">
       <h3 className="serif text-[24px] font-semibold text-ink">The truth</h3>
       <p className="mt-1 max-w-[64ch] text-[14.5px] leading-relaxed text-ink-2">
-        The strategy tested again with point-in-time data, a one-bar delay, full costs and the full universe, on bars nobody saw: fresh simulated worlds with the same planted effects.
+        The strategy is tested again, honestly: data as first published, trades one day later, full costs, and every company, including those that failed. It runs on fresh simulated markets with the same planted effects, which nobody has seen.
       </p>
       <div className="mt-5 grid grid-cols-2 gap-6 md:grid-cols-4">
         <Stat label="Claimed Sharpe" value={<span className="text-ink-3 line-through decoration-[1.5px]">{sh(claimed)}</span>} />
@@ -276,7 +276,7 @@ function LiveLab() {
 
       <section aria-labelledby="s3" className="mt-14 border-t border-line pt-10">
         <h2 id="s3" className="serif text-[22px] font-semibold text-ink"><span className="num text-ink-4">3.</span> Send it to court</h2>
-        <p className="mt-1.5 max-w-[70ch] text-[14px] text-ink-3">The claim in the case file is the backtest above. The research log says how many versions were tried before this one.</p>
+        <p className="mt-1.5 max-w-[70ch] text-[14px] text-ink-3">The court takes the backtest above as the strategy&rsquo;s claim. Choose below whether this was the only version tried, or the best of many.</p>
         <div className="mt-4 flex flex-wrap items-end gap-x-6 gap-y-3">
           <div className="flex flex-col gap-1.5">
             <span className="label">Research log</span>
@@ -355,7 +355,7 @@ export default function Lab() {
       <header className="mb-10 max-w-[760px] md:mb-12">
         <h1 tabIndex={-1} data-page-title className="serif text-[34px] font-semibold leading-[1.1] text-ink outline-none text-balance md:text-[44px]">Flaw Lab</h1>
         <p className="mt-3 text-[16.5px] leading-[1.65] text-ink-2 text-pretty">
-          A backtest can lie without anyone lying. Start from a sound strategy, plant a flaw that real research pipelines make by accident, and watch the claimed numbers rise. Then send it to court and compare the ruling with what the strategy really earns.
+          A backtest can mislead even when nobody means to cheat. Start from a sound strategy, plant a mistake that real research teams make by accident, and watch the claimed numbers rise. Then send it to court and compare the ruling with what the strategy really earns.
         </p>
       </header>
       {up === null ? <Loading label="Looking for the server" /> : up ? <LiveLab /> : <RecordedLab />}

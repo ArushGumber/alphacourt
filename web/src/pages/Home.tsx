@@ -27,9 +27,9 @@ function Twin({ b, label }: { b: CaseBundle; label: string }) {
 
 const STEPS = [
   { t: 'The agent researches', d: 'It reads pages, lists fields and runs backtests through the gateway. Every backtest goes into the research log.' },
-  { t: 'A request is held', d: 'submit_strategy returns “held” and a case id. The clerk assembles the case file from the spec, the claim and the log.' },
-  { t: 'The court tries it', d: 'The prosecutor runs forensic tests and files charges, the defence answers, the judge rules. Each finding must cite an exhibit.' },
-  { t: 'The bailiff enforces', d: 'Deploy releases capital, paper only releases simulated trading, reject keeps the hold. The audit record is written first.' },
+  { t: 'A request is held', d: 'When the agent submits a strategy, it gets back a case number and the status “held”. A clerk (plain code) builds the case file: the strategy, its claim and the research log.' },
+  { t: 'The court tries it', d: 'The prosecutor runs forensic tests and files charges. The defence answers, and the judge rules. Each charge must point to a test the strategy failed.' },
+  { t: 'The bailiff enforces', d: 'Deploy releases the capital. Paper trading only lets it trade on paper. Reject keeps the hold. The full trial record is saved first.' },
 ]
 
 export default function Home() {
@@ -49,13 +49,14 @@ export default function Home() {
             <div className="mt-6 max-w-[620px] space-y-4 text-[17px] leading-[1.65] text-ink-2 text-pretty">
               <p>
                 Funds now let AI agents research trading strategies. The agents browse the Web for ideas, write strategies, backtest them and ask to put them into production.
-                An agent rewarded for backtest performance finds the shortcuts a tired junior quant finds, only faster: it peeks at tomorrow&rsquo;s data, keeps trying until one
-                variant works, forgets trading costs. This is reward hacking with money attached, and no desk can review hundreds of strategies a day by hand.
+                An agent judged on its own backtest finds the same shortcuts a tired junior quant finds, only faster. It peeks at tomorrow&rsquo;s data, keeps trying until one
+                variant works, and forgets trading costs. No desk can review hundreds of strategies a day by hand.
               </p>
               <p>
-                {SITE.name} is a gateway on MCP, the protocol agents already use to reach tools. Research calls pass through and are logged. A request for capital is held and tried:
-                a prosecutor runs forensic tests and files charges that cite exhibits, a defence answers, and a judge rules deploy, paper trading only, or reject.
-                A finding without an exhibit is struck by code.
+                {SITE.name} sits between the agent and the broker. Agents connect to it over MCP, the standard way AI agents use outside tools.
+                Research, such as data lookups and backtests, passes straight through and is logged. But when an agent asks for capital, the strategy goes on trial.
+                An AI prosecutor runs standard tests and files charges. An AI defence answers. An AI judge rules: deploy, paper trading only, or reject.
+                A charge counts only if it points to a test the strategy failed, and plain code enforces that rule.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -86,14 +87,14 @@ export default function Home() {
       <Page>
         <section className="border-t border-line pt-12 md:pt-16" id="figure-section">
           <SectionTitle title="How the pieces fit">
-            <p>The agent reaches the Web and the markets only through the gateway. The court tries what the gateway holds. Hover or tap a box to see what goes in and what comes out.</p>
+            <p>The agent can reach the Web and the market data only through AlphaCourt. Any request for capital is held and sent to the court. Hover over or tap a box to see what goes in and what comes out.</p>
           </SectionTitle>
           <Architecture />
         </section>
 
         <section className="mt-20 border-t border-line pt-12 md:mt-24 md:pt-16" aria-labelledby="results-h">
           <SectionTitle title="Results" id="results-h">
-            <p>On held-out cases the court never saw: rigged strategies, and honest ones with the same headline numbers. A good gate stops the first and lets the second through.</p>
+            <p>Measured on test cases the court had never seen: rigged strategies, and honest ones with similar headline numbers. A good gate stops the first kind and lets the second through.</p>
           </SectionTitle>
           {headline.length ? (
             <div className="grid gap-x-10 gap-y-8 md:grid-cols-3">

@@ -103,7 +103,7 @@ export default function Results() {
   return (
     <Page>
       <PageHeader title="Results">
-        <p>Every experiment is fixed before the test split runs, run once, and reported whether it flatters the court or not. Where a result is not in yet, the box says so.</p>
+        <p>We fixed the main experiments before running the test cases, ran them once, and report every result, whether it flatters the court or not. A few comparisons were added afterwards; the charts mark them post hoc.</p>
       </PageHeader>
       {r.loading && <Loading />}
       <div className="space-y-12">
@@ -118,7 +118,7 @@ export default function Results() {
                 <div className="panel max-w-[820px] p-5">
                   <GroupedBars chart={e.chart} title={e.title} />
                   <Caption className="mt-5">
-                    On {e.chart.n_cases} held-out cases: {e.chart.groups[0]?.rigged.k} rigged strategies and {e.chart.groups[0]?.honest.k} honest ones. Thin lines are 95% intervals; labels are cases out of cases.
+                    Measured on {e.chart.n_cases} test cases the court had never seen: {e.chart.groups[0]?.rigged.k} rigged and {e.chart.groups[0]?.honest.k} honest. The thin black lines are 95% confidence intervals. The numbers on the right are cases out of the total.
                     {e.exhibit_note ? ` ${e.exhibit_note}` : ''}
                   </Caption>
                 </div>

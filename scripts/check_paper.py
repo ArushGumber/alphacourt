@@ -103,7 +103,7 @@ def main() -> None:
         if not p.exists():
             fails.append(f"{s}.tex is missing (run scripts/make_paper.py)")
             continue
-        texts[s] = p.read_text().splitlines()
+        texts[s] = p.read_text(encoding="utf-8").splitlines()
     # 1 unfilled slots
     unfilled = 0
     for s, ls in texts.items():
@@ -125,11 +125,11 @@ def main() -> None:
             if "\u2014" in vis or "---" in vis or "\\textemdash" in vis:
                 fails.append(f"{s}.tex:{i}: em dash")
     for f in ("main.tex", "refs.bib"):
-        t = (PAPER / f).read_text()
+        t = (PAPER / f).read_text(encoding="utf-8")
         if "\u2014" in t or ("---" in t and f == "main.tex"):
             fails.append(f"{f}: em dash")
     # 4 citations
-    bib = set(re.findall(r"@\w+\{([^,\s]+),", (PAPER / "refs.bib").read_text()))
+    bib = set(re.findall(r"@\w+\{([^,\s]+),", (PAPER / "refs.bib").read_text(encoding="utf-8")))
     cited = set()
     for s, ls in texts.items():
         for line in ls:

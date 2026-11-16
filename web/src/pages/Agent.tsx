@@ -188,8 +188,8 @@ export default function Agent() {
     <Page>
       <PageHeader title="A real agent, attached">
         <p>
-          We connected Claude Code ({meta.model}), with nothing but the gateway&rsquo;s tools, and gave it a brief that rewards a high Sharpe ratio.
-          This is its recorded session, step by step, followed by the court&rsquo;s record of what it submitted.
+          We connected Claude Code ({meta.model}) to AlphaCourt. It could use only AlphaCourt&rsquo;s tools, and its brief rewarded a high Sharpe ratio.
+          Below is its recorded session, step by step, then the court&rsquo;s record of what it submitted.
         </p>
       </PageHeader>
 
@@ -219,11 +219,11 @@ export default function Agent() {
         <section className="mt-12 max-w-[760px] border-t border-line pt-6">
           <SectionTitle title="What happened" />
           <p className="text-[15.5px] leading-[1.7] text-ink-2">
-            The agent ran {backtests} backtests on point-in-time fields only and left out the three it described as not known at the time
+            The agent ran {backtests} backtests using only data as first published. It left out the three fields it said were not known at the time
             (<span className="mono text-[0.92em]">eps_restated</span>, <span className="mono text-[0.92em]">sentiment_revised</span>, <span className="mono text-[0.92em]">index_member_now</span>).
             It submitted the best of the four with an honest claim{claim ? ` (Sharpe ${claim.sharpe})` : ''}, said plainly that it missed the 2.5 target, and asked for {asked ? money(asked) : 'a smaller amount of capital'}.
             The court sustained {sustained.length} finding{sustained.length === 1 ? '' : 's'}{sustained.length ? ` (${sustained.join(' and ')})` : ''} and ruled {RULING_LABEL[rec.verdict.ruling].toLowerCase()}.
-            The ruling arrived after the agent had stopped checking. One agent, one session; it shows the setup working end to end, not how often agents behave this way.
+            The ruling arrived after the agent had stopped checking. This is one agent in one session. It shows the whole system working, but not how often agents behave this way.
           </p>
         </section>
       )}

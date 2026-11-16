@@ -248,7 +248,7 @@ def e1_chart(e1: dict) -> dict:
 
 
 def exhibit_note(e1: dict) -> str | None:
-    """How many court rulings the exhibit rule converted (a finding with no exhibit is struck and the ruling changes)."""
+    """How many court rulings the exhibit rule converted (a finding with no damaging exhibit is struck and the ruling changes)."""
     parts = []
     for k, c in e1["cells"].items():
         u = c.get("unsupported") or {}
@@ -256,7 +256,7 @@ def exhibit_note(e1: dict) -> str | None:
             parts.append(f"{u['j']} of {u['k']} court rulings with {model_name(k)}")
     if not parts:
         return None
-    return ("The exhibit rule strikes any finding that cites no exhibit. It changed the ruling in " + "; ".join(parts) + ".")
+    return ("The exhibit rule strikes any finding that cites no damaging exhibit. It changed the ruling in " + "; ".join(parts) + ".")
 
 
 def results_file() -> dict:

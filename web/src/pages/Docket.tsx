@@ -45,7 +45,7 @@ export default function Docket() {
   return (
     <Page wide>
       <PageHeader title="Docket">
-        <p>Every case the court has tried, with the truth beside the ruling. Guilty strategies come in pairs with an innocent twin that has the same headline numbers and a real edge.</p>
+        <p>Every case the court has tried, with the truth beside the ruling. Guilty strategies come in pairs with an innocent twin that has similar headline numbers and a real edge.</p>
       </PageHeader>
       <SampleNote show={d.data?.source === 'fixture'} />
       {d.loading && <Loading />}

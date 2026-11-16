@@ -27,14 +27,14 @@ The \emph{true edge} of a strategy is its Sharpe ratio on the sealed period, com
 \paragraph{The forensic lab.}
 Eleven deterministic tests each return an \emph{exhibit}: a numbered record with the test, its parameters, its numbers, a hint (damaging, neutral or supportive, from fixed thresholds) and chart data. % source: court/forensics.py TOOLS (eleven tests)
 The tests re-run the strategy with one more bar of delay, with strict point-in-time data, at higher costs, on the full universe and on the sealed period. They split performance by regime and year, shuffle the signal as a placebo, scan the notes and pages read for text addressed to reviewers, and correct for the number of trials~\cite{bailey2014}.
-The tests are standard~\cite{bailey2014,bailey2016,harvey2016}; none is new. The trial-count test reads the gateway's own log, not the agent's word.
+The tests are standard practice; none is new. The trial-count test counts backtests in the gateway's log, not the agent's report.
 
 \paragraph{The court and the exhibit rule.}
 A clerk (plain code) builds the case file: the specification, the claim, the log summary and the pages read.
 The prosecutor, a language model, may run up to six tests and files charges that each cite exhibit numbers. % source: court/trial.py DEFAULT_BUDGET prosecutor_tools
 The defence may run up to four tests, answer each charge and concede. % source: court/trial.py DEFAULT_BUDGET defence_tools
 The judge reads the exhibits, charges and rebuttals and rules deploy, paper trading only, or reject, with a verdict on each charge and an opinion of at most 120 words. % source: court/roles.py JUDGE_SYSTEM
-The \emph{exhibit rule} runs in code, not in the judge. A sustained finding that cites no damaging exhibit is struck. If a paper or reject ruling is left with no surviving finding, it becomes deploy and is flagged \emph{unsupported}. % source: court/trial.py apply_exhibit_rule
+Plain code applies the \emph{exhibit rule} after the judge rules. A charge the judge upholds is struck unless it cites a damaging exhibit, a test the strategy failed. If no charge survives a paper or reject ruling, the ruling becomes deploy and is flagged \emph{unsupported}. % source: court/trial.py apply_exhibit_rule
 The rule checks that a damaging exhibit is cited, not that it fits the charge.
 
 \paragraph{The bailiff.}

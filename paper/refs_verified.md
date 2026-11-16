@@ -21,5 +21,12 @@
 | gencay2026 | https://arxiv.org/abs/2608.27734 | abstract | Leakage-safe, search-aware assessment of LLM-discovered strategies; a leaky oracle with Sharpe 35 passes standard overfitting tests. |
 | backtestauditor2026 | https://github.com/taku629/backtest-auditor | README | LLM agents write strategies, deterministic tests (look-ahead, survivorship, overfitting) decide whether they are honest; unrefereed repository. |
 
+## Recheck by Pranav, 16 Nov 2026 (evening)
+- All 16 entries were compared with their official records: Crossref for the three journal articles (titles, authors, journals, volume, issue, pages and years match; Crossref lists no volume or pages for bailey2016), the arXiv API for the ten arXiv papers (titles, every author and years match), and the live pages for mcp2025, fm2026brokers (published 16 Sep 2026) and backtestauditor2026.
+- khan2024: the full text (arXiv v4, pp. 2-3) was read for the intro sentence. Debaters use a quote tool, quotes that match the text are marked verified, and the judge is told to trust only verified quotes. The sentence "Khan et al. let debaters quote verified text" is supported.
+- gencay2026: the abstract supports the sentence about deterministic look-ahead and overfitting checks attached to strategy-writing agents.
+- backtestauditor2026: the title copies the README heading. A comma was changed to a full stop to match it exactly.
+- Still open: the abstracts of bailey2014 and bailey2016 were not fetched (SSRN). Pranav confirmed that bailey2014 fits the sentences that cite it, and that bailey2016 and harvey2016 fit the intro sentence ("The statistical traps are well documented"). For "The tests are standard [bailey2014, bailey2016, harvey2016]", the three papers cover the selection and trial-count corrections, not the lag, cost or survivorship tests; kept as is (see QUESTIONS_FOR_ARUSH.md).
+
 Not cited, not opened in full: AEGIS (2603.12621), PolicyGuard, MELON, TradeTrap and the rest of the prior-art file. Each needs opening before any use.
 Open items: full text of every entry was not read; the two Bailey papers need their abstracts checked (SSRN blocked the fetch); the claim "none is new" about the standard tests rests on their being published methods and should be rechecked at freeze.

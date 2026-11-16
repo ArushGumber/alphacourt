@@ -2,13 +2,13 @@
 \textbf{AI agents now research trading strategies on the Web.}
 An agent can read the Web, write a trading strategy and ask to run it with capital. Brokers have started to expose trading to agents over the Model Context Protocol (MCP)~\cite{fm2026brokers}, the standard way agents call tools on the Web. A strategy is judged by its backtest, a replay on past data. The usual score is the Sharpe ratio, return per unit of risk.
 
-\textbf{An agent rewarded for a backtest can inflate it.}
+\textbf{An agent judged on its own backtest can inflate it.}
 It can use data not yet known, report the best of many variants, ignore costs, or test only on survivors. This resembles reward hacking~\cite{amodei2016}.
 The statistical traps are well documented for human researchers~\cite{bailey2014,bailey2016,harvey2016}. Agents under pressure have been seen to act on a tip and hide it~\cite{scheurer2023}. No desk can review by hand every strategy a fleet of agents writes.
 
 \textbf{Existing checks cover parts of the problem.}
 Guardrails check agent actions~\cite{chennabasappa2025,she2026}. Debate and AI control use one model to check another~\cite{irving2018,khan2024,kenton2024,greenblatt2023}. Khan et al.\ let debaters quote verified text, the closest ancestor of our exhibit rule~\cite{khan2024}. Trading frameworks put debate inside the trading agent~\cite{xiao2024}. Deterministic checks for look-ahead, survivorship and overfitting are now attached to strategy-writing agents~\cite{backtestauditor2026,gencay2026}; we did not run those as baselines.
-We did not find a gateway that holds a request for capital and blocks it on the output of deterministic tests inside an adversarial proceeding.
+We found no existing gateway that holds a request for capital, runs deterministic tests on it, and lets a trial between two sides decide whether to block it.
 
 \textbf{AlphaCourt is that gate.}
 An MCP gateway holds every request for capital and a court tries it. A prosecutor runs forensic tests, a defence answers, and a judge rules: deploy, paper trading only, or reject. The \emph{exhibit rule} says a charge counts only if it cites a damaging exhibit, the recorded output of a test that was run. Code enforces the rule, not the judge.

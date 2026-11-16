@@ -38,7 +38,7 @@ def load(exp: str) -> dict | None:
     if exp not in _cache:
         p = RESULTS / f"{exp}.json"
         try:
-            _cache[exp] = json.loads(p.read_text())
+            _cache[exp] = json.loads(p.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             _cache[exp] = None
     return _cache[exp]
@@ -79,7 +79,7 @@ def derived(rest: str):
         return None, "bad derived path"
     _, system, staffing, field = parts
     files = sorted((RESULTS / "trials" / "e1" / system / staffing).glob("*-G.json"))
-    miss = [json.loads(f.read_text()) for f in files]
+    miss = [json.loads(f.read_text(encoding="utf-8")) for f in files]
     miss = [t for t in miss if t.get("verdict", {}).get("ruling") == "deploy"]
     if not files:
         return None, "no trial records"
@@ -100,9 +100,9 @@ def derived_e2(rest: str):
     parts = rest.split(".")
     if len(parts) != 3 or parts[1] != "court_small44":
         return None, "bad derived path"
-    ids = set((RESULTS / "frontier_subset.txt").read_text().strip().split(","))
+    ids = set((RESULTS / "frontier_subset.txt").read_text(encoding="utf-8").strip().split(","))
     base = RESULTS / "trials" / "e1" / "court" / "small"
-    recs = {i: json.loads((base / f"{i}.json").read_text()) for i in ids if (base / f"{i}.json").exists()}
+    recs = {i: json.loads((base / f"{i}.json").read_text(encoding="utf-8")) for i in ids if (base / f"{i}.json").exists()}
     if len(recs) != len(ids):
         return None, "missing trial records"
     stopped = lambda i: recs[i]["verdict"]["ruling"] != "deploy"
@@ -217,12 +217,12 @@ def fill_line(line: str, missing: list[str]) -> str:
 def process(src: Path) -> list[str]:
     missing: list[str] = []
     out = [f"% Filled in by scripts/make_paper.py from {src.name}. Do not edit; edit the template.\n"]
-    for line in src.read_text().splitlines(keepends=True):
+    for line in src.read_text(encoding="utf-8").splitlines(keepends=True):
         if line.lstrip().startswith("%%"):
             continue
         out.append(fill_line(line, missing))
     dst = src.with_suffix("")                                                       # name.tex.in -> name.tex
-    dst.write_text("".join(out))
+    dst.write_text("".join(out), encoding="utf-8")
     return missing
 
 

@@ -55,7 +55,7 @@ function ExhibitCard({ ex, flash }: { ex: Exhibit; flash: boolean }) {
           ))}
         </dl>
       )}
-      <p className="mt-2.5 text-[12px] text-ink-4">Run by the {ROLE_LABEL[ex.called_by]?.toLowerCase() ?? ex.called_by}. Deterministic: the same spec gives the same exhibit.</p>
+      <p className="mt-2.5 text-[12px] text-ink-4">Run by the {ROLE_LABEL[ex.called_by]?.toLowerCase() ?? ex.called_by}. A fixed test: the same strategy always gives the same result.</p>
     </article>
   )
 }
@@ -103,7 +103,7 @@ function FindingRow({ f, have, onJump }: { f: Finding; have: Set<string>; onJump
       </span>
       <span className="col-span-2 sm:col-span-1">
         {f.struck ? (
-          <span className="inline-flex flex-wrap items-center gap-1.5 text-[13px] text-ink-3">cites{f.exhibits.map((id) => <ExhibitChip key={id} id={id} known={have.has(id)} onJump={onJump} />)}<span>which does not exist</span></span>
+          <span className="inline-flex flex-wrap items-center gap-1.5 text-[13px] text-ink-3">{f.exhibits.length ? <>cites{f.exhibits.map((id) => <ExhibitChip key={id} id={id} known={have.has(id)} onJump={onJump} />)}<span>, none of them damaging</span></> : <span>cites no damaging exhibit</span>}</span>
         ) : (
           <Cites ids={f.exhibits} have={have} onJump={onJump} />
         )}
@@ -129,7 +129,7 @@ function VerdictItem({ v, t, have, onJump }: { v: Verdict; t: number; have: Set<
         </div>
       </div>
       {v.unsupported && (
-        <p className="mt-4 rounded-[6px] border border-accent/35 bg-accent-wash px-3.5 py-2.5 text-[13.5px] text-accent-2">The judge wanted to stop this strategy but no finding survived the exhibit rule, so the ruling was converted to deploy and flagged unsupported.</p>
+        <p className="mt-4 rounded-[6px] border border-accent/35 bg-accent-wash px-3.5 py-2.5 text-[13.5px] text-accent-2">The judge wanted to stop this strategy, but no charge passed the exhibit rule. So the ruling was changed to deploy and marked unsupported.</p>
       )}
       <p className="mt-4 max-w-[68ch] text-[15.5px] leading-relaxed text-ink text-pretty">{v.opinion}</p>
       <h4 className="mt-5 text-[13px] font-semibold text-ink-2">Findings</h4>
@@ -158,7 +158,7 @@ export function TruthBlock({ truth, ruling, claimed, stats }: { truth: Truth; ru
   return (
     <section id="truth" aria-label="The truth" className="panel p-5 md:p-6">
       <h3 className="serif text-[24px] font-semibold text-ink">The truth</h3>
-      <p className="mt-1 max-w-[64ch] text-[14.5px] leading-relaxed text-ink-2">The strategy&rsquo;s real result on the sealed bars. No agent or court saw them. {truth.how}</p>
+      <p className="mt-1 max-w-[64ch] text-[14.5px] leading-relaxed text-ink-2">What the strategy really earns on the sealed period, which no agent or court has seen. {truth.how}</p>
       <div className="mt-5 grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,260px)_minmax(0,1fr)]">
         <div className="space-y-4">
           <div>
