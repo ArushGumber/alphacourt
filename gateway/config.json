@@ -1,0 +1,52 @@
+{
+  "system": "court",
+  "staffing": {
+    "prosecutor": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "default_world": "demo",
+  "worlds": {
+    "demo": {
+      "seed": 1,
+      "variant": null,
+      "description": "The demo data room (seed 1): planted effects, clean and leaky fields."
+    },
+    "backfilled": {
+      "seed": 2,
+      "variant": {
+        "backfilled": [
+          "eps_reported"
+        ]
+      },
+      "description": "A vendor backfill: eps_reported is leaky although field_info says otherwise."
+    },
+    "survivors": {
+      "seed": 3,
+      "variant": {
+        "default_universe": "survivors"
+      },
+      "description": "The default universe lists only the survivors."
+    }
+  },
+  "systems": [
+    "court",
+    "debate",
+    "single",
+    "battery",
+    "none"
+  ],
+  "allowed_models": [
+    "google:gemini-3.1-flash-lite",
+    "google:gemini-3.5-flash",
+    "local:qwen3-8b",
+    "local:gemma3-12b",
+    "local:qwen3-4b",
+    "local:phi4-mini"
+  ],
+  "max_concurrent_trials": 2,
+  "queue_max": 12,
+  "backtests_per_minute": 30,
+  "trials_per_hour": 3,
+  "local_exempt": true
+}

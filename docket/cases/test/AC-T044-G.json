@@ -1,0 +1,179 @@
+{
+ "case_id": "AC-T044-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.08,
+  "sharpe": 1.7,
+  "text": "Research-period backtest: Sharpe 1.7, annual return 9%, maximum drawdown 8%."
+ },
+ "family": "momentum",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T044-G",
+  "submitted_spec_hash": "ee725aa75c87",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.05766565470250639,
+     "ann_vol": 0.03058026124081329,
+     "hit_rate": 0.5587044534412956,
+     "max_drawdown": 0.07057110075740042,
+     "n_days": 1976,
+     "sharpe": 1.885714914218724,
+     "turnover": 0.00829873739106567
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),7))",
+     "universe": "default"
+    },
+    "spec_hash": "fc543d04186e",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11114921120936186,
+     "ann_vol": 0.05353834137489393,
+     "hit_rate": 0.5648472709063596,
+     "max_drawdown": 0.11688309438082911,
+     "n_days": 1997,
+     "sharpe": 2.0760675126458765,
+     "turnover": 0.011730095142714071
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,237),6))",
+     "universe": "default"
+    },
+    "spec_hash": "fa32c4d205ca",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0877828335317552,
+     "ann_vol": 0.053145845158621106,
+     "hit_rate": 0.5365375183913683,
+     "max_drawdown": 0.07853319886395727,
+     "n_days": 2039,
+     "sharpe": 1.6517346420920629,
+     "turnover": 0.013719960765080922
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,189),5))",
+     "universe": "default"
+    },
+    "spec_hash": "ee725aa75c87",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Same spec text as the twin; the default universe file is the survivors list here.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "survivorship",
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Trend v34",
+  "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,189),5))",
+  "universe": "default"
+ },
+ "spec_hash": "ee725aa75c87",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.7,
+  "inflation": 1.9,
+  "naive_sharpe": 1.6517,
+  "regime_sharpe": {
+   "calm": 2.849,
+   "stressed": -4.04
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.9208,
+    -1.6842,
+    -0.2137,
+    1.2917,
+    -0.9457,
+    -0.8558
+   ],
+   "sharpe": -0.2478
+  },
+  "turnover": 0.014
+ },
+ "twin_id": "AC-T044-I",
+ "variant": {
+  "default_universe": "survivors",
+  "effect_scale": {
+   "crash": 4.0
+  }
+ },
+ "world_id": "w2-1ad481"
+}

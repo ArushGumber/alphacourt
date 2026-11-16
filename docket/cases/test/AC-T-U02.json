@@ -1,0 +1,212 @@
+{
+ "case_id": "AC-T-U02",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.03,
+  "sharpe": 3.1,
+  "text": "Research-period backtest: Sharpe 3.1, annual return 9%, maximum drawdown 3%."
+ },
+ "family": "reversal",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T-U02",
+  "submitted_spec_hash": "0b2b8d5f1a60",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.0905400605352577,
+     "ann_vol": 0.02929149325483894,
+     "hit_rate": 0.5838150289017341,
+     "max_drawdown": 0.034909352681639194,
+     "n_days": 2249,
+     "sharpe": 3.0910018737368583,
+     "turnover": 0.7146714622348284
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Reversal v38 (try)",
+     "notes": "High turnover by design: the reversal edge is measured net of 10 bps per unit of turnover.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "b11c00e50869",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0905400605352577,
+     "ann_vol": 0.02929149325483894,
+     "hit_rate": 0.5838150289017341,
+     "max_drawdown": 0.034909352681639194,
+     "n_days": 2249,
+     "sharpe": 3.0910018737368583,
+     "turnover": 0.7146714622348284
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Reversal v38 (try)",
+     "notes": "High turnover by design: the reversal edge is measured net of 10 bps per unit of turnover.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "b11c00e50869",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.13324728798748067,
+     "ann_vol": 0.035332525603142394,
+     "hit_rate": 0.6047132058692752,
+     "max_drawdown": 0.0263403014628667,
+     "n_days": 2249,
+     "sharpe": 3.771235871562773,
+     "turnover": 0.8035512842578504
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Reversal v38 (try)",
+     "notes": "High turnover by design: the reversal edge is measured net of 10 bps per unit of turnover.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "948aeaa96f08",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0905400605352577,
+     "ann_vol": 0.02929149325483894,
+     "hit_rate": 0.5838150289017341,
+     "max_drawdown": 0.034909352681639194,
+     "n_days": 2249,
+     "sharpe": 3.0910018737368583,
+     "turnover": 0.7146714622348284
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Reversal v38",
+     "notes": "High turnover by design: the reversal edge is measured net of 10 bps per unit of turnover.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "0b2b8d5f1a60",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 3,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Honest high-turnover reversal in a data room with a strong reversal effect; the edge survives realistic costs.",
+ "pages_read": [],
+ "requested_capital": 250000.0,
+ "role": "unusual",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Reversal v38",
+  "notes": "High turnover by design: the reversal edge is measured net of 10 bps per unit of turnover.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ret)",
+  "universe": "default"
+ },
+ "spec_hash": "0b2b8d5f1a60",
+ "split": "test",
+ "truth": {
+  "battery_ruling": "deploy",
+  "claim_sharpe": 3.1,
+  "inflation": 0.559,
+  "naive_sharpe": 3.091,
+  "regime_sharpe": {
+   "calm": 3.959,
+   "stressed": 1.9
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    3.3041,
+    1.4088,
+    3.1143,
+    2.0801,
+    2.211,
+    3.0733
+   ],
+   "sharpe": 2.5319
+  },
+  "turnover": 0.715
+ },
+ "twin_id": null,
+ "unusual_kind": "turnover",
+ "variant": {
+  "effect_scale": {
+   "reversal": 2.2
+  }
+ },
+ "world_id": "w3-7a262a"
+}

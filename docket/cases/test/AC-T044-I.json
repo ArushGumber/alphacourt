@@ -1,0 +1,246 @@
+{
+ "case_id": "AC-T044-I",
+ "claim": {
+  "ann_return": 0.1,
+  "max_drawdown": 0.18,
+  "sharpe": 1.6,
+  "text": "Research-period backtest: Sharpe 1.6, annual return 10%, maximum drawdown 18%."
+ },
+ "family": "momentum",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T044-I",
+  "submitted_spec_hash": "ee725aa75c87",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.05022313298831506,
+     "ann_vol": 0.0629453647497645,
+     "hit_rate": 0.5683198380566802,
+     "max_drawdown": 0.22607062854536045,
+     "n_days": 1976,
+     "sharpe": 0.7978845334835075,
+     "turnover": 0.012372959092254427
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),4))",
+     "universe": "default"
+    },
+    "spec_hash": "cc9545d6c11f",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06529737545164765,
+     "ann_vol": 0.0625065262172265,
+     "hit_rate": 0.5728592889334001,
+     "max_drawdown": 0.19166024234143011,
+     "n_days": 1997,
+     "sharpe": 1.0446489255333473,
+     "turnover": 0.012419462983930374
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,246),7))",
+     "universe": "default"
+    },
+    "spec_hash": "ddbf955979d6",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04878798423981433,
+     "ann_vol": 0.06279232347645958,
+     "hit_rate": 0.5662955465587044,
+     "max_drawdown": 0.22901241772848105,
+     "n_days": 1976,
+     "sharpe": 0.7769737053623221,
+     "turnover": 0.012457220797607159
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,251),5))",
+     "universe": "default"
+    },
+    "spec_hash": "910e94b9e42c",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08410614102696776,
+     "ann_vol": 0.05858718804330609,
+     "hit_rate": 0.574757281553398,
+     "max_drawdown": 0.19788740399480653,
+     "n_days": 2060,
+     "sharpe": 1.4355722443070444,
+     "turnover": 0.014303591288065678
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,186),4))",
+     "universe": "default"
+    },
+    "spec_hash": "8c51914c1b4c",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09579912008558661,
+     "ann_vol": 0.059163789830605204,
+     "hit_rate": 0.579205492888671,
+     "max_drawdown": 0.17871777053614485,
+     "n_days": 2039,
+     "sharpe": 1.6192187883817766,
+     "turnover": 0.01390591531807645
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v34",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,189),5))",
+     "universe": "default"
+    },
+    "spec_hash": "ee725aa75c87",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 5,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Same spec text as the guilty twin in a clean data room.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "innocent",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Trend v34",
+  "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,189),5))",
+  "universe": "default"
+ },
+ "spec_hash": "ee725aa75c87",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.6,
+  "inflation": -0.08,
+  "naive_sharpe": 1.6192,
+  "regime_sharpe": {
+   "calm": 5.913,
+   "stressed": -5.419
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    3.304,
+    -0.2873,
+    2.3081,
+    4.2209,
+    0.4273,
+    0.2195
+   ],
+   "sharpe": 1.6988
+  },
+  "turnover": 0.014
+ },
+ "twin_id": "AC-T044-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

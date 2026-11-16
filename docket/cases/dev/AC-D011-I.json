@@ -1,0 +1,246 @@
+{
+ "case_id": "AC-D011-I",
+ "claim": {
+  "ann_return": 0.06,
+  "max_drawdown": 0.03,
+  "sharpe": 1.9,
+  "text": "Research-period backtest: Sharpe 1.9, annual return 6%, maximum drawdown 3%."
+ },
+ "family": "sentiment",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D011-I",
+  "submitted_spec_hash": "c309e5ad6de7",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.060942782063869515,
+     "ann_vol": 0.031799154514728666,
+     "hit_rate": 0.5439144003566652,
+     "max_drawdown": 0.02374020082350503,
+     "n_days": 2243,
+     "sharpe": 1.9164906424050414,
+     "turnover": 0.07460593164861605
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v27 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,7))",
+     "universe": "default"
+    },
+    "spec_hash": "1762d510a7d8",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.060097067960912985,
+     "ann_vol": 0.031545850805036385,
+     "hit_rate": 0.5427807486631016,
+     "max_drawdown": 0.026569320473069258,
+     "n_days": 2244,
+     "sharpe": 1.9050704427765288,
+     "turnover": 0.08050113632416125
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v27 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,6))",
+     "universe": "default"
+    },
+    "spec_hash": "12b1266ff1d0",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07529415614866182,
+     "ann_vol": 0.04462156934755816,
+     "hit_rate": 0.5372269282211324,
+     "max_drawdown": 0.035020196259136105,
+     "n_days": 2243,
+     "sharpe": 1.6873937257157938,
+     "turnover": 0.09554801842697518
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v27 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,7))",
+     "universe": "default"
+    },
+    "spec_hash": "90de5385e596",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04671692176453952,
+     "ann_vol": 0.02525217481280543,
+     "hit_rate": 0.5354120267260579,
+     "max_drawdown": 0.02734503901082777,
+     "n_days": 2245,
+     "sharpe": 1.8500157753085598,
+     "turnover": 0.07226085044719983
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v27 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,5))",
+     "universe": "default"
+    },
+    "spec_hash": "6590eae0c85f",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06018150970280711,
+     "ann_vol": 0.03156620103142168,
+     "hit_rate": 0.5518930957683742,
+     "max_drawdown": 0.02559317912525355,
+     "n_days": 2245,
+     "sharpe": 1.9065173424860704,
+     "turnover": 0.08798843952158025
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v27",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,5))",
+     "universe": "default"
+    },
+    "spec_hash": "c309e5ad6de7",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 5,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 1,
+ "sin": null,
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "News tone v27",
+  "notes": "Short-window sentiment tilt.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(ts_mean(sentiment,5))",
+  "universe": "default"
+ },
+ "spec_hash": "c309e5ad6de7",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.9,
+  "inflation": 0.417,
+  "naive_sharpe": 1.9065,
+  "regime_sharpe": {
+   "calm": 2.194,
+   "stressed": 1.468
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    1.9221,
+    1.2611,
+    1.2383,
+    1.2274,
+    0.9557,
+    2.3311
+   ],
+   "sharpe": 1.4893
+  },
+  "turnover": 0.088
+ },
+ "twin_id": "AC-D011-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

@@ -1,0 +1,178 @@
+{
+ "case_id": "AC-D002-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.05,
+  "sharpe": 2.3,
+  "text": "Research-period backtest: Sharpe 2.3, annual return 9%, maximum drawdown 5%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D002-G",
+  "submitted_spec_hash": "ad7915a35eb0",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.09112124378245559,
+     "ann_vol": 0.039743133801333666,
+     "hit_rate": 0.5669781931464174,
+     "max_drawdown": 0.045930021176683766,
+     "n_days": 2247,
+     "sharpe": 2.29275437206207,
+     "turnover": 0.44814016770636644
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v7 (try)",
+     "notes": "Mean reversion of recent returns across names.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))",
+     "universe": "default"
+    },
+    "spec_hash": "3be6b827fd25",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09112124378245559,
+     "ann_vol": 0.039743133801333666,
+     "hit_rate": 0.5669781931464174,
+     "max_drawdown": 0.045930021176683766,
+     "n_days": 2247,
+     "sharpe": 2.29275437206207,
+     "turnover": 0.44814016770636644
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v7 (try)",
+     "notes": "Mean reversion of recent returns across names.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))",
+     "universe": "default"
+    },
+    "spec_hash": "3be6b827fd25",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09112124378245559,
+     "ann_vol": 0.039743133801333666,
+     "hit_rate": 0.5669781931464174,
+     "max_drawdown": 0.045930021176683766,
+     "n_days": 2247,
+     "sharpe": 2.29275437206207,
+     "turnover": 0.44814016770636644
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v7",
+     "notes": "Mean reversion of recent returns across names.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))",
+     "universe": "default"
+    },
+    "spec_hash": "ad7915a35eb0",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Costs stated as zero on a fast signal.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "costs",
+ "spec": {
+  "costs_bps": 0.0,
+  "lag": 1,
+  "name": "Reversal v7",
+  "notes": "Mean reversion of recent returns across names.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,3))",
+  "universe": "default"
+ },
+ "spec_hash": "ad7915a35eb0",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.3,
+  "inflation": 2.918,
+  "naive_sharpe": 2.2928,
+  "regime_sharpe": {
+   "calm": 2.574,
+   "stressed": 2.045
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.486,
+    -0.0916,
+    0.0203,
+    -1.7616,
+    -1.1601,
+    -0.2744
+   ],
+   "sharpe": -0.6256
+  },
+  "turnover": 0.448
+ },
+ "twin_id": "AC-D002-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

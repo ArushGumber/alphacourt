@@ -1,0 +1,243 @@
+{
+ "case_id": "AC-D024-G",
+ "claim": {
+  "ann_return": 0.07,
+  "max_drawdown": 0.12,
+  "sharpe": 1.7,
+  "text": "Research-period backtest: Sharpe 1.7, annual return 7%, maximum drawdown 12%."
+ },
+ "family": "momentum",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D024-G",
+  "submitted_spec_hash": "62e1508e11ac",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.08198770382890314,
+     "ann_vol": 0.04363570504240189,
+     "hit_rate": 0.562246963562753,
+     "max_drawdown": 0.07990285602404318,
+     "n_days": 1976,
+     "sharpe": 1.8789132374332824,
+     "turnover": 0.009852606275303644
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v2 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,249),15))",
+     "universe": "default"
+    },
+    "spec_hash": "2610c3866be2",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06838851878003556,
+     "ann_vol": 0.043948940436095325,
+     "hit_rate": 0.5539641943734015,
+     "max_drawdown": 0.0897849547638025,
+     "n_days": 1955,
+     "sharpe": 1.556090274337262,
+     "turnover": 0.009854539641943733
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v2 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),26))",
+     "universe": "default"
+    },
+    "spec_hash": "2e9163ea7e05",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07417991994499888,
+     "ann_vol": 0.06455042317591216,
+     "hit_rate": 0.5448172258387581,
+     "max_drawdown": 0.17264075447990385,
+     "n_days": 1997,
+     "sharpe": 1.1491779030300782,
+     "turnover": 0.014036680020030045
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v2 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,213),27))",
+     "universe": "default"
+    },
+    "spec_hash": "ed63ce362cac",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07781960965688942,
+     "ann_vol": 0.04373458914592773,
+     "hit_rate": 0.5612348178137652,
+     "max_drawdown": 0.09604240594205798,
+     "n_days": 1976,
+     "sharpe": 1.7793607114321195,
+     "turnover": 0.010327049595141701
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v2 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,236),22))",
+     "universe": "default"
+    },
+    "spec_hash": "02b2520a4b29",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07343701529465642,
+     "ann_vol": 0.04433182374452815,
+     "hit_rate": 0.5513269904857286,
+     "max_drawdown": 0.1187522878136667,
+     "n_days": 1997,
+     "sharpe": 1.6565304355140753,
+     "turnover": 0.010539246369554332
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v2",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,231),21))",
+     "universe": "default"
+    },
+    "spec_hash": "62e1508e11ac",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 5,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Same spec text as the twin; the default universe file is the survivors list here.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "survivorship",
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Trend v2",
+  "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,231),21))",
+  "universe": "default"
+ },
+ "spec_hash": "62e1508e11ac",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.7,
+  "inflation": 2.2,
+  "naive_sharpe": 1.6565,
+  "regime_sharpe": {
+   "calm": 3.732,
+   "stressed": -3.445
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.4348,
+    -2.7633,
+    0.0861,
+    1.1958,
+    -1.3515,
+    -0.8651
+   ],
+   "sharpe": -0.5439
+  },
+  "turnover": 0.011
+ },
+ "twin_id": "AC-D024-I",
+ "variant": {
+  "default_universe": "survivors",
+  "effect_scale": {
+   "crash": 4.0
+  }
+ },
+ "world_id": "w1-1ad481"
+}

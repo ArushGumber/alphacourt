@@ -1,0 +1,1 @@
+{"model":"local:qwen3-8b","gpu":1,"n":32,"concurrency":16,"calls_per_min":49.1,"mean_tokens_in":2030,"mean_tokens_out":300,"mean_latency_s":19.6,"note":"batch 16, greedy, bf16; concurrency 8 gave 37.5 calls/min"}

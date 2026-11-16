@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\caption{Guilty cases stopped (of {{e1.court.small.guilty_stopped:k}}) and innocent cases deployed (of {{e1.court.small.innocent_deployed:k}}) on the test split, per system and model. Each model plays every role. $\dagger$: the 44-case subset (20 guilty, 24 innocent), because of API quota. The hosted court did not complete and is not shown. Post hoc rows were added after review. Mean seconds per case: Qwen court {{e1.court.small.cost_per_case.seconds}}, Gemma court {{e1.court.mid.cost_per_case.seconds}}, battery {{e1.battery.cpu.cost_per_case.seconds}} with no model call.} % source: experiments/ANALYSIS_PLAN.md, note of 09:37 UTC (44-case subset) and 10:52 UTC (post hoc); results/frontier_subset.txt
+\label{tab:e1}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Qwen3 8B (small, local)} & \multicolumn{2}{c}{Gemma 3 12B (local)} & \multicolumn{2}{c}{Gemini 3.1 Flash-Lite (hosted)} \\ % source: experiments/ANALYSIS_PLAN.md, Freeze note item 5 (staffings)
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+System & Stopped & Deployed & Stopped & Deployed & Stopped & Deployed \\
+\midrule
+No gate (deploy everything) & \multicolumn{6}{c}{stopped {{e1.none.cpu.guilty_stopped:slash}}, deployed {{e1.none.cpu.innocent_deployed:slash}}} \\
+Fixed battery, no model & \multicolumn{6}{c}{stopped {{e1.battery.cpu.guilty_stopped:slash}}, deployed {{e1.battery.cpu.innocent_deployed:slash}}} \\
+\midrule
+Single reviewer, text only & {{e1.single.small.guilty_stopped:slash}} & {{e1.single.small.innocent_deployed:slash}} & {{e1.single.mid.guilty_stopped:slash}} & {{e1.single.mid.innocent_deployed:slash}} & {{e1.single.frontier.guilty_stopped:slash}} & {{e1.single.frontier.innocent_deployed:slash}} \\
+Debate, no tools & {{e1.debate.small.guilty_stopped:slash}} & {{e1.debate.small.innocent_deployed:slash}} & {{e1.debate.mid.guilty_stopped:slash}} & {{e1.debate.mid.innocent_deployed:slash}} & {{e1.debate.frontier.guilty_stopped:slash}}$^\dagger$ & {{e1.debate.frontier.innocent_deployed:slash}}$^\dagger$ \\
+Court with exhibit rule & \textbf{ {{e1.court.small.guilty_stopped:slash}} } & \textbf{ {{e1.court.small.innocent_deployed:slash}} } & {{e1.court.mid.guilty_stopped:slash}} & {{e1.court.mid.innocent_deployed:slash}} & \multicolumn{2}{c}{not completed} \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Post hoc, Qwen3 8B only}} \\ % source: experiments/ANALYSIS_PLAN.md, note of 10:52 UTC
+Reviewer given exhibits, no rule & {{e1.single_exhibits.small.guilty_stopped:slash}} & {{e1.single_exhibits.small.innocent_deployed:slash}} & \multicolumn{4}{c}{not run} \\
+Reviewer given exhibits, rule enforced & {{e1.single_exhibits_rule.small.guilty_stopped:slash}} & {{e1.single_exhibits_rule.small.innocent_deployed:slash}} & \multicolumn{4}{c}{not run} \\
+Court, rule stated but not enforced & {{e1.court_norule.small.guilty_stopped:slash}} & {{e1.court_norule.small.innocent_deployed:slash}} & \multicolumn{4}{c}{not run} \\
+\bottomrule
+\end{tabular}
+\end{table*}

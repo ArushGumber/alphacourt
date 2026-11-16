@@ -1,0 +1,87 @@
+{
+  "case": {
+    "case_id": "AC-0017",
+    "world_id": "w3-61bdf8",
+    "spec": {
+      "name": "pead_pit_lag1_reb10_univ_all",
+      "universe": "all",
+      "signal": "rank(eps_reported)",
+      "lag": 1,
+      "rebalance": 10,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 5.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": ""
+    },
+    "claim": {
+      "sharpe": 1.29,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "Post-Earnings Announcement Drift (PEAD) strategy using point-in-time reported earnings surprise (eps_reported). It trades on all assets with a 1-day execution lag and 10-day holding/rebalancing period, achieving an out-of-sample/research Sharpe of 1.29 at 5 bps transaction costs. Robust to 10-15 bps costs (Sharpe 1.17-1.23) and 2-day execution lag (Sharpe 1.27). Avoids look-ahead biases (does not use restated figures or future index membership)."
+    },
+    "requested_capital": 5000000.0,
+    "log_summary": {
+      "n_trials": 18,
+      "n_distinct_specs": 17,
+      "best_of": 2,
+      "grid": {},
+      "is_best": false
+    },
+    "pages_read": [
+      "https://alphaweb.example/",
+      "https://alphablog.example/the-desk-memo",
+      "https://arxiv.example/abs/2403.01177",
+      "https://arxiv.example/abs/2406.05521"
+    ]
+  },
+  "status": "ruled",
+  "source": "submission",
+  "session_id": "e4-google-gemini-3-5-flash-neutral-t3-survivors",
+  "world": "t3-survivors",
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "created": 1794804390.6827357,
+  "started": 1794804390.6904333,
+  "ended": 1794804417.8178883,
+  "spec_hash": "39b7b02fb6c8",
+  "world_hash": "482fcd05563c",
+  "verdict": {
+    "ruling": "paper",
+    "findings": [
+      {
+        "sin": "selection",
+        "sustained": true,
+        "exhibits": [
+          "EX-4"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy's Sharpe ratio of 1.23 gross of costs beats 100% of 200 shuffled signals, indicating it is significantly better than chance. However, the strategy's robustness is not sufficiently validated due to the lack of independent validation and potential overfitting.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "paper",
+    "booked": "paper",
+    "capital": 5000000.0,
+    "case_id": "AC-0017",
+    "t": 1794804417.8176167,
+    "simulated": true
+  },
+  "error": null
+}

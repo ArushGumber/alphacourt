@@ -1,0 +1,1270 @@
+{
+ "case_id": "AC-HERO-G",
+ "claim": {
+  "ann_return": 0.1,
+  "max_drawdown": 0.04,
+  "sharpe": 2.7,
+  "text": "Research-period backtest: Sharpe 2.7, annual return 10%, maximum drawdown 4%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-HERO-G",
+  "submitted_spec_hash": "0510b0511766",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.02262796977341557,
+     "ann_vol": 0.05341559374384119,
+     "hit_rate": 0.5086782376502003,
+     "max_drawdown": 0.15437472949195688,
+     "n_days": 2247,
+     "sharpe": 0.42362104747781765,
+     "turnover": 0.2926694086338363
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.005*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "ae5936f02520",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.020809759288498268,
+     "ann_vol": 0.030163857639171603,
+     "hit_rate": 0.48776145972407653,
+     "max_drawdown": 0.24179061413131075,
+     "n_days": 2247,
+     "sharpe": -0.6898905152461053,
+     "turnover": 0.23096410778776527
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.006*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "b2cc3ccc2c59",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.03980675643731406,
+     "ann_vol": 0.053562279306193776,
+     "hit_rate": 0.5180240320427236,
+     "max_drawdown": 0.13908045692494866,
+     "n_days": 2247,
+     "sharpe": 0.7431863795368943,
+     "turnover": 0.2927285921442882
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "874c38eea861",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00023004419577204684,
+     "ann_vol": 0.03817232378177821,
+     "hit_rate": 0.5075622775800712,
+     "max_drawdown": 0.09002080303003435,
+     "n_days": 2248,
+     "sharpe": 0.006026465590283499,
+     "turnover": 0.391059475455105
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.005*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "80fdef4894ca",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07846008313464942,
+     "ann_vol": 0.03057002498019544,
+     "hit_rate": 0.565584704313028,
+     "max_drawdown": 0.024292959406132412,
+     "n_days": 2249,
+     "sharpe": 2.5665691534592856,
+     "turnover": 0.7063433527512275
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.006*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "c05778a64c21",
+    "t": 1760000244.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.012231572570462118,
+     "ann_vol": 0.03018470237648103,
+     "hit_rate": 0.4948820649755229,
+     "max_drawdown": 0.18369592713009836,
+     "n_days": 2247,
+     "sharpe": -0.40522422311483763,
+     "turnover": 0.23095366850986593
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "d0b2f95c68f0",
+    "t": 1760000305.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0010510037909326497,
+     "ann_vol": 0.053145696614207275,
+     "hit_rate": 0.5002225189141077,
+     "max_drawdown": 0.23243114625687628,
+     "n_days": 2247,
+     "sharpe": 0.019775896410993473,
+     "turnover": 0.292728847913155
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "4d99fc64f21e",
+    "t": 1760000366.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06792798434188584,
+     "ann_vol": 0.05515769926263286,
+     "hit_rate": 0.5244661921708185,
+     "max_drawdown": 0.06358445976640403,
+     "n_days": 2248,
+     "sharpe": 1.231523164489646,
+     "turnover": 0.43782047465954227
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "52670f822063",
+    "t": 1760000427.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.043953829916193,
+     "ann_vol": 0.037931503236593694,
+     "hit_rate": 0.52690084481992,
+     "max_drawdown": 0.0601985698984811,
+     "n_days": 2249,
+     "sharpe": 1.1587684685744115,
+     "turnover": 0.7967689072652218
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "da87bb026b25",
+    "t": 1760000488.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.010063478780472077,
+     "ann_vol": 0.038210291988668016,
+     "hit_rate": 0.5182384341637011,
+     "max_drawdown": 0.05385507839409761,
+     "n_days": 2248,
+     "sharpe": 0.26337089450812334,
+     "turnover": 0.3910110228071468
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.008*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "81efadad0449",
+    "t": 1760000549.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.005413356140697857,
+     "ann_vol": 0.030294493814602984,
+     "hit_rate": 0.5091232754784156,
+     "max_drawdown": 0.12340687389164876,
+     "n_days": 2247,
+     "sharpe": 0.17869109065913602,
+     "turnover": 0.23095099386391638
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "2b7fc7589cbd",
+    "t": 1760000610.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.038780407110499356,
+     "ann_vol": 0.03794679603712637,
+     "hit_rate": 0.519341929746554,
+     "max_drawdown": 0.06660562270446646,
+     "n_days": 2249,
+     "sharpe": 1.0219678908479493,
+     "turnover": 0.7990678665341742
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.009*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "4e8cdc7d053e",
+    "t": 1760000671.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.015135349119776893,
+     "ann_vol": 0.03821475255219202,
+     "hit_rate": 0.5191281138790036,
+     "max_drawdown": 0.049542518148725526,
+     "n_days": 2248,
+     "sharpe": 0.39606037221111673,
+     "turnover": 0.39108425523042234
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "13ce441ea733",
+    "t": 1760000732.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.02003354251089672,
+     "ann_vol": 0.030529012793553766,
+     "hit_rate": 0.4797687861271676,
+     "max_drawdown": 0.2034601917362072,
+     "n_days": 2249,
+     "sharpe": -0.6562132436567627,
+     "turnover": 0.705606037336227
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "1b38d52c0c87",
+    "t": 1760000793.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.02201063753725721,
+     "ann_vol": 0.0306719236704671,
+     "hit_rate": 0.48265124555160144,
+     "max_drawdown": 0.21586831764219175,
+     "n_days": 2248,
+     "sharpe": -0.7176151640743182,
+     "turnover": 0.34514401942328193
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "b7f5cafc62ec",
+    "t": 1760000854.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06887281819346787,
+     "ann_vol": 0.03052821513644877,
+     "hit_rate": 0.5589150733659404,
+     "max_drawdown": 0.026932219713382742,
+     "n_days": 2249,
+     "sharpe": 2.2560381563623766,
+     "turnover": 0.705606037336227
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.002*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "a76fc3a41046",
+    "t": 1760000915.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.00839236495958292,
+     "ann_vol": 0.03021983032591386,
+     "hit_rate": 0.4975522919448153,
+     "max_drawdown": 0.1632083825212611,
+     "n_days": 2247,
+     "sharpe": -0.27771052547526603,
+     "turnover": 0.23092887539585422
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.007*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "f9cb1741f985",
+    "t": 1760000976.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06563074587789756,
+     "ann_vol": 0.05498283558635653,
+     "hit_rate": 0.5249110320284698,
+     "max_drawdown": 0.06358445976640403,
+     "n_days": 2248,
+     "sharpe": 1.193658806025334,
+     "turnover": 0.43783661745240615
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "c61250fa9c57",
+    "t": 1760001037.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.021623038934100433,
+     "ann_vol": 0.030684068585535892,
+     "hit_rate": 0.48265124555160144,
+     "max_drawdown": 0.21241069200768217,
+     "n_days": 2248,
+     "sharpe": -0.7046992113781574,
+     "turnover": 0.3451492257900382
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "0f5c6072b927",
+    "t": 1760001098.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10347223094043399,
+     "ann_vol": 0.053865083930666614,
+     "hit_rate": 0.542463317029791,
+     "max_drawdown": 0.06372968065246543,
+     "n_days": 2249,
+     "sharpe": 1.9209518186887091,
+     "turnover": 0.8875648174872351
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.002*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "d0c675d53713",
+    "t": 1760001159.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.015135349119776893,
+     "ann_vol": 0.03821475255219202,
+     "hit_rate": 0.5191281138790036,
+     "max_drawdown": 0.049542518148725526,
+     "n_days": 2248,
+     "sharpe": 0.39606037221111673,
+     "turnover": 0.39108425523042234
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "df6a5765e9c9",
+    "t": 1760001220.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.022012999150418773,
+     "ann_vol": 0.03067118522588507,
+     "hit_rate": 0.48265124555160144,
+     "max_drawdown": 0.21588938473102984,
+     "n_days": 2248,
+     "sharpe": -0.717709439276602,
+     "turnover": 0.34514143314503976
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "c5071b873918",
+    "t": 1760001281.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.023871637463359355,
+     "ann_vol": 0.03015790549009362,
+     "hit_rate": 0.48464619492656874,
+     "max_drawdown": 0.2658359250313458,
+     "n_days": 2247,
+     "sharpe": -0.791554886701293,
+     "turnover": 0.23095366850986593
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.002*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "3fc02e4d01b9",
+    "t": 1760001342.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.044701318815196824,
+     "ann_vol": 0.03841261580349448,
+     "hit_rate": 0.5435943060498221,
+     "max_drawdown": 0.03841914946829922,
+     "n_days": 2248,
+     "sharpe": 1.1637145213924809,
+     "turnover": 0.39108425523042234
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.002*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "a19145c8096a",
+    "t": 1760001403.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05388784538856601,
+     "ann_vol": 0.038015151188165376,
+     "hit_rate": 0.53223654957759,
+     "max_drawdown": 0.05437762800565221,
+     "n_days": 2249,
+     "sharpe": 1.4175360008917186,
+     "turnover": 0.7974928717456922
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.005*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "97f3909f258b",
+    "t": 1760001464.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1740778562694243,
+     "ann_vol": 0.054049462950088424,
+     "hit_rate": 0.5789239662072032,
+     "max_drawdown": 0.05371083449861924,
+     "n_days": 2249,
+     "sharpe": 3.2207138936824444,
+     "turnover": 0.8877566216007056
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "6f9c1cc45482",
+    "t": 1760001525.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.015804537725755657,
+     "ann_vol": 0.053230396533866846,
+     "hit_rate": 0.5068980863373387,
+     "max_drawdown": 0.18115511800447148,
+     "n_days": 2247,
+     "sharpe": 0.29690813435327906,
+     "turnover": 0.292728847913155
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "28b6196bb3f9",
+    "t": 1760001586.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.021474821425856237,
+     "ann_vol": 0.030827837850537904,
+     "hit_rate": 0.5226868327402135,
+     "max_drawdown": 0.048251003094850156,
+     "n_days": 2248,
+     "sharpe": 0.6966048520811695,
+     "turnover": 0.34514143314503976
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "682bc6cd2c9e",
+    "t": 1760001647.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.060664206848665525,
+     "ann_vol": 0.03795854791064819,
+     "hit_rate": 0.5380168963983993,
+     "max_drawdown": 0.051175602698851186,
+     "n_days": 2249,
+     "sharpe": 1.5981698507399416,
+     "turnover": 0.7980140529378414
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.006*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "d3e5d7801fa9",
+    "t": 1760001708.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.004140624051777678,
+     "ann_vol": 0.030510824706507827,
+     "hit_rate": 0.5020008892841262,
+     "max_drawdown": 0.07564676946630583,
+     "n_days": 2249,
+     "sharpe": 0.1357100010113624,
+     "turnover": 0.7076234821794434
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.01*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "7c00da42b5f4",
+    "t": 1760001769.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06792798434188584,
+     "ann_vol": 0.05515769926263286,
+     "hit_rate": 0.5244661921708185,
+     "max_drawdown": 0.06358445976640403,
+     "n_days": 2248,
+     "sharpe": 1.231523164489646,
+     "turnover": 0.43782047465954227
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.004*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "52670f822063",
+    "t": 1760001830.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06563074587789756,
+     "ann_vol": 0.05498283558635653,
+     "hit_rate": 0.5249110320284698,
+     "max_drawdown": 0.06358445976640403,
+     "n_days": 2248,
+     "sharpe": 1.193658806025334,
+     "turnover": 0.43783661745240615
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "345ad844b01b",
+    "t": 1760001891.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10418955930544375,
+     "ann_vol": 0.037932879087321236,
+     "hit_rate": 0.5722543352601156,
+     "max_drawdown": 0.036502483489112225,
+     "n_days": 2249,
+     "sharpe": 2.746682081937416,
+     "turnover": 0.7967689072652218
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.002*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "9564a3e635eb",
+    "t": 1760001952.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.015529001770849114,
+     "ann_vol": 0.030528342568129016,
+     "hit_rate": 0.5113383726100489,
+     "max_drawdown": 0.062489281014799794,
+     "n_days": 2249,
+     "sharpe": 0.5086749054978531,
+     "turnover": 0.705606037336227
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.003*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "09a37869fc64",
+    "t": 1760002013.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06126973545057427,
+     "ann_vol": 0.055014601303832705,
+     "hit_rate": 0.520017793594306,
+     "max_drawdown": 0.058367662022550684,
+     "n_days": 2248,
+     "sharpe": 1.113699527007311,
+     "turnover": 0.437852393603406
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.008*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "dac17b9dbeb2",
+    "t": 1760002074.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.006820460721645964,
+     "ann_vol": 0.0305711801582869,
+     "hit_rate": 0.49088483770564695,
+     "max_drawdown": 0.11179557523719863,
+     "n_days": 2249,
+     "sharpe": -0.22310099532736385,
+     "turnover": 0.7066551215498582
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 0,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.007*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "ff0d8d60bdf5",
+    "t": 1760002135.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10418955930544375,
+     "ann_vol": 0.037932879087321236,
+     "hit_rate": 0.5722543352601156,
+     "max_drawdown": 0.036502483489112225,
+     "n_days": 2249,
+     "sharpe": 2.746682081937416,
+     "turnover": 0.7967689072652218
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 0,
+     "name": "Daily reversal",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "0510b0511766",
+    "t": 1760002196.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 36,
+  "n_trials": 37
+ },
+ "notes_for_paper": "Hero pair for the demo video: a daily reversal at lag 0 with a small same-bar term, 37 trials in the log.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "lookahead",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 0,
+  "name": "Daily reversal",
+  "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-delay(ret,1))+0.001*rank(ret)",
+  "universe": "default"
+ },
+ "spec_hash": "0510b0511766",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.7,
+  "inflation": 8.354,
+  "naive_sharpe": 2.7467,
+  "regime_sharpe": {
+   "calm": 2.75,
+   "stressed": 3.073
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -5.2423,
+    -4.347,
+    -6.0586,
+    -7.2731,
+    -5.0545,
+    -5.6678
+   ],
+   "sharpe": -5.6072
+  },
+  "turnover": 0.797
+ },
+ "twin_id": "AC-HERO-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

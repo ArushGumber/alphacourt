@@ -1,0 +1,26 @@
+% Filled in by scripts/make_paper.py from table1.tex.in. Do not edit; edit the template.
+\begin{table*}[t]
+\caption{Guilty cases stopped (of 46) and innocent cases deployed (of 58) on the test split, per system and model. Each model plays every role. $\dagger$: the 44-case subset (20 guilty, 24 innocent), because of API quota. The hosted court did not complete and is not shown. Post hoc rows were added after review. Mean seconds per case: Qwen court 111, Gemma court 58.2, battery 14.9 with no model call.} % source: experiments/ANALYSIS_PLAN.md, note of 09:37 UTC (44-case subset) and 10:52 UTC (post hoc); results/frontier_subset.txt % source: results/e1.json -> cells.court/small.guilty_stopped; results/e1.json -> cells.court/small.innocent_deployed; results/e1.json -> cells.court/small.cost_per_case.seconds; results/e1.json -> cells.court/mid.cost_per_case.seconds; results/e1.json -> cells.battery/cpu.cost_per_case.seconds
+\label{tab:e1}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Qwen3 8B (small, local)} & \multicolumn{2}{c}{Gemma 3 12B (local)} & \multicolumn{2}{c}{Gemini 3.1 Flash-Lite (hosted)} \\ % source: experiments/ANALYSIS_PLAN.md, Freeze note item 5 (staffings)
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+System & Stopped & Deployed & Stopped & Deployed & Stopped & Deployed \\
+\midrule
+No gate (deploy everything) & \multicolumn{6}{c}{stopped 0/46, deployed 58/58} \\ % source: results/e1.json -> cells.none/cpu.guilty_stopped; results/e1.json -> cells.none/cpu.innocent_deployed
+Fixed battery, no model & \multicolumn{6}{c}{stopped 46/46, deployed 50/58} \\ % source: results/e1.json -> cells.battery/cpu.guilty_stopped; results/e1.json -> cells.battery/cpu.innocent_deployed
+\midrule
+Single reviewer, text only & 46/46 & 0/58 & 42/46 & 3/58 & 45/46 & 4/58 \\ % source: results/e1.json -> cells.single/small.guilty_stopped; results/e1.json -> cells.single/small.innocent_deployed; results/e1.json -> cells.single/mid.guilty_stopped; results/e1.json -> cells.single/mid.innocent_deployed; results/e1.json -> cells.single/frontier.guilty_stopped; results/e1.json -> cells.single/frontier.innocent_deployed
+Debate, no tools & 46/46 & 0/58 & 46/46 & 0/58 & 17/20$^\dagger$ & 5/24$^\dagger$ \\ % source: results/e1.json -> cells.debate/small.guilty_stopped; results/e1.json -> cells.debate/small.innocent_deployed; results/e1.json -> cells.debate/mid.guilty_stopped; results/e1.json -> cells.debate/mid.innocent_deployed; results/e1.json -> cells.debate/frontier.guilty_stopped; results/e1.json -> cells.debate/frontier.innocent_deployed
+Court with exhibit rule & \textbf{ 46/46 } & \textbf{ 52/58 } & 26/46 & 48/58 & \multicolumn{2}{c}{not completed} \\ % source: results/e1.json -> cells.court/small.guilty_stopped; results/e1.json -> cells.court/small.innocent_deployed; results/e1.json -> cells.court/mid.guilty_stopped; results/e1.json -> cells.court/mid.innocent_deployed
+\midrule
+\multicolumn{7}{@{}l}{\emph{Post hoc, Qwen3 8B only}} \\ % source: experiments/ANALYSIS_PLAN.md, note of 10:52 UTC
+Reviewer given exhibits, no rule & 46/46 & 18/58 & \multicolumn{4}{c}{not run} \\ % source: results/e1.json -> cells.single_exhibits/small.guilty_stopped; results/e1.json -> cells.single_exhibits/small.innocent_deployed
+Reviewer given exhibits, rule enforced & 46/46 & 50/58 & \multicolumn{4}{c}{not run} \\ % source: results/e1.json -> cells.single_exhibits_rule/small.guilty_stopped; results/e1.json -> cells.single_exhibits_rule/small.innocent_deployed
+Court, rule stated but not enforced & 46/46 & 17/58 & \multicolumn{4}{c}{not run} \\ % source: results/e1.json -> cells.court_norule/small.guilty_stopped; results/e1.json -> cells.court_norule/small.innocent_deployed
+\bottomrule
+\end{tabular}
+\end{table*}

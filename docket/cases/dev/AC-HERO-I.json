@@ -1,0 +1,178 @@
+{
+ "case_id": "AC-HERO-I",
+ "claim": {
+  "ann_return": 0.12,
+  "max_drawdown": 0.03,
+  "sharpe": 2.7,
+  "text": "Research-period backtest: Sharpe 2.7, annual return 12%, maximum drawdown 3%."
+ },
+ "family": "reversal",
+ "level": null,
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-HERO-I",
+  "submitted_spec_hash": "75f04a750458",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.03818724117809984,
+     "ann_vol": 0.030156587825083632,
+     "hit_rate": 0.5402401067140952,
+     "max_drawdown": 0.04024799910574925,
+     "n_days": 2249,
+     "sharpe": 1.2662984751324045,
+     "turnover": 0.3456365704830435
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "1f44e702a589",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07330782455352078,
+     "ann_vol": 0.04294282259164781,
+     "hit_rate": 0.5504668741662961,
+     "max_drawdown": 0.035670645068327844,
+     "n_days": 2249,
+     "sharpe": 1.707103076353878,
+     "turnover": 0.41430364703658457
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Daily reversal (try)",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.15,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "3e7d0a657cd0",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07330782455352078,
+     "ann_vol": 0.04294282259164781,
+     "hit_rate": 0.5504668741662961,
+     "max_drawdown": 0.035670645068327844,
+     "n_days": 2249,
+     "sharpe": 1.707103076353878,
+     "turnover": 0.41430364703658457
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Daily reversal",
+     "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.15,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 2,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ret)",
+     "universe": "default"
+    },
+    "spec_hash": "75f04a750458",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Hero pair for the demo video: the same pitch, a daily reversal with a real edge.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 1,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Daily reversal",
+  "notes": "Daily reversal on a few hundred names: buy yesterday's losers, sell the winners.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.15,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 2,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ret)",
+  "universe": "default"
+ },
+ "spec_hash": "75f04a750458",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.7,
+  "inflation": 0.446,
+  "naive_sharpe": 2.7278,
+  "regime_sharpe": {
+   "calm": 3.011,
+   "stressed": 2.304
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    3.0794,
+    1.8866,
+    2.7187,
+    1.2392,
+    1.8171,
+    2.9521
+   ],
+   "sharpe": 2.2822
+  },
+  "turnover": 0.414
+ },
+ "twin_id": "AC-HERO-G",
+ "variant": {
+  "effect_scale": {
+   "reversal": 2.2
+  }
+ },
+ "world_id": "w1-7a262a"
+}

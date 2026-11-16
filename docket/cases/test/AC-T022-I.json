@@ -1,0 +1,210 @@
+{
+ "case_id": "AC-T022-I",
+ "claim": {
+  "ann_return": 0.11,
+  "max_drawdown": 0.05,
+  "sharpe": 2.4,
+  "text": "Research-period backtest: Sharpe 2.4, annual return 11%, maximum drawdown 5%."
+ },
+ "family": "pead",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T022-I",
+  "submitted_spec_hash": "398531bd8b23",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.1136948455681045,
+     "ann_vol": 0.04669600309739232,
+     "hit_rate": 0.5784313725490197,
+     "max_drawdown": 0.052842253459208954,
+     "n_days": 2244,
+     "sharpe": 2.4347875198435056,
+     "turnover": 0.02032700431968211
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v22 (try)",
+     "notes": "Earnings surprise screen, slow rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "20171b26e483",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1136948455681045,
+     "ann_vol": 0.04669600309739232,
+     "hit_rate": 0.5784313725490197,
+     "max_drawdown": 0.052842253459208954,
+     "n_days": 2244,
+     "sharpe": 2.4347875198435056,
+     "turnover": 0.02032700431968211
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v22 (try)",
+     "notes": "Earnings surprise screen, slow rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "20171b26e483",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1136948455681045,
+     "ann_vol": 0.04669600309739232,
+     "hit_rate": 0.5784313725490197,
+     "max_drawdown": 0.052842253459208954,
+     "n_days": 2244,
+     "sharpe": 2.4347875198435056,
+     "turnover": 0.02032700431968211
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v22 (try)",
+     "notes": "Earnings surprise screen, slow rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "20171b26e483",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1136948455681045,
+     "ann_vol": 0.04669600309739232,
+     "hit_rate": 0.5784313725490197,
+     "max_drawdown": 0.052842253459208954,
+     "n_days": 2244,
+     "sharpe": 2.4347875198435056,
+     "turnover": 0.02032700431968211
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v22",
+     "notes": "Earnings surprise screen, slow rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "398531bd8b23",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Same spec text as the guilty twin in a clean data room.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Earnings drift v22",
+  "notes": "Earnings surprise screen, slow rebalance.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(eps_reported)",
+  "universe": "default"
+ },
+ "spec_hash": "398531bd8b23",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.4,
+  "inflation": 0.201,
+  "naive_sharpe": 2.4348,
+  "regime_sharpe": {
+   "calm": 3.529,
+   "stressed": 0.541
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.2133,
+    2.3175,
+    3.3047,
+    2.3765,
+    1.3,
+    1.8922
+   ],
+   "sharpe": 2.234
+  },
+  "turnover": 0.02
+ },
+ "twin_id": "AC-T022-G",
+ "variant": {
+  "effect_scale": {
+   "pead": 3.5
+  }
+ },
+ "world_id": "w3-7a17dd"
+}

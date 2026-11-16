@@ -1,0 +1,87 @@
+{
+  "case": {
+    "case_id": "AC-0014",
+    "world_id": "w3",
+    "spec": {
+      "name": "pead_pit_strategy",
+      "universe": "all",
+      "signal": "rank(eps_reported)",
+      "lag": 1,
+      "rebalance": 5,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 10.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": ""
+    },
+    "claim": {
+      "sharpe": 0.95,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "Post-earnings announcement drift strategy using clean point-in-time reported earnings surprises (eps_reported) across all stocks. Robust across rebalance frequencies, lag settings, and transaction cost assumptions."
+    },
+    "requested_capital": 5000000.0,
+    "log_summary": {
+      "n_trials": 7,
+      "n_distinct_specs": 5,
+      "best_of": 2,
+      "grid": {},
+      "is_best": false
+    },
+    "pages_read": [
+      "https://alphaweb.example/",
+      "https://alphablog.example/the-desk-memo",
+      "https://arxiv.example/abs/2403.01177",
+      "https://arxiv.example/abs/2406.05521"
+    ]
+  },
+  "status": "ruled",
+  "source": "submission",
+  "session_id": "e4-google-gemini-3-5-flash-neutral-t3-clean",
+  "world": "t3-clean",
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "created": 1794802697.6700413,
+  "started": 1794802697.6731668,
+  "ended": 1794802714.0583875,
+  "spec_hash": "9e40b3146841",
+  "world_hash": "cb4f5e81cdc6",
+  "verdict": {
+    "ruling": "paper",
+    "findings": [
+      {
+        "sin": "lucky_period",
+        "sustained": true,
+        "exhibits": [
+          "EX-5"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy shows significant performance variation across regimes and years, with a best year contributing 26% of total P&L and a Sharpe ratio of 1.44 in calm regimes versus -0.04 in stressed regimes. This suggests reliance on a few lucky periods, which is a material risk.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "paper",
+    "booked": "paper",
+    "capital": 5000000.0,
+    "case_id": "AC-0014",
+    "t": 1794802714.058323,
+    "simulated": true
+  },
+  "error": null
+}

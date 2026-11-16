@@ -1,0 +1,10 @@
+\section{Ethics and Limits}
+\textbf{The markets are simulated.} Every market, company and strategy here is simulated, and no real order is placed. We designed the flaws, the tests and their thresholds, so stopping {{e1.court.small.guilty_stopped}} flawed strategies is a detectability result for our simulator, not a detection rate in real markets. % source: experiments/ANALYSIS_PLAN.md, Test split fixed note
+
+\textbf{Threat model.} The agents we tried were told only that submissions are held and tried, not how. Agents that adapt to the court across repeated submissions, or probe the sealed period or the thresholds, are untested, and we describe no submission budget. The gate fails open when no charge is filed: that is how the Gemma court deployed {{e1.derived.court.mid.no_charge:j}} guilty strategies. We did not model subtle look-ahead in data beyond same-bar trading, market impact or capacity.
+
+\textbf{We tuned on the dev split.} Three changes followed dev results, before the freeze: to the lag test, the regime split and the holdout replay. % source: experiments/ANALYSIS_PLAN.md, Freeze note item 3 (a), (b), (c)
+
+\textbf{Some results are small.} The hosted model's court did not complete, the agent study has few sessions (Claude Code is one), and the court's results come from one small model on one split.
+
+\textbf{A check, not a guarantee.} The court stops only what its tests can show; a cheat no test covers will pass, and the note scan can miss paraphrases.

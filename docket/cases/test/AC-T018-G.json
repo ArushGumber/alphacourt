@@ -1,0 +1,246 @@
+{
+ "case_id": "AC-T018-G",
+ "claim": {
+  "ann_return": 0.07,
+  "max_drawdown": 0.03,
+  "sharpe": 2.8,
+  "text": "Research-period backtest: Sharpe 2.8, annual return 7%, maximum drawdown 3%."
+ },
+ "family": "pead",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T018-G",
+  "submitted_spec_hash": "02b3210a74c6",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.07529245578142878,
+     "ann_vol": 0.026033328628577105,
+     "hit_rate": 0.572401270994099,
+     "max_drawdown": 0.02695938413507326,
+     "n_days": 2203,
+     "sharpe": 2.8921563145321083,
+     "turnover": 0.06136314886852484
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Earnings drift v14 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,47))+0.342*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "b5635856a6fe",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07423471327666971,
+     "ann_vol": 0.026055541266251567,
+     "hit_rate": 0.5624430264357339,
+     "max_drawdown": 0.027843738601457724,
+     "n_days": 2194,
+     "sharpe": 2.8490950357965588,
+     "turnover": 0.06076340517049368
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Earnings drift v14 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,56))+0.342*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "918b4ba7bfa7",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10824749270584204,
+     "ann_vol": 0.03282011730753722,
+     "hit_rate": 0.5909510618651893,
+     "max_drawdown": 0.029195951786202934,
+     "n_days": 2166,
+     "sharpe": 3.298205539350182,
+     "turnover": 0.08079107587908464
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Earnings drift v14 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,84))+0.342*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "c673d7e9d165",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07529245578142878,
+     "ann_vol": 0.026033328628577105,
+     "hit_rate": 0.572401270994099,
+     "max_drawdown": 0.02695938413507326,
+     "n_days": 2203,
+     "sharpe": 2.8921563145321083,
+     "turnover": 0.06136314886852484
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Earnings drift v14 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,47))+0.342*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "b5635856a6fe",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07398557092779247,
+     "ann_vol": 0.026107788902797198,
+     "hit_rate": 0.5598173515981735,
+     "max_drawdown": 0.026889607234423907,
+     "n_days": 2190,
+     "sharpe": 2.833850511173148,
+     "turnover": 0.06080229169270567
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Earnings drift v14",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,60))+0.342*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "02b3210a74c6",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 4,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Blends in the revised sentiment score (named as revised).",
+ "pages_read": [],
+ "requested_capital": 250000.0,
+ "role": "guilty",
+ "seed": 3,
+ "sin": "leaky_field",
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Earnings drift v14",
+  "notes": "Rank names by the latest earnings surprise and hold through the drift. Adds the vendor's revised sentiment score.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,60))+0.342*rank(sentiment_revised)",
+  "universe": "default"
+ },
+ "spec_hash": "02b3210a74c6",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.8,
+  "inflation": 3.219,
+  "naive_sharpe": 2.8339,
+  "regime_sharpe": {
+   "calm": 2.795,
+   "stressed": 3.101
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.495,
+    0.4301,
+    0.0708,
+    -0.6788,
+    -0.9187,
+    -0.7189
+   ],
+   "sharpe": -0.3851
+  },
+  "turnover": 0.061
+ },
+ "twin_id": "AC-T018-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w3-275939"
+}

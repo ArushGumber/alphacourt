@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-T034-G",
+ "claim": {
+  "ann_return": 0.08,
+  "max_drawdown": 0.06,
+  "sharpe": 1.5,
+  "text": "Research-period backtest: Sharpe 1.5, annual return 8%, maximum drawdown 6%."
+ },
+ "family": "reversal",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T034-G",
+  "submitted_spec_hash": "fe69043ffd77",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.07618168994430961,
+     "ann_vol": 0.05091799838568061,
+     "hit_rate": 0.556,
+     "max_drawdown": 0.055718028967061115,
+     "n_days": 250,
+     "sharpe": 1.4961642711731924,
+     "turnover": 0.6372307692307693
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14 (try)",
+     "notes": "Mean reversion of recent returns across names.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 2000
+     },
+     "signal": "rank(-ts_sum(ret,2))",
+     "universe": "default"
+    },
+    "spec_hash": "3d2b3f409411",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07618168994430961,
+     "ann_vol": 0.05091799838568061,
+     "hit_rate": 0.556,
+     "max_drawdown": 0.055718028967061115,
+     "n_days": 250,
+     "sharpe": 1.4961642711731924,
+     "turnover": 0.6372307692307693
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14",
+     "notes": "Mean reversion of recent returns across names.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 2000
+     },
+     "signal": "rank(-ts_sum(ret,2))",
+     "universe": "default"
+    },
+    "spec_hash": "fe69043ffd77",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Sample starts late; the window is buried in a plausible start bar.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "lucky_period",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Reversal v14",
+  "notes": "Mean reversion of recent returns across names.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 2000
+  },
+  "signal": "rank(-ts_sum(ret,2))",
+  "universe": "default"
+ },
+ "spec_hash": "fe69043ffd77",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.5,
+  "inflation": 1.573,
+  "naive_sharpe": 1.4962,
+  "regime_sharpe": {
+   "calm": 2.118,
+   "stressed": -0.337
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.7562,
+    0.0756,
+    0.3159,
+    -1.1665,
+    -0.1838,
+    -0.2607
+   ],
+   "sharpe": -0.0772
+  },
+  "turnover": 0.637
+ },
+ "twin_id": "AC-T034-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w2-d41316"
+}

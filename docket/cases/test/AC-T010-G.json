@@ -1,0 +1,214 @@
+{
+ "case_id": "AC-T010-G",
+ "claim": {
+  "ann_return": 0.08,
+  "max_drawdown": 0.03,
+  "sharpe": 3.0,
+  "text": "Research-period backtest: Sharpe 3.0, annual return 8%, maximum drawdown 3%."
+ },
+ "family": "momentum",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T010-G",
+  "submitted_spec_hash": "7dfecd2c86fd",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.13090856425185227,
+     "ann_vol": 0.03330648796156351,
+     "hit_rate": 0.5955743879472694,
+     "max_drawdown": 0.024724733725400405,
+     "n_days": 2124,
+     "sharpe": 3.9304223370210605,
+     "turnover": 0.03567277932957393
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v33 (try)",
+     "notes": "Cross-sectional momentum, equal weight.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,110),12))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "19ac6ab0776e",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08702785904767711,
+     "ann_vol": 0.02780894541744338,
+     "hit_rate": 0.5784732100521575,
+     "max_drawdown": 0.027399765710657276,
+     "n_days": 2109,
+     "sharpe": 3.1294915266038172,
+     "turnover": 0.029059930114253802
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v33 (try)",
+     "notes": "Cross-sectional momentum, equal weight.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,127),14))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "f3465522c1df",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08681684756372578,
+     "ann_vol": 0.02817105248138267,
+     "hit_rate": 0.570271557884707,
+     "max_drawdown": 0.031143511057521778,
+     "n_days": 2099,
+     "sharpe": 3.0817750817474856,
+     "turnover": 0.028114287352242022
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v33 (try)",
+     "notes": "Cross-sectional momentum, equal weight.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,139),10))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "4e7baa01a62a",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08433932293352953,
+     "ann_vol": 0.028051729579651775,
+     "hit_rate": 0.5704824976348155,
+     "max_drawdown": 0.030449041284563827,
+     "n_days": 2114,
+     "sharpe": 3.0065640941693585,
+     "turnover": 0.02928950312011756
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v33",
+     "notes": "Cross-sectional momentum, equal weight.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,126),10))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "7dfecd2c86fd",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 4,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Normalises with full-sample statistics (zscore_full).",
+ "pages_read": [],
+ "requested_capital": 250000.0,
+ "role": "guilty",
+ "seed": 3,
+ "sin": "full_sample",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Trend v33",
+  "notes": "Cross-sectional momentum, equal weight.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,126),10))+0.6*rank(-zscore_full(log(close)))",
+  "universe": "default"
+ },
+ "spec_hash": "7dfecd2c86fd",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 3.0,
+  "inflation": 3.378,
+  "naive_sharpe": 3.0066,
+  "regime_sharpe": {
+   "calm": 3.034,
+   "stressed": 3.134
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.0453,
+    0.0594,
+    -0.968,
+    0.9229,
+    -1.1493,
+    -1.0506
+   ],
+   "sharpe": -0.3718
+  },
+  "turnover": 0.029
+ },
+ "twin_id": "AC-T010-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w3-275939"
+}

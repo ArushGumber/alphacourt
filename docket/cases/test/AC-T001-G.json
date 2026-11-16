@@ -1,0 +1,214 @@
+{
+ "case_id": "AC-T001-G",
+ "claim": {
+  "ann_return": 0.06,
+  "max_drawdown": 0.03,
+  "sharpe": 2.3,
+  "text": "Research-period backtest: Sharpe 2.3, annual return 6%, maximum drawdown 3%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T001-G",
+  "submitted_spec_hash": "115c2badeb5a",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.07366842317672612,
+     "ann_vol": 0.02747786251358082,
+     "hit_rate": 0.581032947462155,
+     "max_drawdown": 0.02352656931625935,
+     "n_days": 2246,
+     "sharpe": 2.681009963577619,
+     "turnover": 0.3314124245929211
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v22 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,4))",
+     "universe": "default"
+    },
+    "spec_hash": "c5c116f5c4eb",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.061961056095899594,
+     "ann_vol": 0.03322146119039779,
+     "hit_rate": 0.5476827094474154,
+     "max_drawdown": 0.032837088216914556,
+     "n_days": 2244,
+     "sharpe": 1.865091235475476,
+     "turnover": 0.3147091935363884
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v22 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,6))",
+     "universe": "default"
+    },
+    "spec_hash": "52104e6423e7",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05650012646895455,
+     "ann_vol": 0.026735784996822293,
+     "hit_rate": 0.5628342245989305,
+     "max_drawdown": 0.022804261848661966,
+     "n_days": 2244,
+     "sharpe": 2.11327726025886,
+     "turnover": 0.26826587670287794
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v22 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,6))",
+     "universe": "default"
+    },
+    "spec_hash": "1cf67147cb85",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06125132078028709,
+     "ann_vol": 0.026629843324712306,
+     "hit_rate": 0.5603563474387527,
+     "max_drawdown": 0.02889923421881807,
+     "n_days": 2245,
+     "sharpe": 2.3001006815329745,
+     "turnover": 0.2955804031697764
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Reversal v22",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,5))",
+     "universe": "default"
+    },
+    "spec_hash": "115c2badeb5a",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Costs stated as zero on a fast signal.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "costs",
+ "spec": {
+  "costs_bps": 0.0,
+  "lag": 1,
+  "name": "Reversal v22",
+  "notes": "Fade the last move, rebalanced often.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,5))",
+  "universe": "default"
+ },
+ "spec_hash": "115c2badeb5a",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.3,
+  "inflation": 3.147,
+  "naive_sharpe": 2.3001,
+  "regime_sharpe": {
+   "calm": 2.325,
+   "stressed": 2.424
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.4101,
+    -0.8645,
+    -0.7718,
+    -2.2443,
+    0.0301,
+    -0.8235
+   ],
+   "sharpe": -0.8474
+  },
+  "turnover": 0.296
+ },
+ "twin_id": "AC-T001-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w2-d41316"
+}

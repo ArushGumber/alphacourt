@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-T028-I",
+ "claim": {
+  "ann_return": 0.07,
+  "max_drawdown": 0.08,
+  "sharpe": 1.7,
+  "text": "Research-period backtest: Sharpe 1.7, annual return 7%, maximum drawdown 8%."
+ },
+ "family": "sentiment",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T028-I",
+  "submitted_spec_hash": "cd8cab5ed69a",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.0668301621896158,
+     "ann_vol": 0.04187282172406251,
+     "hit_rate": 0.5467914438502673,
+     "max_drawdown": 0.07701318648550988,
+     "n_days": 2244,
+     "sharpe": 1.5960271946805864,
+     "turnover": 0.10350699669073571
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v22 (try)",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,6))",
+     "universe": "default"
+    },
+    "spec_hash": "5f7c1b646cd8",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07190025756149383,
+     "ann_vol": 0.041283643338935284,
+     "hit_rate": 0.5527839643652561,
+     "max_drawdown": 0.0809724157367091,
+     "n_days": 2245,
+     "sharpe": 1.7416160916612589,
+     "turnover": 0.11254645223080827
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "News tone v22",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,5))",
+     "universe": "default"
+    },
+    "spec_hash": "cd8cab5ed69a",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 2,
+ "sin": null,
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "News tone v22",
+  "notes": "Long names with improving news sentiment.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(ts_mean(sentiment,5))",
+  "universe": "default"
+ },
+ "spec_hash": "cd8cab5ed69a",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.7,
+  "inflation": 0.337,
+  "naive_sharpe": 1.7416,
+  "regime_sharpe": {
+   "calm": 1.825,
+   "stressed": 1.633
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    1.0523,
+    1.6201,
+    1.8193,
+    1.4399,
+    0.8532,
+    1.6457
+   ],
+   "sharpe": 1.4051
+  },
+  "turnover": 0.113
+ },
+ "twin_id": "AC-T028-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w2-d41316"
+}

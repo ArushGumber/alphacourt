@@ -1,0 +1,246 @@
+{
+ "case_id": "AC-T006-I",
+ "claim": {
+  "ann_return": 0.12,
+  "max_drawdown": 0.1,
+  "sharpe": 2.2,
+  "text": "Research-period backtest: Sharpe 2.2, annual return 12%, maximum drawdown 10%."
+ },
+ "family": "combined",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T006-I",
+  "submitted_spec_hash": "abb048e51865",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.10679162818917079,
+     "ann_vol": 0.052289265794480524,
+     "hit_rate": 0.5771744595274007,
+     "max_drawdown": 0.09498250447862366,
+     "n_days": 1989,
+     "sharpe": 2.042324109290579,
+     "turnover": 0.021084143885499618
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v37 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),8))+rank(eps_reported)-0.5*rank(ts_std(ret,116))",
+     "universe": "default"
+    },
+    "spec_hash": "3319f7d222b3",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07359216901350092,
+     "ann_vol": 0.03574063350787476,
+     "hit_rate": 0.5766070565490575,
+     "max_drawdown": 0.07820060458461107,
+     "n_days": 2069,
+     "sharpe": 2.059061683875478,
+     "turnover": 0.019161573710542543
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v37 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,164),10))+rank(eps_reported)-0.5*rank(ts_std(ret,78))",
+     "universe": "default"
+    },
+    "spec_hash": "f5fff9c63ac3",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1159243380230252,
+     "ann_vol": 0.05234188019070776,
+     "hit_rate": 0.5857928964482241,
+     "max_drawdown": 0.09258694533996736,
+     "n_days": 1999,
+     "sharpe": 2.2147530352492995,
+     "turnover": 0.021362329358439482
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v37 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,241),9))+rank(eps_reported)-0.5*rank(ts_std(ret,104))",
+     "universe": "default"
+    },
+    "spec_hash": "d6e6aaee0dcc",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05770448457548712,
+     "ann_vol": 0.02972902815759109,
+     "hit_rate": 0.5957767722473605,
+     "max_drawdown": 0.08838840817166778,
+     "n_days": 1989,
+     "sharpe": 1.9410148313493625,
+     "turnover": 0.013976482543442064
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v37 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),8))+rank(eps_reported)-0.5*rank(ts_std(ret,124))",
+     "universe": "default"
+    },
+    "spec_hash": "165cb8837567",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1160932260035733,
+     "ann_vol": 0.0525461331262339,
+     "hit_rate": 0.5823792931806869,
+     "max_drawdown": 0.10485057956020938,
+     "n_days": 2009,
+     "sharpe": 2.2093581220273135,
+     "turnover": 0.02176555932670658
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v37",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,231),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+     "universe": "default"
+    },
+    "spec_hash": "abb048e51865",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 5,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "innocent",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Blend v37",
+  "notes": "Combined signal, rebalanced on a slow schedule.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 10,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,231),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+  "universe": "default"
+ },
+ "spec_hash": "abb048e51865",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.2,
+  "inflation": -0.051,
+  "naive_sharpe": 2.2094,
+  "regime_sharpe": {
+   "calm": 5.735,
+   "stressed": -4.356
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.4833,
+    0.4547,
+    3.0492,
+    4.6854,
+    1.5312,
+    1.3559
+   ],
+   "sharpe": 2.2599
+  },
+  "turnover": 0.022
+ },
+ "twin_id": "AC-T006-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

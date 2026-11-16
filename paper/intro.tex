@@ -1,0 +1,23 @@
+% Filled in by scripts/make_paper.py from intro.tex.in. Do not edit; edit the template.
+\section{Introduction}
+\textbf{AI agents now research trading strategies on the Web.}
+An agent can read the Web, write a trading strategy and ask to run it with capital. Brokers have started to expose trading to agents over the Model Context Protocol (MCP)~\cite{fm2026brokers}, the standard way agents call tools on the Web. A strategy is judged by its backtest, a replay on past data. The usual score is the Sharpe ratio, return per unit of risk.
+
+\textbf{An agent rewarded for a backtest can inflate it.}
+It can use data not yet known, report the best of many variants, ignore costs, or test only on survivors. This resembles reward hacking~\cite{amodei2016}.
+The statistical traps are well documented for human researchers~\cite{bailey2014,bailey2016,harvey2016}. Agents under pressure have been seen to act on a tip and hide it~\cite{scheurer2023}. No desk can review by hand every strategy a fleet of agents writes.
+
+\textbf{Existing checks cover parts of the problem.}
+Guardrails check agent actions~\cite{chennabasappa2025,she2026}. Debate and AI control use one model to check another~\cite{irving2018,khan2024,kenton2024,greenblatt2023}. Khan et al.\ let debaters quote verified text, the closest ancestor of our exhibit rule~\cite{khan2024}. Trading frameworks put debate inside the trading agent~\cite{xiao2024}. Deterministic checks for look-ahead, survivorship and overfitting are now attached to strategy-writing agents~\cite{backtestauditor2026,gencay2026}; we did not run those as baselines.
+We did not find a gateway that holds a request for capital and blocks it on the output of deterministic tests inside an adversarial proceeding.
+
+\textbf{AlphaCourt is that gate.}
+An MCP gateway holds every request for capital and a court tries it. A prosecutor runs forensic tests, a defence answers, and a judge rules: deploy, paper trading only, or reject. The \emph{exhibit rule} says a charge counts only if it cites a damaging exhibit, the recorded output of a test that was run. Code enforces the rule, not the judge.
+We measured what each part adds, on simulated cases with known truth.
+One small model alone deployed 0 of 58 honest strategies. % source: results/e1.json -> cells.single/small.innocent_deployed
+Given the exhibits but no rule it deployed 18 of 58; with the rule enforced, 50 of 58. % source: results/e1.json -> cells.single_exhibits/small.innocent_deployed; results/e1.json -> cells.single_exhibits_rule/small.innocent_deployed
+The full court deployed 52 of 58, and a court with the rule only stated in its prompts, 17 of 58. % source: results/e1.json -> cells.court/small.innocent_deployed; results/e1.json -> cells.court_norule/small.innocent_deployed
+So the rule does the work, and the court adds little over a single reviewer bound by it.
+A fixed battery of the same tests, with no model, does as well as the court. What the court adds is a readable trial record, and its stated reasons are often wrong.
+
+We contribute the gate (gateway, court under the exhibit rule, audit record), a docket of 104 simulated cases with known truth, and a measured comparison, with post-hoc ablations, of the court against a single reviewer, a debate, a fixed battery and live research agents. % source: results/e1.json -> cells.court/small.n_cases

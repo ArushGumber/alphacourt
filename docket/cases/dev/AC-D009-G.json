@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-D009-G",
+ "claim": {
+  "ann_return": 0.12,
+  "max_drawdown": 0.04,
+  "sharpe": 3.2,
+  "text": "Research-period backtest: Sharpe 3.2, annual return 12%, maximum drawdown 4%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D009-G",
+  "submitted_spec_hash": "892fb49e181c",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.061898924485152,
+     "ann_vol": 0.029786208094192933,
+     "hit_rate": 0.5387355298308103,
+     "max_drawdown": 0.03688297012059755,
+     "n_days": 2246,
+     "sharpe": 2.0781068973065997,
+     "turnover": 0.33142742718542867
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v33 (try)",
+     "notes": "Mean reversion of recent returns across names. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,4))+0.225*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "3ec1e4e0f09f",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.12031208859506545,
+     "ann_vol": 0.03723407694726924,
+     "hit_rate": 0.586559857587895,
+     "max_drawdown": 0.035771973940824764,
+     "n_days": 2247,
+     "sharpe": 3.2312359660600953,
+     "turnover": 0.4475479250604688
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v33",
+     "notes": "Mean reversion of recent returns across names. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))+0.225*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "892fb49e181c",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Blends in the revised sentiment score (named as revised).",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "leaky_field",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Reversal v33",
+  "notes": "Mean reversion of recent returns across names. Adds the vendor's revised sentiment score.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,3))+0.225*rank(sentiment_revised)",
+  "universe": "default"
+ },
+ "spec_hash": "892fb49e181c",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 3.2,
+  "inflation": 3.389,
+  "naive_sharpe": 3.2312,
+  "regime_sharpe": {
+   "calm": 2.992,
+   "stressed": 4.16
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.4543,
+    0.0423,
+    -0.0011,
+    -1.5291,
+    -0.3844,
+    0.4731
+   ],
+   "sharpe": -0.1575
+  },
+  "turnover": 0.448
+ },
+ "twin_id": "AC-D009-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

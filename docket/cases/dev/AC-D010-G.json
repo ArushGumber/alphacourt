@@ -1,0 +1,246 @@
+{
+ "case_id": "AC-D010-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.05,
+  "sharpe": 1.8,
+  "text": "Research-period backtest: Sharpe 1.8, annual return 9%, maximum drawdown 5%."
+ },
+ "family": "momentum",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D010-G",
+  "submitted_spec_hash": "f0746ce18914",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.09901404728921664,
+     "ann_vol": 0.05234933505281968,
+     "hit_rate": 0.5584541062801932,
+     "max_drawdown": 0.051546749848633555,
+     "n_days": 2070,
+     "sharpe": 1.8914098371892019,
+     "turnover": 0.10749240804912968
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,155),25))+0.156*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "9e1bf1bd3312",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.01486598007981082,
+     "ann_vol": 0.02966303823804711,
+     "hit_rate": 0.5101847465656087,
+     "max_drawdown": 0.04530090616419462,
+     "n_days": 2111,
+     "sharpe": 0.5011617475091633,
+     "turnover": 0.06326640144035979
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,120),19))+0.156*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "f05a76b573ea",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11355978873394086,
+     "ann_vol": 0.05287202569884293,
+     "hit_rate": 0.565054015969939,
+     "max_drawdown": 0.061657721273174815,
+     "n_days": 2129,
+     "sharpe": 2.147823678645739,
+     "turnover": 0.11997262106330635
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,104),17))+0.156*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "605c72954b54",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0937700836426175,
+     "ann_vol": 0.05245712076326848,
+     "hit_rate": 0.5481049562682215,
+     "max_drawdown": 0.0530951417025006,
+     "n_days": 2058,
+     "sharpe": 1.7875568136076045,
+     "turnover": 0.10577608238942476
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,168),24))+0.156*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "0b6a570c0a42",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09454677277372324,
+     "ann_vol": 0.0516517578090518,
+     "hit_rate": 0.548264384213029,
+     "max_drawdown": 0.05484906082266902,
+     "n_days": 2103,
+     "sharpe": 1.8304657340655741,
+     "turnover": 0.11449226367217086
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,126),21))+0.156*rank(sentiment_revised)",
+     "universe": "default"
+    },
+    "spec_hash": "f0746ce18914",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 5,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Blends in the revised sentiment score (named as revised).",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "leaky_field",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Trend v12",
+  "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth. Adds the vendor's revised sentiment score.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,126),21))+0.156*rank(sentiment_revised)",
+  "universe": "default"
+ },
+ "spec_hash": "f0746ce18914",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.8,
+  "inflation": 2.724,
+  "naive_sharpe": 1.8305,
+  "regime_sharpe": {
+   "calm": 1.969,
+   "stressed": 1.617
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.1389,
+    -1.1332,
+    -1.0912,
+    0.5898,
+    -1.7032,
+    -1.8866
+   ],
+   "sharpe": -0.8939
+  },
+  "turnover": 0.114
+ },
+ "twin_id": "AC-D010-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w1-275939"
+}

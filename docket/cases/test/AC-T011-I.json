@@ -1,0 +1,182 @@
+{
+ "case_id": "AC-T011-I",
+ "claim": {
+  "ann_return": 0.1,
+  "max_drawdown": 0.1,
+  "sharpe": 2.0,
+  "text": "Research-period backtest: Sharpe 2.0, annual return 10%, maximum drawdown 10%."
+ },
+ "family": "combined",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T011-I",
+  "submitted_spec_hash": "14f271938ee8",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.07108317720714079,
+     "ann_vol": 0.03615010346012032,
+     "hit_rate": 0.5735794074793589,
+     "max_drawdown": 0.0805642495173215,
+     "n_days": 2059,
+     "sharpe": 1.9663339908710789,
+     "turnover": 0.02436447968986317
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v29 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,178),13))+rank(eps_reported)-0.5*rank(ts_std(ret,93))",
+     "universe": "default"
+    },
+    "spec_hash": "93964987dee7",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05054879590044131,
+     "ann_vol": 0.029937892375169826,
+     "hit_rate": 0.5851814516129032,
+     "max_drawdown": 0.10491043097529958,
+     "n_days": 1984,
+     "sharpe": 1.6884553951555372,
+     "turnover": 0.017874667658212568
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v29 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),13))+rank(eps_reported)-0.5*rank(ts_std(ret,102))",
+     "universe": "default"
+    },
+    "spec_hash": "22225572cc77",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10254079381591562,
+     "ann_vol": 0.05199854943736466,
+     "hit_rate": 0.5740927419354839,
+     "max_drawdown": 0.09709730598816796,
+     "n_days": 1984,
+     "sharpe": 1.971993352226721,
+     "turnover": 0.027758684796322104
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v29",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+     "universe": "default"
+    },
+    "spec_hash": "14f271938ee8",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "innocent",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Blend v29",
+  "notes": "Combined signal, rebalanced on a slow schedule.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,252),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+  "universe": "default"
+ },
+ "spec_hash": "14f271938ee8",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.0,
+  "inflation": -0.263,
+  "naive_sharpe": 1.972,
+  "regime_sharpe": {
+   "calm": 5.708,
+   "stressed": -4.888
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.591,
+    0.9816,
+    2.5452,
+    4.5917,
+    1.4852,
+    1.2169
+   ],
+   "sharpe": 2.2353
+  },
+  "turnover": 0.028
+ },
+ "twin_id": "AC-T011-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

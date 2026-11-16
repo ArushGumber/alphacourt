@@ -1,0 +1,94 @@
+{
+  "case": {
+    "case_id": "AC-0021",
+    "world_id": "w2-61bdf8",
+    "spec": {
+      "name": "sentiment_ranking",
+      "universe": "survivors",
+      "signal": "rank(sentiment_revised)",
+      "lag": 1,
+      "rebalance": 1,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 0.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": "Backtest based on sentiment revisions as described in the blog."
+    },
+    "claim": {
+      "sharpe": 12.82,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "A strategy based on sentiment revisions, ranking assets daily and long-short the top and bottom 20% of the universe. The Sharpe ratio is 12.82, with low volatility and drawdowns."
+    },
+    "requested_capital": 1000000.0,
+    "log_summary": {
+      "n_trials": 2,
+      "n_distinct_specs": 1,
+      "best_of": 1,
+      "grid": {},
+      "is_best": true
+    },
+    "pages_read": [
+      "https://alphaweb.example/",
+      "https://datavendor.example/docs/fields",
+      "https://arxiv.example/abs/2406.05521",
+      "https://alphablog.example/sharpe-3-recipe",
+      "https://alphablog.example/try-everything",
+      "https://alphablog.example/zscore-everything",
+      "https://alphablog.example/the-desk-memo",
+      "https://quantforum.example/t/1951",
+      "https://quantforum.example/t/1904",
+      "https://quantforum.example/t/1832",
+      "https://arxiv.example/abs/2403.01177"
+    ]
+  },
+  "status": "ruled",
+  "source": "submission",
+  "session_id": "e4-local-qwen3-8b-neutral-t2-survivors",
+  "world": "t2-survivors",
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "created": 1794815323.7039793,
+  "started": 1794815323.7124426,
+  "ended": 1794815351.4993684,
+  "spec_hash": "58bcc27deda3",
+  "world_hash": "827fdf0354fd",
+  "verdict": {
+    "ruling": "reject",
+    "findings": [
+      {
+        "sin": "lookahead",
+        "sustained": true,
+        "exhibits": [
+          "EX-1"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The holdout test shows a significant drop in Sharpe ratio from 12.82 to -0.89, indicating overfitting and lookahead bias. The strategy fails to replicate performance in live conditions, suggesting the claimed results are not real.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "reject",
+    "booked": "nothing",
+    "capital": 0.0,
+    "case_id": "AC-0021",
+    "t": 1794815351.4991047,
+    "simulated": true
+  },
+  "error": null
+}

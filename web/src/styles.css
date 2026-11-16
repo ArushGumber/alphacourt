@@ -1,0 +1,281 @@
+@import 'tailwindcss';
+
+/* Design tokens. Light and warm: off-white page, white surfaces, near-black text, one orange accent.
+   Charts: orange for a move toward the story (and for buys), slate for a move against it (and for sells),
+   light grey for a move too small to count. The token names are shared by every component. */
+@theme {
+  --color-bg: #fbfaf7;
+  --color-bg-1: #ffffff;
+  --color-bg-2: #f5f3ee;
+  --color-bg-3: #eeebe4;
+  --color-bg-4: #e6e2da;
+  --color-line: #e8e4dc;
+  --color-line-2: #dcd7cd;
+  --color-line-3: #c5bfb3;
+  --color-ink: #1f1e1b;
+  --color-ink-2: #4a4740;
+  --color-ink-3: #6b675f;
+  --color-ink-4: #7a766d;
+  --color-accent: #c8501d;
+  --color-accent-2: #a8411a;
+  --color-accent-ink: #ffffff;
+  --color-accent-wash: #fbefe8;
+  --color-cool: #5e7185;
+  --color-faint: #bdb7ab;
+  --color-up: #c8501d;
+  --color-down: #5e7185;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Source Serif 4 Variable', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --radius-panel: 8px;
+}
+
+:root {
+  color-scheme: light;
+  --accent-wash: #fbefe8;
+  --cool-wash: #eef1f4;
+}
+
+html {
+  background: var(--color-bg);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Body size stays at 15px: the /figure print view inherits from here and must not change. */
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #f6d9c8;
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+/* Headings get focus after navigation so screen readers start there; they need no ring. */
+[tabindex='-1']:focus,
+[tabindex='-1']:focus-visible {
+  outline: none;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+/* A section reached by a link (?s=...) clears the sticky header. */
+[id] {
+  scroll-margin-top: 84px;
+}
+
+/* Serif for page titles and section headings. */
+.serif {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+/* Numbers in text and tables: the body face with equal-width digits. */
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Monospace, only for tickers, prices, prompts and code. */
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.94em;
+}
+
+/* A small field label or column heading: sentence case, quiet. */
+.label {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--color-ink-3);
+}
+
+/* The one surface: white, a hairline, no shadow. Never put a panel inside a panel. */
+.panel {
+  background: var(--color-bg-1);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+}
+
+/* A quiet filled area inside a panel (no border, so nothing looks nested). */
+.panel-inset {
+  background: #f8f6f2;
+  border-radius: 6px;
+}
+
+.hairline {
+  border-color: var(--color-line);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+.text-pretty {
+  text-wrap: pretty;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d2ccc1 transparent;
+}
+
+/* Horizontal scroller without a visible bar, for option rows on phones */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 0.25s ease-out both;
+}
+
+/* Native range input styled as a thin slider (used for scrubbers). */
+input[type='range'].scrub {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='range'].scrub::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-accent) var(--fill, 0%), var(--color-bg-4) var(--fill, 0%));
+}
+input[type='range'].scrub::-moz-range-track {
+  height: 3px;
+  border-radius: 3px;
+  background: var(--color-bg-4);
+}
+input[type='range'].scrub::-moz-range-progress {
+  height: 3px;
+  border-radius: 3px;
+  background: var(--color-accent);
+}
+input[type='range'].scrub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5.5px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--color-ink-2);
+}
+input[type='range'].scrub::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--color-ink-2);
+}
+
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+/* Chart first draw. The final state is the default; reduced motion skips the animation (see the rule above). */
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.draw-line {
+  stroke-dasharray: 1;
+  animation: draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.grow-bar {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* A new trial event settles in: a short rise and fade. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* The ruling stamp lands: scale down onto the page with a slight tilt. */
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(1.18) rotate(-5deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-2deg);
+  }
+}
+.stamp {
+  animation: stamp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform: rotate(-2deg);
+}

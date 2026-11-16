@@ -1,0 +1,10 @@
+\section{Demonstration}
+The public site (\DemoURL) needs no account. A visitor can try five things.
+\begin{enumerate}
+\item \textbf{Replay a trial.} Pick a docket case and watch the exhibits and ruling, then the true profit on the sealed period. One button shows the case's twin, with the opposite truth.
+\item \textbf{Break a strategy in the Flaw Lab.} Tick a flaw, such as trading on the same bar, and compare the claimed backtest with the honest one.
+\item \textbf{Watch a real agent.} The agent page replays a recorded Claude Code session that used only the gateway's tools under a brief that rewards a high Sharpe ratio, then the court's record of what it submitted.
+\item \textbf{Run an analyst in the Studio.} Pick a model and a brief, watch its research log, then the court try what it submits.
+\item \textbf{Connect over MCP.} The Connect page gives one line of configuration for Claude Code, Codex or Gemini CLI. The visitor's own agent is tried while they watch.
+\end{enumerate}
+At the booth we show recorded trials and run live ones on request, since a live court trial takes about {{e1.court.small.cost_per_case.seconds}} s. On the site a visitor can pick the model for each court role; a second live court, Qwen3 8B on Hugging Face, runs at \url{https://arushthegarlic-alphacourt-live.hf.space}. A static mirror at \url{https://huggingface.co/spaces/Arushthegarlic/alphacourt} shows recorded trials without a server.

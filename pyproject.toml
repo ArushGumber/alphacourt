@@ -1,0 +1,28 @@
+[project]
+name = "alphacourt"
+version = "0.1.0"
+description = "No alpha without a trial: an MCP gateway that puts agent-written trading strategies on trial before they trade."
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "Arush Gumber" },
+  { name = "Sidhant Gumber" },
+  { name = "Pranav Viksar Garg" },
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "pydantic>=2",
+  "fastapi",
+  "uvicorn[standard]",
+  "httpx",
+  "sse-starlette",
+  "matplotlib",
+  "pytest",
+  "hypothesis",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

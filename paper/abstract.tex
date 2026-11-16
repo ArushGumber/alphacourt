@@ -1,0 +1,7 @@
+% Filled in by scripts/make_paper.py from abstract.tex.in. Do not edit; edit the template.
+AI agents now write trading strategies and ask to run them with capital. AlphaCourt is a gateway on the Model Context Protocol that holds each request and puts the strategy on trial: a prosecutor, a defence and a judge argue over the output of deterministic tests, and an \emph{exhibit rule}, enforced in code, strikes any finding that cites no damaging test.
+On simulated cases with known truth, a court run by the small open model Qwen3 8B stopped 46 of 46 flawed strategies and deployed 52 of 58 honest ones. % source: results/e1.json -> cells.court/small.guilty_stopped; results/e1.json -> cells.court/small.innocent_deployed
+Reviewing alone, the same model deployed 0 of 58 honest strategies, and 18 of 58 when shown the tests' output without the rule (post hoc), so the rule, not the evidence alone, is what lets honest work through. % source: results/e1.json -> cells.single/small.innocent_deployed; results/e1.json -> cells.single_exhibits/small.innocent_deployed
+A fixed battery of the same tests does as well without any model. The court adds a readable trial record, but its stated reasons are often wrong, and a court run by Gemma 3 12B stopped only 26 of 46 flawed strategies. % source: results/e1.json -> cells.court/mid.guilty_stopped
+Everything is simulated and no real order is placed.
+Demo: \DemoURL. Video: \VideoURL. Code and data: \CodeURL.

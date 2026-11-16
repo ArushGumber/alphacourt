@@ -1,0 +1,242 @@
+{
+ "case_id": "AC-D017-G",
+ "claim": {
+  "ann_return": 0.11,
+  "max_drawdown": 0.04,
+  "sharpe": 2.2,
+  "text": "Research-period backtest: Sharpe 2.2, annual return 11%, maximum drawdown 4%."
+ },
+ "family": "sentiment",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D017-G",
+  "submitted_spec_hash": "50eae87f5fde",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.11426919047270429,
+     "ann_vol": 0.05155338888461787,
+     "hit_rate": 0.5257142857142857,
+     "max_drawdown": 0.03617406336745401,
+     "n_days": 350,
+     "sharpe": 2.2165214148860564,
+     "turnover": 0.07069882498453926
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "News tone v4 (try)",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": 1983,
+      "start": 1633
+     },
+     "signal": "rank(ts_mean(sentiment,10))",
+     "universe": "default"
+    },
+    "spec_hash": "db7fd32ca7ef",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11426919047270429,
+     "ann_vol": 0.05155338888461787,
+     "hit_rate": 0.5257142857142857,
+     "max_drawdown": 0.03617406336745401,
+     "n_days": 350,
+     "sharpe": 2.2165214148860564,
+     "turnover": 0.07069882498453926
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "News tone v4 (try)",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": 1983,
+      "start": 1633
+     },
+     "signal": "rank(ts_mean(sentiment,10))",
+     "universe": "default"
+    },
+    "spec_hash": "db7fd32ca7ef",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06649002215023204,
+     "ann_vol": 0.03269717398051831,
+     "hit_rate": 0.5314285714285715,
+     "max_drawdown": 0.024663167951474083,
+     "n_days": 350,
+     "sharpe": 2.0335097519390595,
+     "turnover": 0.04654747522687722
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "News tone v4 (try)",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": 1983,
+      "start": 1633
+     },
+     "signal": "rank(ts_mean(sentiment,14))",
+     "universe": "default"
+    },
+    "spec_hash": "35d1db6c5c0c",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.039732106452082916,
+     "ann_vol": 0.028945280088262068,
+     "hit_rate": 0.5171428571428571,
+     "max_drawdown": 0.024939655676796464,
+     "n_days": 350,
+     "sharpe": 1.372662704625033,
+     "turnover": 0.043519300639836354
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "News tone v4 (try)",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": 1983,
+      "start": 1633
+     },
+     "signal": "rank(ts_mean(sentiment,11))",
+     "universe": "default"
+    },
+    "spec_hash": "068894167108",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11426919047270429,
+     "ann_vol": 0.05155338888461787,
+     "hit_rate": 0.5257142857142857,
+     "max_drawdown": 0.03617406336745401,
+     "n_days": 350,
+     "sharpe": 2.2165214148860564,
+     "turnover": 0.07069882498453926
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "News tone v4",
+     "notes": "Long names with improving news sentiment.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": 1983,
+      "start": 1633
+     },
+     "signal": "rank(ts_mean(sentiment,10))",
+     "universe": "default"
+    },
+    "spec_hash": "50eae87f5fde",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 4,
+  "n_trials": 5
+ },
+ "notes_for_paper": "Sample bounds restricted to a window that happens to be good, shown in the spec.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "lucky_period",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "News tone v4",
+  "notes": "Long names with improving news sentiment.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 3,
+  "sample": {
+   "end": 1983,
+   "start": 1633
+  },
+  "signal": "rank(ts_mean(sentiment,10))",
+  "universe": "default"
+ },
+ "spec_hash": "50eae87f5fde",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.2,
+  "inflation": 1.782,
+  "naive_sharpe": 2.2165,
+  "regime_sharpe": {
+   "calm": 1.612,
+   "stressed": 5.905
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.3119,
+    0.8494,
+    0.4735,
+    0.0244,
+    0.4628,
+    0.4823
+   ],
+   "sharpe": 0.434
+  },
+  "turnover": 0.071
+ },
+ "twin_id": "AC-D017-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

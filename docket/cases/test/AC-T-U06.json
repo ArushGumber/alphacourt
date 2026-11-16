@@ -1,0 +1,152 @@
+{
+ "case_id": "AC-T-U06",
+ "claim": {
+  "ann_return": 0.1,
+  "max_drawdown": 0.11,
+  "sharpe": 1.9,
+  "text": "Research-period backtest: Sharpe 1.9, annual return 10%, maximum drawdown 11%."
+ },
+ "family": "combined",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T-U06",
+  "submitted_spec_hash": "f7f8ae4375da",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.05049876646777525,
+     "ann_vol": 0.029759902175757132,
+     "hit_rate": 0.584133400707428,
+     "max_drawdown": 0.12295983103699301,
+     "n_days": 1979,
+     "sharpe": 1.6968727306137554,
+     "turnover": 0.015381323453507557
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v3 (try)",
+     "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),17))+rank(eps_reported)-0.5*rank(ts_std(ret,43))",
+     "universe": "default"
+    },
+    "spec_hash": "5894012f0aec",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09995358048724012,
+     "ann_vol": 0.05162229580030488,
+     "hit_rate": 0.5726495726495726,
+     "max_drawdown": 0.1148147002812345,
+     "n_days": 1989,
+     "sharpe": 1.9362482612919707,
+     "turnover": 0.022853930375644635
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v3",
+     "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,231),21))+rank(eps_reported)-0.5*rank(ts_std(ret,60))",
+     "universe": "default"
+    },
+    "spec_hash": "f7f8ae4375da",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Honest strategy that declares it is built for calm regimes.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "unusual",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Blend v3",
+  "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 10,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,231),21))+rank(eps_reported)-0.5*rank(ts_std(ret,60))",
+  "universe": "default"
+ },
+ "spec_hash": "f7f8ae4375da",
+ "split": "test",
+ "truth": {
+  "battery_ruling": "deploy",
+  "claim_sharpe": 1.9,
+  "inflation": -0.16,
+  "naive_sharpe": 1.9362,
+  "regime_sharpe": {
+   "calm": 5.668,
+   "stressed": -4.901
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.3033,
+    0.5808,
+    2.9034,
+    4.38,
+    1.0629,
+    1.3499
+   ],
+   "sharpe": 2.0967
+  },
+  "turnover": 0.023
+ },
+ "twin_id": null,
+ "unusual_kind": "calm",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

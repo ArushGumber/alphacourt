@@ -1,0 +1,152 @@
+{
+ "case_id": "AC-T-U07",
+ "claim": {
+  "ann_return": 0.06,
+  "max_drawdown": 0.21,
+  "sharpe": 1.1,
+  "text": "Research-period backtest: Sharpe 1.1, annual return 6%, maximum drawdown 21%."
+ },
+ "family": "momentum",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T-U07",
+  "submitted_spec_hash": "4d5114f9185f",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.06446944975609356,
+     "ann_vol": 0.06146556318858214,
+     "hit_rate": 0.5718623481781376,
+     "max_drawdown": 0.22292612648058147,
+     "n_days": 1976,
+     "sharpe": 1.0488710492783613,
+     "turnover": 0.012169693377069826
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v4 (try)",
+     "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),7))",
+     "universe": "default"
+    },
+    "spec_hash": "38e927ab07c5",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06453005425283713,
+     "ann_vol": 0.06143653852362735,
+     "hit_rate": 0.576417004048583,
+     "max_drawdown": 0.20803781246797737,
+     "n_days": 1976,
+     "sharpe": 1.0503530277510684,
+     "turnover": 0.012327820801749323
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Trend v4",
+     "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),5))",
+     "universe": "default"
+    },
+    "spec_hash": "4d5114f9185f",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Honest strategy that declares it is built for calm regimes.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "unusual",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Trend v4",
+  "notes": "Built for calm markets: the signal works in calm regimes and gives back part of it in stressed ones. Intended to run at reduced size when volatility is high.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,252),5))",
+  "universe": "default"
+ },
+ "spec_hash": "4d5114f9185f",
+ "split": "test",
+ "truth": {
+  "battery_ruling": "deploy",
+  "claim_sharpe": 1.1,
+  "inflation": -0.614,
+  "naive_sharpe": 1.0504,
+  "regime_sharpe": {
+   "calm": 5.938,
+   "stressed": -6.679
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.9524,
+    -0.85,
+    2.5606,
+    4.0608,
+    0.8825,
+    0.3795
+   ],
+   "sharpe": 1.6643
+  },
+  "turnover": 0.012
+ },
+ "twin_id": null,
+ "unusual_kind": "calm",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

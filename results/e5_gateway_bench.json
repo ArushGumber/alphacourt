@@ -1,0 +1,20 @@
+{
+ "n_backtests": 30,
+ "world": "t2-clean",
+ "runs": [
+  {
+   "threads": 1,
+   "seconds": 9.682,
+   "backtests_per_second": 3.099,
+   "latency_ms_median": 283.0,
+   "latency_ms_p90": 409.3
+  },
+  {
+   "threads": 4,
+   "seconds": 5.647,
+   "backtests_per_second": 5.312,
+   "latency_ms_median": 707.0,
+   "latency_ms_p90": 813.7
+  }
+ ]
+}

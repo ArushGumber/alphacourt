@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-D021-I",
+ "claim": {
+  "ann_return": 0.11,
+  "max_drawdown": 0.17,
+  "sharpe": 1.8,
+  "text": "Research-period backtest: Sharpe 1.8, annual return 11%, maximum drawdown 17%."
+ },
+ "family": "momentum",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D021-I",
+  "submitted_spec_hash": "60efc32b6307",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.0856570817605403,
+     "ann_vol": 0.03522389996834756,
+     "hit_rate": 0.6093514328808446,
+     "max_drawdown": 0.10716469470314355,
+     "n_days": 1989,
+     "sharpe": 2.431788695672891,
+     "turnover": 0.01148352826847041
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v26 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),8))",
+     "universe": "default"
+    },
+    "spec_hash": "a47fa4d71eee",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10888124032458087,
+     "ann_vol": 0.061096612742996714,
+     "hit_rate": 0.5928322548531608,
+     "max_drawdown": 0.16972889450082568,
+     "n_days": 2009,
+     "sharpe": 1.782115823385995,
+     "turnover": 0.017971055921657528
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v26",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,231),10))",
+     "universe": "default"
+    },
+    "spec_hash": "60efc32b6307",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "innocent",
+ "seed": 1,
+ "sin": null,
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Trend v26",
+  "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 10,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,231),10))",
+  "universe": "default"
+ },
+ "spec_hash": "60efc32b6307",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.8,
+  "inflation": -0.002,
+  "naive_sharpe": 1.7821,
+  "regime_sharpe": {
+   "calm": 6.182,
+   "stressed": -7.155
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    3.1049,
+    -0.2159,
+    2.1678,
+    4.3441,
+    1.0807,
+    0.2219
+   ],
+   "sharpe": 1.7839
+  },
+  "turnover": 0.018
+ },
+ "twin_id": "AC-D021-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

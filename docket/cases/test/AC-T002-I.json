@@ -1,0 +1,214 @@
+{
+ "case_id": "AC-T002-I",
+ "claim": {
+  "ann_return": 0.12,
+  "max_drawdown": 0.1,
+  "sharpe": 2.2,
+  "text": "Research-period backtest: Sharpe 2.2, annual return 12%, maximum drawdown 10%."
+ },
+ "family": "combined",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T002-I",
+  "submitted_spec_hash": "8a3eb3e847bb",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.1099281627111704,
+     "ann_vol": 0.05188781044679693,
+     "hit_rate": 0.5783308931185944,
+     "max_drawdown": 0.11057599211958136,
+     "n_days": 2049,
+     "sharpe": 2.11857393412052,
+     "turnover": 0.023067231859620074
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v31 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,183),13))+rank(eps_reported)-0.5*rank(ts_std(ret,63))",
+     "universe": "default"
+    },
+    "spec_hash": "ef7a946ad61c",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11045828085697412,
+     "ann_vol": 0.05159401127591707,
+     "hit_rate": 0.5790803436078827,
+     "max_drawdown": 0.0943880086928745,
+     "n_days": 1979,
+     "sharpe": 2.140912833201895,
+     "turnover": 0.021928722563578203
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v31 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),11))+rank(eps_reported)-0.5*rank(ts_std(ret,66))",
+     "universe": "default"
+    },
+    "spec_hash": "038ca8400264",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11426967990165637,
+     "ann_vol": 0.052166280099005036,
+     "hit_rate": 0.5751633986928104,
+     "max_drawdown": 0.09698353905733986,
+     "n_days": 1989,
+     "sharpe": 2.1904893292139467,
+     "turnover": 0.02181868346372256
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v31 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),9))+rank(eps_reported)-0.5*rank(ts_std(ret,73))",
+     "universe": "default"
+    },
+    "spec_hash": "a44b684d1233",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1160932260035733,
+     "ann_vol": 0.0525461331262339,
+     "hit_rate": 0.5823792931806869,
+     "max_drawdown": 0.10485057956020938,
+     "n_days": 2009,
+     "sharpe": 2.2093581220273135,
+     "turnover": 0.02176555932670658
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v31",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,231),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+     "universe": "default"
+    },
+    "spec_hash": "8a3eb3e847bb",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 3,
+ "sin": null,
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Blend v31",
+  "notes": "Multi-factor score: momentum, drift and low risk.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 10,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,231),10))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+  "universe": "default"
+ },
+ "spec_hash": "8a3eb3e847bb",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.2,
+  "inflation": -0.051,
+  "naive_sharpe": 2.2094,
+  "regime_sharpe": {
+   "calm": 5.735,
+   "stressed": -4.356
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    2.4833,
+    0.4547,
+    3.0492,
+    4.6854,
+    1.5312,
+    1.3559
+   ],
+   "sharpe": 2.2599
+  },
+  "turnover": 0.022
+ },
+ "twin_id": "AC-T002-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w3-d41316"
+}

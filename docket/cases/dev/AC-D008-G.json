@@ -1,0 +1,2838 @@
+{
+ "case_id": "AC-D008-G",
+ "claim": {
+  "ann_return": 0.04,
+  "max_drawdown": 0.11,
+  "sharpe": 1.1,
+  "text": "Research-period backtest: Sharpe 1.1, annual return 4%, maximum drawdown 11%."
+ },
+ "family": "momentum",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent-batch",
+  "pages_read": [],
+  "session_id": "docket-AC-D008-G",
+  "submitted_spec_hash": "03de8c3ecbb9",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": -0.02753074331181801,
+     "ann_vol": 0.0382403098932165,
+     "hit_rate": 0.473064735174287,
+     "max_drawdown": 0.2659021778072212,
+     "n_days": 2209,
+     "sharpe": -0.7199403819868554,
+     "turnover": 0.07885134405504994
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "86e0c0be44ef",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.019628147677016816,
+     "ann_vol": 0.03859728590153851,
+     "hit_rate": 0.47738693467336685,
+     "max_drawdown": 0.22080097518574998,
+     "n_days": 2189,
+     "sharpe": -0.5085369921369115,
+     "turnover": 0.07872479664439112
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "7d23f42f4886",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.02442432024523514,
+     "ann_vol": 0.03862389064818834,
+     "hit_rate": 0.47223497016980265,
+     "max_drawdown": 0.25157824506764626,
+     "n_days": 2179,
+     "sharpe": -0.6323630228686133,
+     "turnover": 0.0786266949902922
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "aac7b8954a51",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.015835271427906816,
+     "ann_vol": 0.03786616210396519,
+     "hit_rate": 0.4793886058360352,
+     "max_drawdown": 0.22100094562837888,
+     "n_days": 2159,
+     "sharpe": -0.4181905571636638,
+     "turnover": 0.07852997031623672
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "156a4604f621",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01629298504935541,
+     "ann_vol": 0.03806192793730442,
+     "hit_rate": 0.47417403443462075,
+     "max_drawdown": 0.24422993744356947,
+     "n_days": 2149,
+     "sharpe": -0.4280651541402004,
+     "turnover": 0.07862971309045745
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "8befe97ca611",
+    "t": 1760000244.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01470633812058372,
+     "ann_vol": 0.03777794412174522,
+     "hit_rate": 0.4700330344502124,
+     "max_drawdown": 0.21041317740321636,
+     "n_days": 2119,
+     "sharpe": -0.38928370673613927,
+     "turnover": 0.07835756484563086
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "408115122138",
+    "t": 1760000305.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.007471296670077274,
+     "ann_vol": 0.03815432521984567,
+     "hit_rate": 0.4773701762744164,
+     "max_drawdown": 0.18314169767505337,
+     "n_days": 2099,
+     "sharpe": -0.19581781690614564,
+     "turnover": 0.07823441159626866
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "7954b62890cb",
+    "t": 1760000366.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.008270855834078097,
+     "ann_vol": 0.03835941942597231,
+     "hit_rate": 0.4775253745770904,
+     "max_drawdown": 0.18827364805716285,
+     "n_days": 2069,
+     "sharpe": -0.215614729259382,
+     "turnover": 0.0784866446361722
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "f9415bca3c1d",
+    "t": 1760000427.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01178434445124979,
+     "ann_vol": 0.03826654327021344,
+     "hit_rate": 0.4763299170326989,
+     "max_drawdown": 0.18245446188531414,
+     "n_days": 2049,
+     "sharpe": -0.3079542452537825,
+     "turnover": 0.07854046685022288
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "499f15d89752",
+    "t": 1760000488.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01213585458780466,
+     "ann_vol": 0.03823354491852637,
+     "hit_rate": 0.4749876176324913,
+     "max_drawdown": 0.1754093149443289,
+     "n_days": 2019,
+     "sharpe": -0.31741379497154965,
+     "turnover": 0.07862392141851164
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "d0fcc09842f2",
+    "t": 1760000549.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.010289999426886387,
+     "ann_vol": 0.03852023880437968,
+     "hit_rate": 0.4782391195597799,
+     "max_drawdown": 0.16713941955300493,
+     "n_days": 1999,
+     "sharpe": -0.2671322854238493,
+     "turnover": 0.0786525535749774
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 3,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,3)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "bc011c421643",
+    "t": 1760000610.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01582242878738935,
+     "ann_vol": 0.03924120128411199,
+     "hit_rate": 0.4784970574920779,
+     "max_drawdown": 0.180153884397964,
+     "n_days": 2209,
+     "sharpe": -0.40320959271436857,
+     "turnover": 0.0797102186159447
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "6b6a5040a3a5",
+    "t": 1760000671.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.014595751796174089,
+     "ann_vol": 0.039663944944984895,
+     "hit_rate": 0.485153037916857,
+     "max_drawdown": 0.1578606538831548,
+     "n_days": 2189,
+     "sharpe": -0.3679853785703576,
+     "turnover": 0.07916949372888867
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "8ce4a5001273",
+    "t": 1760000732.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.016009089889675174,
+     "ann_vol": 0.03976204545754354,
+     "hit_rate": 0.4887563102340523,
+     "max_drawdown": 0.1692303515799601,
+     "n_days": 2179,
+     "sharpe": -0.40262239292415425,
+     "turnover": 0.0788135152498313
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "528de1107871",
+    "t": 1760000793.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.008101729783390915,
+     "ann_vol": 0.039769647033072425,
+     "hit_rate": 0.4900416859657249,
+     "max_drawdown": 0.1047990521640384,
+     "n_days": 2159,
+     "sharpe": -0.20371641158025666,
+     "turnover": 0.07855492873246085
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "c4410b7bce3c",
+    "t": 1760000854.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.008009555442220045,
+     "ann_vol": 0.039894649775761966,
+     "hit_rate": 0.4848766868310842,
+     "max_drawdown": 0.11100535037866396,
+     "n_days": 2149,
+     "sharpe": -0.20076765900289362,
+     "turnover": 0.07853056595264754
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "73aa957401cd",
+    "t": 1760000915.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.010336044639373534,
+     "ann_vol": 0.0401085869952887,
+     "hit_rate": 0.48466257668711654,
+     "max_drawdown": 0.12967035527209952,
+     "n_days": 2119,
+     "sharpe": -0.2577015400863572,
+     "turnover": 0.07833021844839126
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "5ba86d1ab1cc",
+    "t": 1760000976.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.006123870199561787,
+     "ann_vol": 0.039746535067034974,
+     "hit_rate": 0.4878513577894235,
+     "max_drawdown": 0.09962058890931967,
+     "n_days": 2099,
+     "sharpe": -0.15407305792148937,
+     "turnover": 0.078201827834443
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "7e1416504e56",
+    "t": 1760001037.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.005986846732556939,
+     "ann_vol": 0.039864443987399946,
+     "hit_rate": 0.48139197680038665,
+     "max_drawdown": 0.11373609557054136,
+     "n_days": 2069,
+     "sharpe": -0.15018011374871346,
+     "turnover": 0.07827486329405006
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "ca0162eb6400",
+    "t": 1760001098.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.00807469451067334,
+     "ann_vol": 0.03989337240339731,
+     "hit_rate": 0.4816983894582723,
+     "max_drawdown": 0.14201062184935864,
+     "n_days": 2049,
+     "sharpe": -0.2024069168438039,
+     "turnover": 0.07841638128060856
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "2e2a80375911",
+    "t": 1760001159.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.004777967017226779,
+     "ann_vol": 0.040031442180622476,
+     "hit_rate": 0.487369985141159,
+     "max_drawdown": 0.1231403448783249,
+     "n_days": 2019,
+     "sharpe": -0.11935535561443227,
+     "turnover": 0.07831562504443289
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "c7862dea4c41",
+    "t": 1760001220.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.00518780148453723,
+     "ann_vol": 0.04019285772318241,
+     "hit_rate": 0.4847423711855928,
+     "max_drawdown": 0.1347685627874073,
+     "n_days": 1999,
+     "sharpe": -0.12907272033919137,
+     "turnover": 0.07832814535856267
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 5,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,5)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "9870ebc9ce12",
+    "t": 1760001281.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.020643457956399377,
+     "ann_vol": 0.03908535560473288,
+     "hit_rate": 0.4852874603893164,
+     "max_drawdown": 0.20842215967288077,
+     "n_days": 2209,
+     "sharpe": -0.5281634933852218,
+     "turnover": 0.0800002681710378
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "b51b7a639be0",
+    "t": 1760001342.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.024884929063120283,
+     "ann_vol": 0.038248934854454575,
+     "hit_rate": 0.4751027866605756,
+     "max_drawdown": 0.24332101867006886,
+     "n_days": 2189,
+     "sharpe": -0.6506044980811309,
+     "turnover": 0.0793994729609845
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "6e1fb3dac3ad",
+    "t": 1760001403.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.02286120240155378,
+     "ann_vol": 0.03914737291860331,
+     "hit_rate": 0.4745296007342818,
+     "max_drawdown": 0.2215411348217166,
+     "n_days": 2179,
+     "sharpe": -0.5839779453167305,
+     "turnover": 0.0788388793809177
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "e6c1185d2329",
+    "t": 1760001464.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.021986366574664615,
+     "ann_vol": 0.039536853160782856,
+     "hit_rate": 0.476609541454377,
+     "max_drawdown": 0.2124808268060115,
+     "n_days": 2159,
+     "sharpe": -0.5560980406117195,
+     "turnover": 0.07879447467357496
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "20eb22426c2a",
+    "t": 1760001525.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01880801008920667,
+     "ann_vol": 0.03956016343931843,
+     "hit_rate": 0.473708701721731,
+     "max_drawdown": 0.18495008534737137,
+     "n_days": 2149,
+     "sharpe": -0.4754280178355782,
+     "turnover": 0.07883515872769434
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "fc5e39b9d2f5",
+    "t": 1760001586.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.02398611598256701,
+     "ann_vol": 0.03934864448863176,
+     "hit_rate": 0.4695611137328929,
+     "max_drawdown": 0.22912058224221882,
+     "n_days": 2119,
+     "sharpe": -0.6095792191646361,
+     "turnover": 0.0788750466747281
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "1302667fef45",
+    "t": 1760001647.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.019594918305691607,
+     "ann_vol": 0.03909309528291555,
+     "hit_rate": 0.4754645069080515,
+     "max_drawdown": 0.19833213658317206,
+     "n_days": 2099,
+     "sharpe": -0.501237319886895,
+     "turnover": 0.0788432912314904
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "cad608525335",
+    "t": 1760001708.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01850271414911128,
+     "ann_vol": 0.03880514267556298,
+     "hit_rate": 0.471725471242146,
+     "max_drawdown": 0.1894857401117657,
+     "n_days": 2069,
+     "sharpe": -0.4768108779757977,
+     "turnover": 0.07878062601138103
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "32a36dac8907",
+    "t": 1760001769.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.010901567218062083,
+     "ann_vol": 0.03888323103466406,
+     "hit_rate": 0.4807223035627135,
+     "max_drawdown": 0.14944677773243034,
+     "n_days": 2049,
+     "sharpe": -0.2803668040946348,
+     "turnover": 0.07869249989324373
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "7edea1bf8d37",
+    "t": 1760001830.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.013961865650879405,
+     "ann_vol": 0.039520533840714994,
+     "hit_rate": 0.4764735017335314,
+     "max_drawdown": 0.1492442845349386,
+     "n_days": 2019,
+     "sharpe": -0.35328130199738245,
+     "turnover": 0.07885881218314801
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "835bece3caa9",
+    "t": 1760001891.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.01374911121575668,
+     "ann_vol": 0.03926499999381581,
+     "hit_rate": 0.47223611805902954,
+     "max_drawdown": 0.1474492923174128,
+     "n_days": 1999,
+     "sharpe": -0.3501620073327938,
+     "turnover": 0.07876372847625568
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 7,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,7)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "5c7949035aaa",
+    "t": 1760001952.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0137072886752841,
+     "ann_vol": 0.04009866598060295,
+     "hit_rate": 0.485740153915799,
+     "max_drawdown": 0.1770656208595996,
+     "n_days": 2209,
+     "sharpe": -0.3418390198296065,
+     "turnover": 0.07806570984355414
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "f1c455b4c234",
+    "t": 1760002013.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.005533402588362305,
+     "ann_vol": 0.04000212065909051,
+     "hit_rate": 0.490634993147556,
+     "max_drawdown": 0.15453284161746145,
+     "n_days": 2189,
+     "sharpe": -0.13832773106004906,
+     "turnover": 0.07652916362889281
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "62c50e2eec77",
+    "t": 1760002074.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.008215451993177358,
+     "ann_vol": 0.040176253307849935,
+     "hit_rate": 0.48692060578246904,
+     "max_drawdown": 0.18243600404386134,
+     "n_days": 2179,
+     "sharpe": -0.20448526969965522,
+     "turnover": 0.07598017828927538
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "0e5430fa595c",
+    "t": 1760002135.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0036625750116283935,
+     "ann_vol": 0.040371877410345265,
+     "hit_rate": 0.4789254284390922,
+     "max_drawdown": 0.18011115232203195,
+     "n_days": 2159,
+     "sharpe": -0.0907209485058493,
+     "turnover": 0.07543489621856056
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "0690fc081ece",
+    "t": 1760002196.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0006551126370636823,
+     "ann_vol": 0.04045776345947432,
+     "hit_rate": 0.4890646812470917,
+     "max_drawdown": 0.1646463000503976,
+     "n_days": 2149,
+     "sharpe": -0.016192507470658746,
+     "turnover": 0.07544365731100988
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "c2730ff9dc83",
+    "t": 1760002257.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0037550782071859292,
+     "ann_vol": 0.04026178329229332,
+     "hit_rate": 0.49504483246814535,
+     "max_drawdown": 0.1462966637520501,
+     "n_days": 2119,
+     "sharpe": 0.09326656447193946,
+     "turnover": 0.0752360998793131
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "2700597150e5",
+    "t": 1760002318.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0060060132526978185,
+     "ann_vol": 0.040088854564880844,
+     "hit_rate": 0.4907098618389709,
+     "max_drawdown": 0.16396786061223242,
+     "n_days": 2099,
+     "sharpe": 0.14981753202695108,
+     "turnover": 0.07507279767665097
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "6aa4bceaf6f0",
+    "t": 1760002379.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.008736735958928888,
+     "ann_vol": 0.03967410238568604,
+     "hit_rate": 0.5031416143064282,
+     "max_drawdown": 0.1710433947588533,
+     "n_days": 2069,
+     "sharpe": 0.220212567734891,
+     "turnover": 0.07474051786476146
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "0bb48b236344",
+    "t": 1760002440.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.012245014200032045,
+     "ann_vol": 0.03990915659832648,
+     "hit_rate": 0.4997559785261103,
+     "max_drawdown": 0.16006746532789895,
+     "n_days": 2049,
+     "sharpe": 0.30682217425124736,
+     "turnover": 0.07482693182461479
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "4fb54fad6eaf",
+    "t": 1760002501.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.018605772185909225,
+     "ann_vol": 0.04058815617404187,
+     "hit_rate": 0.4972758791480931,
+     "max_drawdown": 0.15511002011911063,
+     "n_days": 2019,
+     "sharpe": 0.45840397642424907,
+     "turnover": 0.0746195888994725
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "ec5aa147f730",
+    "t": 1760002562.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.013007498497479631,
+     "ann_vol": 0.040391918214329164,
+     "hit_rate": 0.4912456228114057,
+     "max_drawdown": 0.1535255714517984,
+     "n_days": 1999,
+     "sharpe": 0.32203220526588366,
+     "turnover": 0.07472324781488107
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 11,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,11)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "ba03e92acb60",
+    "t": 1760002623.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0031632379906438354,
+     "ann_vol": 0.04056464440191505,
+     "hit_rate": 0.4907197827071073,
+     "max_drawdown": 0.09915850443172652,
+     "n_days": 2209,
+     "sharpe": -0.07798017306160583,
+     "turnover": 0.07301643827351204
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "4c623f3e667a",
+    "t": 1760002684.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0038270389729601205,
+     "ann_vol": 0.04079249318549441,
+     "hit_rate": 0.49611694837825493,
+     "max_drawdown": 0.11858368249008791,
+     "n_days": 2189,
+     "sharpe": -0.09381723631251337,
+     "turnover": 0.07111380702724769
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "2b8f4b12f13e",
+    "t": 1760002745.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0028902954503757707,
+     "ann_vol": 0.040779043365796,
+     "hit_rate": 0.4850849013308857,
+     "max_drawdown": 0.13748102677835433,
+     "n_days": 2179,
+     "sharpe": -0.07087698022852708,
+     "turnover": 0.07007449616504373
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "1dc1c25907b2",
+    "t": 1760002806.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00014806708924433682,
+     "ann_vol": 0.040588601069023726,
+     "hit_rate": 0.4854099119962946,
+     "max_drawdown": 0.11073504950106555,
+     "n_days": 2159,
+     "sharpe": 0.0036479968598212707,
+     "turnover": 0.06962153374901905
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "d545b05acbc7",
+    "t": 1760002867.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00248848669146788,
+     "ann_vol": 0.04080394311929213,
+     "hit_rate": 0.49185667752442996,
+     "max_drawdown": 0.1235119564962949,
+     "n_days": 2149,
+     "sharpe": 0.06098642683116874,
+     "turnover": 0.06930170644838984
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "e8311c7028cc",
+    "t": 1760002928.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00852475441278273,
+     "ann_vol": 0.04064378756266698,
+     "hit_rate": 0.49598867390278434,
+     "max_drawdown": 0.1326669491448028,
+     "n_days": 2119,
+     "sharpe": 0.209743110177386,
+     "turnover": 0.0691234850146903
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "a67bbeb6032b",
+    "t": 1760002989.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00767525754993077,
+     "ann_vol": 0.04012228527017498,
+     "hit_rate": 0.4916626965221534,
+     "max_drawdown": 0.14728357318076202,
+     "n_days": 2099,
+     "sharpe": 0.19129661977744314,
+     "turnover": 0.0690022962220833
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "fd79d19cdb89",
+    "t": 1760003050.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.011207686586002916,
+     "ann_vol": 0.04029724016828546,
+     "hit_rate": 0.48960850652489124,
+     "max_drawdown": 0.14741224601973268,
+     "n_days": 2069,
+     "sharpe": 0.27812541353200504,
+     "turnover": 0.06880736636559118
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "b9bde8572e74",
+    "t": 1760003111.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.01830499428932363,
+     "ann_vol": 0.040835047049215034,
+     "hit_rate": 0.4899951195705222,
+     "max_drawdown": 0.11598241732534546,
+     "n_days": 2049,
+     "sharpe": 0.4482667613254411,
+     "turnover": 0.06876187919203469
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "a06d7c530d53",
+    "t": 1760003172.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.017304165887013563,
+     "ann_vol": 0.040906211810996886,
+     "hit_rate": 0.48637939574046557,
+     "max_drawdown": 0.14254540620724016,
+     "n_days": 2019,
+     "sharpe": 0.4230204929991013,
+     "turnover": 0.06886848565995264
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "6db4f7bd5b03",
+    "t": 1760003233.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.01569110149320009,
+     "ann_vol": 0.04022746686747522,
+     "hit_rate": 0.48574287143571787,
+     "max_drawdown": 0.16175245922066891,
+     "n_days": 1999,
+     "sharpe": 0.3900593975974831,
+     "turnover": 0.06901795290040834
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 13,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,13)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "8d5342ba3807",
+    "t": 1760003294.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.014999281704671845,
+     "ann_vol": 0.04016874843448301,
+     "hit_rate": 0.5011317338162065,
+     "max_drawdown": 0.09822657663737179,
+     "n_days": 2209,
+     "sharpe": 0.3734067475150821,
+     "turnover": 0.06926351859093577
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "9ebcede497d8",
+    "t": 1760003355.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.009718019463817418,
+     "ann_vol": 0.03929328060296137,
+     "hit_rate": 0.49657377798081315,
+     "max_drawdown": 0.1185700682889154,
+     "n_days": 2189,
+     "sharpe": 0.24732013501272818,
+     "turnover": 0.059030792102517764
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "91f29d62ad64",
+    "t": 1760003416.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.014597744297984414,
+     "ann_vol": 0.03934307833454648,
+     "hit_rate": 0.49518127581459387,
+     "max_drawdown": 0.13373451544599022,
+     "n_days": 2179,
+     "sharpe": 0.3710371662800567,
+     "turnover": 0.054809329103134345
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "53b03e1d4b14",
+    "t": 1760003477.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.023366568068570563,
+     "ann_vol": 0.03991445347989281,
+     "hit_rate": 0.4969893469198703,
+     "max_drawdown": 0.0959907477611657,
+     "n_days": 2159,
+     "sharpe": 0.5854162097031252,
+     "turnover": 0.05261544762133189
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "6d6a57e8be9b",
+    "t": 1760003538.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.016121858763431033,
+     "ann_vol": 0.0398979257030681,
+     "hit_rate": 0.4955793392275477,
+     "max_drawdown": 0.10814501470998764,
+     "n_days": 2149,
+     "sharpe": 0.4040776175537187,
+     "turnover": 0.051756105980142235
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "cf145f35ca27",
+    "t": 1760003599.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.028333364500643932,
+     "ann_vol": 0.040250064697543234,
+     "hit_rate": 0.49646059462010383,
+     "max_drawdown": 0.13075468351474992,
+     "n_days": 2119,
+     "sharpe": 0.7039333902579624,
+     "turnover": 0.05046185670872448
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "9e09d75d0a3f",
+    "t": 1760003660.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.033928448422566364,
+     "ann_vol": 0.040559576732826494,
+     "hit_rate": 0.5083373034778466,
+     "max_drawdown": 0.10178260546010864,
+     "n_days": 2099,
+     "sharpe": 0.8365089371139003,
+     "turnover": 0.050125110437553036
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "421859a472cf",
+    "t": 1760003721.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.02753347708439638,
+     "ann_vol": 0.04052403365374544,
+     "hit_rate": 0.4852585790236829,
+     "max_drawdown": 0.0961420243911755,
+     "n_days": 2069,
+     "sharpe": 0.6794357471828718,
+     "turnover": 0.04994690687802999
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "bed9e7529bde",
+    "t": 1760003782.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.03911673378100415,
+     "ann_vol": 0.040682906000113025,
+     "hit_rate": 0.5070766227428014,
+     "max_drawdown": 0.09963161649488034,
+     "n_days": 2049,
+     "sharpe": 0.961502941331071,
+     "turnover": 0.049880622445209466
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "4c6282ac67b2",
+    "t": 1760003843.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04374733857156045,
+     "ann_vol": 0.04023644990903625,
+     "hit_rate": 0.5086676572560673,
+     "max_drawdown": 0.10565897142822706,
+     "n_days": 2019,
+     "sharpe": 1.087256422235594,
+     "turnover": 0.04985387707009178
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "e3da1a272007",
+    "t": 1760003904.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04353271442211986,
+     "ann_vol": 0.04120621836012704,
+     "hit_rate": 0.511255627813907,
+     "max_drawdown": 0.09940814465721926,
+     "n_days": 1999,
+     "sharpe": 1.0564598294767094,
+     "turnover": 0.049383598350986845
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "ed2673eab293",
+    "t": 1760003965.0
+   },
+   {
+    "metrics": {
+     "ann_return": -0.0018645989409670789,
+     "ann_vol": 0.03925795639078013,
+     "hit_rate": 0.49705749207786326,
+     "max_drawdown": 0.10924189752644312,
+     "n_days": 2209,
+     "sharpe": -0.047496077544295884,
+     "turnover": 0.0792549404766179
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 41
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,41))",
+     "universe": "default"
+    },
+    "spec_hash": "f3f09f4c2a24",
+    "t": 1760004026.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.00652066410595676,
+     "ann_vol": 0.04031637093754528,
+     "hit_rate": 0.4892645043398812,
+     "max_drawdown": 0.12153602541437278,
+     "n_days": 2189,
+     "sharpe": 0.16173737750498482,
+     "turnover": 0.0657037045274431
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 53
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "156171eb4c21",
+    "t": 1760004087.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.01666677984750753,
+     "ann_vol": 0.03967303685599571,
+     "hit_rate": 0.4882973841211565,
+     "max_drawdown": 0.14471156077832273,
+     "n_days": 2179,
+     "sharpe": 0.42010345484779077,
+     "turnover": 0.052918404426236076
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 67
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,67))",
+     "universe": "default"
+    },
+    "spec_hash": "217b237b8ed3",
+    "t": 1760004148.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.014397171879136889,
+     "ann_vol": 0.03969540327283384,
+     "hit_rate": 0.4997684113015285,
+     "max_drawdown": 0.11616311403031043,
+     "n_days": 2159,
+     "sharpe": 0.3626911604898549,
+     "turnover": 0.047810689184730075
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 83
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,83))",
+     "universe": "default"
+    },
+    "spec_hash": "6fe93fb45f75",
+    "t": 1760004209.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.02399016957062864,
+     "ann_vol": 0.039309980449953694,
+     "hit_rate": 0.5095393206142392,
+     "max_drawdown": 0.12159948935476683,
+     "n_days": 2149,
+     "sharpe": 0.6102819003222603,
+     "turnover": 0.04501574693793024
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 101
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,101))",
+     "universe": "default"
+    },
+    "spec_hash": "778504d59468",
+    "t": 1760004270.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.030112302403387598,
+     "ann_vol": 0.04013010535342254,
+     "hit_rate": 0.49976403964134025,
+     "max_drawdown": 0.0986451790080834,
+     "n_days": 2119,
+     "sharpe": 0.7503668913448153,
+     "turnover": 0.04311143784027091
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 127
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,127))",
+     "universe": "default"
+    },
+    "spec_hash": "43748800a75d",
+    "t": 1760004331.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.029207929290303768,
+     "ann_vol": 0.040630775147683894,
+     "hit_rate": 0.5107193901858028,
+     "max_drawdown": 0.1504137613538971,
+     "n_days": 2099,
+     "sharpe": 0.718862221656845,
+     "turnover": 0.042381064544524276
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 149
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,149))",
+     "universe": "default"
+    },
+    "spec_hash": "da6c49256952",
+    "t": 1760004392.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.02706216540237303,
+     "ann_vol": 0.0396878733855456,
+     "hit_rate": 0.49782503624939584,
+     "max_drawdown": 0.11693695856674854,
+     "n_days": 2069,
+     "sharpe": 0.6818749177986726,
+     "turnover": 0.04215695829708767
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 173
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,173))",
+     "universe": "default"
+    },
+    "spec_hash": "4345dee01a25",
+    "t": 1760004453.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.03546389063811651,
+     "ann_vol": 0.03973189761423008,
+     "hit_rate": 0.5104929233772572,
+     "max_drawdown": 0.08622622854902581,
+     "n_days": 2049,
+     "sharpe": 0.8925798355378584,
+     "turnover": 0.04167611468294787
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 197
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,197))",
+     "universe": "default"
+    },
+    "spec_hash": "c733f0e91428",
+    "t": 1760004514.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.027758993478554726,
+     "ann_vol": 0.04015424252782286,
+     "hit_rate": 0.49826646854878653,
+     "max_drawdown": 0.14763514089955398,
+     "n_days": 2019,
+     "sharpe": 0.6913091053659033,
+     "turnover": 0.04140566570866783
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "281ea66bbe95",
+    "t": 1760004575.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.02668732732970259,
+     "ann_vol": 0.04034102803511726,
+     "hit_rate": 0.5117558779389695,
+     "max_drawdown": 0.1354926805604177,
+     "n_days": 1999,
+     "sharpe": 0.6615430649529064,
+     "turnover": 0.041004039348496724
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 37,
+      "slow": 251
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,37)-ts_mean(ret,251))",
+     "universe": "default"
+    },
+    "spec_hash": "28b7beea5b04",
+    "t": 1760004636.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04374733857156045,
+     "ann_vol": 0.04023644990903625,
+     "hit_rate": 0.5086676572560673,
+     "max_drawdown": 0.10565897142822706,
+     "n_days": 2019,
+     "sharpe": 1.087256422235594,
+     "turnover": 0.04985387707009178
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Crossover 25/223",
+     "notes": "Trend crossover: short mean of returns against a long one.",
+     "params": {
+      "fast": 25,
+      "slow": 223
+     },
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 10,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(ret,25)-ts_mean(ret,223))",
+     "universe": "default"
+    },
+    "spec_hash": "03de8c3ecbb9",
+    "t": 1760004697.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {
+   "fast": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    25,
+    37
+   ],
+   "slow": [
+    41,
+    53,
+    67,
+    83,
+    101,
+    127,
+    149,
+    173,
+    197,
+    223,
+    251
+   ]
+  },
+  "is_best": true,
+  "n_distinct_specs": 78,
+  "n_trials": 78
+ },
+ "notes_for_paper": "Best of 77 grid points, every trial really backtested; twin is an honest spec with a short log.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "knife_edge",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Crossover 25/223",
+  "notes": "Trend crossover: short mean of returns against a long one.",
+  "params": {
+   "fast": 25,
+   "slow": 223
+  },
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 10,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(ts_mean(ret,25)-ts_mean(ret,223))",
+  "universe": "default"
+ },
+ "spec_hash": "03de8c3ecbb9",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.1,
+  "inflation": 1.044,
+  "naive_sharpe": 1.0873,
+  "regime_sharpe": {
+   "calm": -0.256,
+   "stressed": 4.266
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    1.4232,
+    -0.3601,
+    -1.7308,
+    -0.254,
+    0.762,
+    0.4213
+   ],
+   "sharpe": 0.0436
+  },
+  "turnover": 0.05
+ },
+ "twin_id": "AC-D008-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

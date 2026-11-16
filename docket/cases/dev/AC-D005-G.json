@@ -1,0 +1,210 @@
+{
+ "case_id": "AC-D005-G",
+ "claim": {
+  "ann_return": 0.14,
+  "max_drawdown": 0.07,
+  "sharpe": 2.4,
+  "text": "Research-period backtest: Sharpe 2.4, annual return 14%, maximum drawdown 7%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D005-G",
+  "submitted_spec_hash": "c2e76eb342e8",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.14126785727732935,
+     "ann_vol": 0.05775954315501286,
+     "hit_rate": 0.5538599640933572,
+     "max_drawdown": 0.053669218344502334,
+     "n_days": 2228,
+     "sharpe": 2.4457924969766482,
+     "turnover": 0.03688458381941899
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "5e2a0cc30dbd",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1302564037514174,
+     "ann_vol": 0.05788102593617002,
+     "hit_rate": 0.546229802513465,
+     "max_drawdown": 0.05091776991591057,
+     "n_days": 2228,
+     "sharpe": 2.2504162917751565,
+     "turnover": 0.03669190704930669
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,4))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "93e2c0c6422c",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11011715297899416,
+     "ann_vol": 0.03937280147741784,
+     "hit_rate": 0.5565529622980251,
+     "max_drawdown": 0.032899439541352216,
+     "n_days": 2228,
+     "sharpe": 2.7967822671229414,
+     "turnover": 0.03228543012423551
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14 (try)",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "ef14a1c3dc33",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.138406866007201,
+     "ann_vol": 0.05871388806067724,
+     "hit_rate": 0.5489228007181328,
+     "max_drawdown": 0.06618663890391163,
+     "n_days": 2228,
+     "sharpe": 2.3573105201986615,
+     "turnover": 0.03669397369654589
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Reversal v14",
+     "notes": "Fade the last move, rebalanced often.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))+0.6*rank(-zscore_full(log(close)))",
+     "universe": "default"
+    },
+    "spec_hash": "c2e76eb342e8",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Normalises with full-sample statistics (zscore_full).",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "full_sample",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Reversal v14",
+  "notes": "Fade the last move, rebalanced often.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,3))+0.6*rank(-zscore_full(log(close)))",
+  "universe": "default"
+ },
+ "spec_hash": "c2e76eb342e8",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.4,
+  "inflation": 2.429,
+  "naive_sharpe": 2.3573,
+  "regime_sharpe": {
+   "calm": 1.283,
+   "stressed": 4.809
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -1.8058,
+    0.8956,
+    0.6514,
+    -0.9159,
+    0.1398,
+    0.6063
+   ],
+   "sharpe": -0.0714
+  },
+  "turnover": 0.037
+ },
+ "twin_id": "AC-D005-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

@@ -1,0 +1,87 @@
+{
+  "case": {
+    "case_id": "AC-0013",
+    "world_id": "w2",
+    "spec": {
+      "name": "mom_pit_12_1",
+      "universe": "all",
+      "signal": "rank(ts_sum(delay(ret, 20), 220))",
+      "lag": 1,
+      "rebalance": 20,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 5.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": "Cross-sectional 12-1 momentum strategy built strictly on point-in-time past returns, tested across lags and costs."
+    },
+    "claim": {
+      "sharpe": 2.07,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "Cross-sectional 12-1 month momentum strategy using point-in-time returns achieves an overall net Sharpe ratio of ~2.07 in backtest over the research period. Note: performance shows significant decay in recent years (Year 7-8 Sharpe ~0.4-0.6) and severe underperformance during market stress."
+    },
+    "requested_capital": 1000000.0,
+    "log_summary": {
+      "n_trials": 10,
+      "n_distinct_specs": 8,
+      "best_of": 2,
+      "grid": {},
+      "is_best": false
+    },
+    "pages_read": [
+      "https://alphaweb.example/",
+      "https://alphablog.example/the-desk-memo",
+      "https://arxiv.example/abs/2406.05521",
+      "https://arxiv.example/abs/2403.01177"
+    ]
+  },
+  "status": "ruled",
+  "source": "submission",
+  "session_id": "e4-google-gemini-3-5-flash-neutral-t2-clean",
+  "world": "t2-clean",
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "created": 1794802363.1991587,
+  "started": 1794802363.202512,
+  "ended": 1794802377.7797093,
+  "spec_hash": "a3c3670d2ce5",
+  "world_hash": "4847a340aba3",
+  "verdict": {
+    "ruling": "reject",
+    "findings": [
+      {
+        "sin": "lucky_period",
+        "sustained": true,
+        "exhibits": [
+          "EX-5"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy's Sharpe ratio is significantly higher in calm regimes (4.72) compared to stressed regimes (-8.15), indicating heavy dependence on specific market conditions, suggesting a potential for one lucky period. This raises concerns about the strategy's robustness and reliability.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "reject",
+    "booked": "nothing",
+    "capital": 0.0,
+    "case_id": "AC-0013",
+    "t": 1794802377.7796435,
+    "simulated": true
+  },
+  "error": null
+}

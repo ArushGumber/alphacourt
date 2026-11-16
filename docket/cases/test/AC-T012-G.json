@@ -1,0 +1,214 @@
+{
+ "case_id": "AC-T012-G",
+ "claim": {
+  "ann_return": 0.05,
+  "max_drawdown": 0.04,
+  "sharpe": 1.6,
+  "text": "Research-period backtest: Sharpe 1.6, annual return 5%, maximum drawdown 4%."
+ },
+ "family": "lowvol",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T012-G",
+  "submitted_spec_hash": "f12f3abd0f9b",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.08414914642751753,
+     "ann_vol": 0.030795880789844677,
+     "hit_rate": 0.5712136409227683,
+     "max_drawdown": 0.02700266400888346,
+     "n_days": 1994,
+     "sharpe": 2.732480587315001,
+     "turnover": 0.025406092180368215
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v38 (try)",
+     "notes": "Low-volatility screen on trailing daily returns.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,252)),0.01))",
+     "universe": "default"
+    },
+    "spec_hash": "a523e2b636f8",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07818691370008492,
+     "ann_vol": 0.03070269853420932,
+     "hit_rate": 0.547536087605774,
+     "max_drawdown": 0.033793937009468006,
+     "n_days": 2009,
+     "sharpe": 2.5465811616841467,
+     "turnover": 0.025489942578107334
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v38 (try)",
+     "notes": "Low-volatility screen on trailing daily returns.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,239)),0.01))",
+     "universe": "default"
+    },
+    "spec_hash": "bd331efa60d3",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07881983262447494,
+     "ann_vol": 0.030751225695942075,
+     "hit_rate": 0.5583832335329342,
+     "max_drawdown": 0.034041524151040614,
+     "n_days": 2004,
+     "sharpe": 2.563144422398617,
+     "turnover": 0.025481702342277163
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v38 (try)",
+     "notes": "Low-volatility screen on trailing daily returns.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,243)),0.01))",
+     "universe": "default"
+    },
+    "spec_hash": "c4d19d156549",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04816271836351518,
+     "ann_vol": 0.030657733437067736,
+     "hit_rate": 0.5322972316658572,
+     "max_drawdown": 0.03819135203721703,
+     "n_days": 2059,
+     "sharpe": 1.5709810531943131,
+     "turnover": 0.027360544219537968
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v38",
+     "notes": "Low-volatility screen on trailing daily returns.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,189)),0.01))",
+     "universe": "default"
+    },
+    "spec_hash": "f12f3abd0f9b",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 4,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Clips with full-sample quantiles (winsor_full).",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "full_sample",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Quiet names v38",
+  "notes": "Low-volatility screen on trailing daily returns.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,189)),0.01))",
+  "universe": "default"
+ },
+ "spec_hash": "f12f3abd0f9b",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.6,
+  "inflation": 1.481,
+  "naive_sharpe": 1.571,
+  "regime_sharpe": {
+   "calm": 1.157,
+   "stressed": 3.381
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.7554,
+    0.1992,
+    0.5124,
+    -1.228,
+    0.6033,
+    1.209
+   ],
+   "sharpe": 0.0901
+  },
+  "turnover": 0.027
+ },
+ "twin_id": "AC-T012-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w2-275939"
+}

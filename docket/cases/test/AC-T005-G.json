@@ -1,0 +1,178 @@
+{
+ "case_id": "AC-T005-G",
+ "claim": {
+  "ann_return": 0.11,
+  "max_drawdown": 0.05,
+  "sharpe": 2.3,
+  "text": "Research-period backtest: Sharpe 2.3, annual return 11%, maximum drawdown 5%."
+ },
+ "family": "combined",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T005-G",
+  "submitted_spec_hash": "b7c470e6a7c7",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.10470369253024188,
+     "ann_vol": 0.047604962355508526,
+     "hit_rate": 0.5556544968833482,
+     "max_drawdown": 0.054018219523628175,
+     "n_days": 2246,
+     "sharpe": 2.1994281131518694,
+     "turnover": 0.5578097984318723
+    },
+    "spec": {
+     "costs_bps": 2.0,
+     "lag": 1,
+     "name": "Blend v21 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,4))",
+     "universe": "default"
+    },
+    "spec_hash": "743b8108076d",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06359611481190795,
+     "ann_vol": 0.028672461851970282,
+     "hit_rate": 0.5585224744103249,
+     "max_drawdown": 0.02631425219917405,
+     "n_days": 2247,
+     "sharpe": 2.21802073153819,
+     "turnover": 0.35345488062757646
+    },
+    "spec": {
+     "costs_bps": 2.0,
+     "lag": 1,
+     "name": "Blend v21 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))+0.5*rank(ts_mean(sentiment,2))",
+     "universe": "default"
+    },
+    "spec_hash": "3b217cf23bf3",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.11071241935806174,
+     "ann_vol": 0.0474091071503869,
+     "hit_rate": 0.5549621717846017,
+     "max_drawdown": 0.04912516762755037,
+     "n_days": 2247,
+     "sharpe": 2.3352563676609597,
+     "turnover": 0.5598881906432771
+    },
+    "spec": {
+     "costs_bps": 2.0,
+     "lag": 1,
+     "name": "Blend v21",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,3))",
+     "universe": "default"
+    },
+    "spec_hash": "b7c470e6a7c7",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Costs understated at 1 to 2 bps.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "costs",
+ "spec": {
+  "costs_bps": 2.0,
+  "lag": 1,
+  "name": "Blend v21",
+  "notes": "Combined signal, rebalanced on a slow schedule.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,3))",
+  "universe": "default"
+ },
+ "spec_hash": "b7c470e6a7c7",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.3,
+  "inflation": 2.569,
+  "naive_sharpe": 2.3353,
+  "regime_sharpe": {
+   "calm": 2.496,
+   "stressed": 1.989
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.1018,
+    0.2442,
+    -0.0816,
+    -1.3396,
+    -0.3391,
+    0.0097
+   ],
+   "sharpe": -0.2341
+  },
+  "turnover": 0.56
+ },
+ "twin_id": "AC-T005-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w2-564b96"
+}

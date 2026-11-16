@@ -1,0 +1,210 @@
+{
+ "case_id": "AC-T014-G",
+ "claim": {
+  "ann_return": 0.07,
+  "max_drawdown": 0.06,
+  "sharpe": 1.7,
+  "text": "Research-period backtest: Sharpe 1.7, annual return 7%, maximum drawdown 6%."
+ },
+ "family": "combined",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T014-G",
+  "submitted_spec_hash": "5b260f018db2",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.09192649040584942,
+     "ann_vol": 0.04494637794585703,
+     "hit_rate": 0.5257680872150644,
+     "max_drawdown": 0.07285324685527506,
+     "n_days": 2018,
+     "sharpe": 2.0452480179066987,
+     "turnover": 0.014304475826295808
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v9 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,219)),0.1))",
+     "universe": "default"
+    },
+    "spec_hash": "0a059dea28b8",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.14318307452163181,
+     "ann_vol": 0.06815814331695098,
+     "hit_rate": 0.5222993062438057,
+     "max_drawdown": 0.09288362886373891,
+     "n_days": 2018,
+     "sharpe": 2.100747871839726,
+     "turnover": 0.0185478152612494
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v9 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,232)),0.1))",
+     "universe": "default"
+    },
+    "spec_hash": "443f35ce4aa3",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.06900044055681027,
+     "ann_vol": 0.042718471688568314,
+     "hit_rate": 0.5004854368932039,
+     "max_drawdown": 0.07617746930431413,
+     "n_days": 2060,
+     "sharpe": 1.615236637205707,
+     "turnover": 0.015478252945915384
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v9 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,171)),0.1))",
+     "universe": "default"
+    },
+    "spec_hash": "7231ebdf6030",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07390888642115791,
+     "ann_vol": 0.042782180145979086,
+     "hit_rate": 0.516504854368932,
+     "max_drawdown": 0.057695564378551556,
+     "n_days": 2060,
+     "sharpe": 1.7275624142801962,
+     "turnover": 0.01487714358328947
+    },
+    "spec": {
+     "costs_bps": 10.0,
+     "lag": 1,
+     "name": "Blend v9",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,189)),0.1))",
+     "universe": "default"
+    },
+    "spec_hash": "5b260f018db2",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Clips with full-sample quantiles (winsor_full).",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 3,
+ "sin": "full_sample",
+ "spec": {
+  "costs_bps": 10.0,
+  "lag": 1,
+  "name": "Blend v9",
+  "notes": "Multi-factor score: momentum, drift and low risk.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(winsor_full(-zscore_full(ts_mean(ret,189)),0.1))",
+  "universe": "default"
+ },
+ "spec_hash": "5b260f018db2",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.7,
+  "inflation": 1.927,
+  "naive_sharpe": 1.7276,
+  "regime_sharpe": {
+   "calm": -1.89,
+   "stressed": 7.6
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.9999,
+    1.5318,
+    -0.1086,
+    -1.6114,
+    -0.5574,
+    0.5466
+   ],
+   "sharpe": -0.1998
+  },
+  "turnover": 0.015
+ },
+ "twin_id": "AC-T014-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w3-564b96"
+}

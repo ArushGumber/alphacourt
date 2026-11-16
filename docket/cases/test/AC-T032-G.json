@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-T032-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.04,
+  "sharpe": 1.8,
+  "text": "Research-period backtest: Sharpe 1.8, annual return 9%, maximum drawdown 4%."
+ },
+ "family": "momentum",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T032-G",
+  "submitted_spec_hash": "7a4d4470e318",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.10798427755838157,
+     "ann_vol": 0.04876314934614382,
+     "hit_rate": 0.53,
+     "max_drawdown": 0.03830816445548925,
+     "n_days": 300,
+     "sharpe": 2.2144647957796626,
+     "turnover": 0.015064102564102566
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12 (try)",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": 1530,
+      "start": 1230
+     },
+     "signal": "rank(delay(ts_sum(ret,134),5))",
+     "universe": "default"
+    },
+    "spec_hash": "60903e2a93e5",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09009179321870385,
+     "ann_vol": 0.049453621845031624,
+     "hit_rate": 0.5366666666666666,
+     "max_drawdown": 0.04133136821672824,
+     "n_days": 300,
+     "sharpe": 1.821743076796608,
+     "turnover": 0.01580128205128205
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Trend v12",
+     "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": 1530,
+      "start": 1230
+     },
+     "signal": "rank(delay(ts_sum(ret,126),5))",
+     "universe": "default"
+    },
+    "spec_hash": "7a4d4470e318",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Sample bounds restricted to a window that happens to be good, shown in the spec.",
+ "pages_read": [],
+ "requested_capital": 250000.0,
+ "role": "guilty",
+ "seed": 3,
+ "sin": "lucky_period",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Trend v12",
+  "notes": "Twelve-month return skipping the most recent weeks, long the strongest fifth.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": 1530,
+   "start": 1230
+  },
+  "signal": "rank(delay(ts_sum(ret,126),5))",
+  "universe": "default"
+ },
+ "spec_hash": "7a4d4470e318",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.8,
+  "inflation": 2.418,
+  "naive_sharpe": 1.8217,
+  "regime_sharpe": {
+   "calm": 1.884,
+   "stressed": 1.282
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.2479,
+    -0.9373,
+    -0.8739,
+    0.9818,
+    -1.2745,
+    -1.7188
+   ],
+   "sharpe": -0.5958
+  },
+  "turnover": 0.016
+ },
+ "twin_id": "AC-T032-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w3-275939"
+}

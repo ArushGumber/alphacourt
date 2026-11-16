@@ -1,0 +1,10 @@
+torch==2.11.0
+transformers==5.23.0
+accelerate==1.15.0
+gradio[mcp]==6.31.0
+spaces
+numpy
+scipy
+pandas
+pydantic>=2
+httpx

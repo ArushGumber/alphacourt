@@ -1,0 +1,143 @@
+{
+  "case_id": "AC-0034",
+  "status": "ruled",
+  "submission": {
+    "spec": {
+      "name": "eps_sentiment_momentum",
+      "universe": "default",
+      "signal": "rank(eps_reported) * 0.5 + rank(sentiment) * 0.5",
+      "lag": 1,
+      "rebalance": 5,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 5.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": "Combining point-in-time earnings surprise and sentiment scores."
+    },
+    "claim": {
+      "sharpe": 2.88,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "A robust strategy combining point-in-time earnings surprise and sentiment scores, achieving a Sharpe ratio of 2.88 with low turnover and consistent performance across the research period."
+    },
+    "requested_capital": 100000000.0,
+    "world_id": "w2-0faa65"
+  },
+  "log_summary": {
+    "n_trials": 1,
+    "n_distinct_specs": 1,
+    "best_of": 1,
+    "grid": {},
+    "is_best": true
+  },
+  "pages_read": [],
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "model_ids": [
+    "local:qwen3-8b"
+  ],
+  "exhibits": [
+    {
+      "id": "EX-1",
+      "test": "holdout_test",
+      "params": {},
+      "numbers": {
+        "sharpe_research": 2.8799,
+        "sharpe_sealed": -0.1628,
+        "gap": 3.0426,
+        "cost_bps": 10.0
+      },
+      "summary": "On the sealed period, traded as live (strict data, 10 bps, at least one bar of lag), the Sharpe ratio is -0.16 against 2.88 in research, a gap of +3.04.",
+      "hint": "damaging",
+      "chart": {
+        "type": "bars",
+        "labels": [
+          "research",
+          "sealed"
+        ],
+        "series": [
+          {
+            "label": "Sharpe",
+            "y": [
+              2.8799,
+              -0.1628
+            ]
+          }
+        ]
+      },
+      "called_by": "prosecution"
+    }
+  ],
+  "charges": [
+    {
+      "sin": "other",
+      "exhibits": [
+        "EX-1"
+      ],
+      "argument": "The holdout test on sealed data shows a Sharpe ratio of -0.16, which is significantly lower than the claimed research Sharpe ratio of 2.88, indicating overfitting of the strategy to the research data."
+    }
+  ],
+  "rebuttals": [
+    {
+      "sin": "other",
+      "concede": false,
+      "exhibits": [
+        "EX-1"
+      ],
+      "argument": "The holdout test shows a Sharpe ratio of -0.16 on sealed data, which is significantly lower than the claimed research Sharpe ratio of 2.88. This indicates overfitting, as the strategy does not generalize well to unseen data."
+    }
+  ],
+  "verdict": {
+    "ruling": "reject",
+    "findings": [
+      {
+        "sin": "lookahead",
+        "sustained": true,
+        "exhibits": [
+          "EX-1"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy's Sharpe ratio drops significantly from 2.88 in research to -0.16 on sealed data, indicating overfitting and poor generalization. This suggests the strategy is not robust and cannot be trusted with real capital.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "reject",
+    "booked": "nothing",
+    "capital": 0.0,
+    "case_id": "AC-0034",
+    "t": 1794816098.142692,
+    "simulated": true
+  },
+  "calls": 4,
+  "tokens_in": 4536,
+  "tokens_out": 292,
+  "timings": {
+    "submitted": 1794816086.897449,
+    "trial_started": 1794816086.898763,
+    "ended": 1794816098.1429307,
+    "trial_seconds": 11.243,
+    "queue_seconds": 0.001313924789428711
+  },
+  "prompt_version": "1.2",
+  "hashes": {
+    "spec": "67ff69509984",
+    "world": "b41d64b6eaa5"
+  },
+  "error": null
+}

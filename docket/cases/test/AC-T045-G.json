@@ -1,0 +1,147 @@
+{
+ "case_id": "AC-T045-G",
+ "claim": {
+  "ann_return": 0.08,
+  "max_drawdown": 0.04,
+  "sharpe": 2.3,
+  "text": "Research-period backtest: Sharpe 2.3, annual return 8%, maximum drawdown 4%."
+ },
+ "family": "combined",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T045-G",
+  "submitted_spec_hash": "eb8a63c54e6b",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.08478276953079734,
+     "ann_vol": 0.03489792894531067,
+     "hit_rate": 0.5630585898709036,
+     "max_drawdown": 0.0369635071206974,
+     "n_days": 2014,
+     "sharpe": 2.429449886944934,
+     "turnover": 0.023699488197998622
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Blend v38 (try)",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,218),14))+rank(eps_reported)-0.5*rank(ts_std(ret,74))",
+     "universe": "default"
+    },
+    "spec_hash": "e9d53f908af0",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07834549611291074,
+     "ann_vol": 0.03472082827465357,
+     "hit_rate": 0.552464616886286,
+     "max_drawdown": 0.03686201059415062,
+     "n_days": 2049,
+     "sharpe": 2.256440874427626,
+     "turnover": 0.024946502984570334
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Blend v38",
+     "notes": "Multi-factor score: momentum, drift and low risk.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,189),10))+rank(eps_reported)-0.5*rank(ts_std(ret,60))",
+     "universe": "default"
+    },
+    "spec_hash": "eb8a63c54e6b",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Same spec text as the twin; the default universe file is the survivors list here.",
+ "pages_read": [],
+ "requested_capital": 1000000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "survivorship",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Blend v38",
+  "notes": "Multi-factor score: momentum, drift and low risk.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,189),10))+rank(eps_reported)-0.5*rank(ts_std(ret,60))",
+  "universe": "default"
+ },
+ "spec_hash": "eb8a63c54e6b",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 2.3,
+  "inflation": 2.17,
+  "naive_sharpe": 2.2564,
+  "regime_sharpe": {
+   "calm": 3.088,
+   "stressed": -1.411
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.2915,
+    -1.3252,
+    0.9245,
+    1.1436,
+    -0.3958,
+    -0.1193
+   ],
+   "sharpe": 0.0865
+  },
+  "turnover": 0.025
+ },
+ "twin_id": "AC-T045-I",
+ "variant": {
+  "default_universe": "survivors",
+  "effect_scale": {
+   "crash": 4.0
+  }
+ },
+ "world_id": "w2-1ad481"
+}

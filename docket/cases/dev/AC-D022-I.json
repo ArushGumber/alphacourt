@@ -1,0 +1,182 @@
+{
+ "case_id": "AC-D022-I",
+ "claim": {
+  "ann_return": 0.07,
+  "max_drawdown": 0.12,
+  "sharpe": 1.9,
+  "text": "Research-period backtest: Sharpe 1.9, annual return 7%, maximum drawdown 12%."
+ },
+ "family": "momentum",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D022-I",
+  "submitted_spec_hash": "6273accc0b67",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.07031820438706884,
+     "ann_vol": 0.038863386666337686,
+     "hit_rate": 0.5854922279792746,
+     "max_drawdown": 0.11811255242066898,
+     "n_days": 2123,
+     "sharpe": 1.8093689309886212,
+     "turnover": 0.015754405265493234
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v17 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,104),12))",
+     "universe": "default"
+    },
+    "spec_hash": "d341d86f8d51",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05613089498589747,
+     "ann_vol": 0.03220035503241193,
+     "hit_rate": 0.5737392959086585,
+     "max_drawdown": 0.09292031611409524,
+     "n_days": 2102,
+     "sharpe": 1.7431762764540257,
+     "turnover": 0.011543776701183159
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v17 (try)",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,135),11))",
+     "universe": "default"
+    },
+    "spec_hash": "8c10e855c195",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.0728640641051367,
+     "ann_vol": 0.039320983024805044,
+     "hit_rate": 0.5651760228353948,
+     "max_drawdown": 0.12300921808998894,
+     "n_days": 2102,
+     "sharpe": 1.8530580494178266,
+     "turnover": 0.014169419881791103
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Trend v17",
+     "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,126),10))",
+     "universe": "default"
+    },
+    "spec_hash": "6273accc0b67",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "innocent",
+ "seed": 1,
+ "sin": null,
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Trend v17",
+  "notes": "Classic trend signal on trailing returns. Weekly rebalance.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,126),10))",
+  "universe": "default"
+ },
+ "spec_hash": "6273accc0b67",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.9,
+  "inflation": 0.214,
+  "naive_sharpe": 1.8531,
+  "regime_sharpe": {
+   "calm": 5.577,
+   "stressed": -6.576
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    3.2388,
+    -0.5775,
+    1.7272,
+    4.11,
+    0.8489,
+    0.4859
+   ],
+   "sharpe": 1.6389
+  },
+  "turnover": 0.014
+ },
+ "twin_id": "AC-D022-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

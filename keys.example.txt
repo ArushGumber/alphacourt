@@ -1,0 +1,4 @@
+# One API key per line. Copy to keys.txt (ignored by git). The values below are placeholders.
+# Google AI Studio keys start with AIza, Groq keys with gsk_.
+AIza-REPLACE-WITH-YOUR-GOOGLE-KEY
+gsk_REPLACE_WITH_YOUR_GROQ_KEY

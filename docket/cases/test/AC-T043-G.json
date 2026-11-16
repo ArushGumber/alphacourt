@@ -1,0 +1,179 @@
+{
+ "case_id": "AC-T043-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.08,
+  "sharpe": 1.8,
+  "text": "Research-period backtest: Sharpe 1.8, annual return 9%, maximum drawdown 8%."
+ },
+ "family": "combined",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T043-G",
+  "submitted_spec_hash": "9d266b89f1c7",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.09254524792682287,
+     "ann_vol": 0.05001759302624241,
+     "hit_rate": 0.5475708502024291,
+     "max_drawdown": 0.0657531784487474,
+     "n_days": 1976,
+     "sharpe": 1.8502539272185239,
+     "turnover": 0.016422064777327938
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Blend v20 (try)",
+     "notes": "Blend of trend, earnings surprise and a volatility penalty.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,235),29))+rank(eps_reported)-0.5*rank(ts_std(ret,99))",
+     "universe": "default"
+    },
+    "spec_hash": "22dfe34f0c2c",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09580055739904175,
+     "ann_vol": 0.05003692114982224,
+     "hit_rate": 0.5495951417004049,
+     "max_drawdown": 0.07151852080402155,
+     "n_days": 1976,
+     "sharpe": 1.9145973652573967,
+     "turnover": 0.01618168016194332
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Blend v20 (try)",
+     "notes": "Blend of trend, earnings surprise and a volatility penalty.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),17))+rank(eps_reported)-0.5*rank(ts_std(ret,123))",
+     "universe": "default"
+    },
+    "spec_hash": "20514f720f7f",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08820689055498497,
+     "ann_vol": 0.04994349168264345,
+     "hit_rate": 0.5374493927125507,
+     "max_drawdown": 0.08245586795627147,
+     "n_days": 1976,
+     "sharpe": 1.7661338361258183,
+     "turnover": 0.01618168016194332
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Blend v20",
+     "notes": "Blend of trend, earnings surprise and a volatility penalty.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(delay(ts_sum(ret,252),21))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+     "universe": "default"
+    },
+    "spec_hash": "9d266b89f1c7",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 3,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Same spec text as the twin; the default universe file is the survivors list here.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "survivorship",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Blend v20",
+  "notes": "Blend of trend, earnings surprise and a volatility penalty.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(delay(ts_sum(ret,252),21))+rank(eps_reported)-0.5*rank(ts_std(ret,90))",
+  "universe": "default"
+ },
+ "spec_hash": "9d266b89f1c7",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.8,
+  "inflation": 1.509,
+  "naive_sharpe": 1.7661,
+  "regime_sharpe": {
+   "calm": 2.526,
+   "stressed": -1.87
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    0.0987,
+    -1.7125,
+    0.9953,
+    1.6728,
+    0.2149,
+    0.2713
+   ],
+   "sharpe": 0.2568
+  },
+  "turnover": 0.016
+ },
+ "twin_id": "AC-T043-I",
+ "variant": {
+  "default_universe": "survivors",
+  "effect_scale": {
+   "crash": 4.0
+  }
+ },
+ "world_id": "w2-1ad481"
+}

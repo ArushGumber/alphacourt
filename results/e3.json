@@ -1,0 +1,3840 @@
+{
+ "meta": {
+  "experiment": "e3",
+  "inputs": [
+   "results/trials/e3/battery/i_cpu",
+   "results/trials/e3/court/i_small",
+   "results/trials/e3/court/iii_plain_small",
+   "results/trials/e3/court_flood/iii_small",
+   "results/trials/e3/none/i_cpu",
+   "results/trials/e3/single/i_small"
+  ],
+  "counts": {
+   "cells": 6,
+   "records": 256,
+   "docket_cases_with_meta": 116
+  },
+  "time": "2026-11-16T10:47:42+0000",
+  "analysis_plan": "experiments/ANALYSIS_PLAN.md",
+  "analysis_plan_commit": "f9cc7fcb3769d16287ca94f45ccdec3a246b4ed2",
+  "bootstrap": {
+   "resamples": 2000,
+   "seed": 0,
+   "unit": "twin pair"
+  }
+ },
+ "cells": {
+  "battery/i_cpu": {
+   "n_cases": 12,
+   "guilty_stopped": {
+    "j": 12,
+    "k": 12,
+    "rate": 1.0,
+    "lo": 0.757,
+    "hi": 1.0
+   },
+   "innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "unusual_innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "right_reason": {
+    "j": 7,
+    "k": 12,
+    "rate": 0.583,
+    "lo": 0.32,
+    "hi": 0.807
+   },
+   "right_reason_given_stopped": {
+    "j": 7,
+    "k": 12,
+    "rate": 0.583,
+    "lo": 0.32,
+    "hi": 0.807
+   },
+   "named_sin": {
+    "j": 7,
+    "k": 12,
+    "rate": 0.583,
+    "lo": 0.32,
+    "hi": 0.807
+   },
+   "n_records": 12,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 0,
+     "k": 12,
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.243
+    },
+    "with_sealed_return": 0,
+    "capital_lost": 0.0,
+    "capital_net_pnl": 0.0,
+    "n": 0,
+    "capital_allowed_total": 0.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "tokens_in": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "tokens_out": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "seconds": {
+     "mean": 16.515,
+     "n": 12
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     }
+    },
+    "full_sample": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     }
+    },
+    "leaky_field": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "lookahead": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     }
+    },
+    "lucky_period": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     }
+    },
+    "selection": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     }
+    },
+    "survivorship": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 11,
+     "guilty_stopped": {
+      "j": 11,
+      "k": 11,
+      "rate": 1.0,
+      "lo": 0.741,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 6,
+      "k": 11,
+      "rate": 0.545,
+      "lo": 0.28,
+      "hi": 0.787
+     },
+     "right_reason_given_stopped": {
+      "j": 6,
+      "k": 11,
+      "rate": 0.545,
+      "lo": 0.28,
+      "hi": 0.787
+     },
+     "named_sin": {
+      "j": 6,
+      "k": 11,
+      "rate": 0.545,
+      "lo": 0.28,
+      "hi": 0.787
+     }
+    },
+    "L2": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 12,
+      "k": 12,
+      "rate": 1.0,
+      "lo": 0.757,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 7,
+      "k": 12,
+      "rate": 0.583,
+      "lo": 0.32,
+      "hi": 0.807
+     },
+     "right_reason_given_stopped": {
+      "j": 7,
+      "k": 12,
+      "rate": 0.583,
+      "lo": 0.32,
+      "hi": 0.807
+     },
+     "named_sin": {
+      "j": 7,
+      "k": 12,
+      "rate": 0.583,
+      "lo": 0.32,
+      "hi": 0.807
+     }
+    }
+   }
+  },
+  "court/i_small": {
+   "n_cases": 12,
+   "guilty_stopped": {
+    "j": 12,
+    "k": 12,
+    "rate": 1.0,
+    "lo": 0.757,
+    "hi": 1.0
+   },
+   "innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "unusual_innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "right_reason": {
+    "j": 1,
+    "k": 12,
+    "rate": 0.083,
+    "lo": 0.015,
+    "hi": 0.354
+   },
+   "right_reason_given_stopped": {
+    "j": 1,
+    "k": 12,
+    "rate": 0.083,
+    "lo": 0.015,
+    "hi": 0.354
+   },
+   "named_sin": {
+    "j": 2,
+    "k": 12,
+    "rate": 0.167,
+    "lo": 0.047,
+    "hi": 0.448
+   },
+   "n_records": 12,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 0,
+     "k": 12,
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.243
+    },
+    "with_sealed_return": 0,
+    "capital_lost": 0.0,
+    "capital_net_pnl": 0.0,
+    "n": 0,
+    "capital_allowed_total": 0.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 7.833,
+     "n": 12
+    },
+    "tokens_in": {
+     "mean": 13126.75,
+     "n": 12
+    },
+    "tokens_out": {
+     "mean": 464.25,
+     "n": 12
+    },
+    "seconds": {
+     "mean": 92.431,
+     "n": 12
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "full_sample": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "leaky_field": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "lookahead": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 2,
+      "rate": 0.5,
+      "lo": 0.095,
+      "hi": 0.905
+     }
+    },
+    "lucky_period": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "selection": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     }
+    },
+    "survivorship": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 11,
+     "guilty_stopped": {
+      "j": 11,
+      "k": 11,
+      "rate": 1.0,
+      "lo": 0.741,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 11,
+      "rate": 0.091,
+      "lo": 0.016,
+      "hi": 0.377
+     }
+    },
+    "L2": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 12,
+      "k": 12,
+      "rate": 1.0,
+      "lo": 0.757,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 12,
+      "rate": 0.083,
+      "lo": 0.015,
+      "hi": 0.354
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 12,
+      "rate": 0.083,
+      "lo": 0.015,
+      "hi": 0.354
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 12,
+      "rate": 0.167,
+      "lo": 0.047,
+      "hi": 0.448
+     }
+    }
+   }
+  },
+  "court/iii_plain_small": {
+   "n_cases": 104,
+   "guilty_stopped": {
+    "j": 46,
+    "k": 46,
+    "rate": 1.0,
+    "lo": 0.923,
+    "hi": 1.0
+   },
+   "innocent_deployed": {
+    "j": 52,
+    "k": 58,
+    "rate": 0.897,
+    "lo": 0.792,
+    "hi": 0.952
+   },
+   "unusual_innocent_deployed": {
+    "j": 11,
+    "k": 12,
+    "rate": 0.917,
+    "lo": 0.646,
+    "hi": 0.985
+   },
+   "right_reason": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "right_reason_given_stopped": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "named_sin": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "n_records": 104,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 35,
+    "k": 104,
+    "rate": 0.337,
+    "lo": 0.253,
+    "hi": 0.432
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 104,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.036
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 0,
+     "k": 46,
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.077
+    },
+    "with_sealed_return": 0,
+    "capital_lost": 0.0,
+    "capital_net_pnl": 0.0,
+    "n": 0,
+    "capital_allowed_total": 0.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 7.462,
+     "n": 104
+    },
+    "tokens_in": {
+     "mean": 12074.952,
+     "n": 104
+    },
+    "tokens_out": {
+     "mean": 322.519,
+     "n": 104
+    },
+    "seconds": {
+     "mean": 30.118,
+     "n": 104
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 14,
+     "guilty_stopped": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 6,
+      "k": 7,
+      "rate": 0.857,
+      "lo": 0.487,
+      "hi": 0.974
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     },
+     "right_reason_given_stopped": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     }
+    },
+    "full_sample": {
+     "n_cases": 14,
+     "guilty_stopped": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     }
+    },
+    "leaky_field": {
+     "n_cases": 22,
+     "guilty_stopped": {
+      "j": 11,
+      "k": 11,
+      "rate": 1.0,
+      "lo": 0.741,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 10,
+      "k": 11,
+      "rate": 0.909,
+      "lo": 0.623,
+      "hi": 0.984
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     }
+    },
+    "lookahead": {
+     "n_cases": 8,
+     "guilty_stopped": {
+      "j": 4,
+      "k": 4,
+      "rate": 1.0,
+      "lo": 0.51,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 3,
+      "k": 4,
+      "rate": 0.75,
+      "lo": 0.301,
+      "hi": 0.954
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     }
+    },
+    "lucky_period": {
+     "n_cases": 10,
+     "guilty_stopped": {
+      "j": 5,
+      "k": 5,
+      "rate": 1.0,
+      "lo": 0.566,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 4,
+      "k": 5,
+      "rate": 0.8,
+      "lo": 0.376,
+      "hi": 0.964
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     }
+    },
+    "selection": {
+     "n_cases": 8,
+     "guilty_stopped": {
+      "j": 4,
+      "k": 4,
+      "rate": 1.0,
+      "lo": 0.51,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 3,
+      "k": 4,
+      "rate": 0.75,
+      "lo": 0.301,
+      "hi": 0.954
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     }
+    },
+    "survivorship": {
+     "n_cases": 16,
+     "guilty_stopped": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 23,
+      "k": 23,
+      "rate": 1.0,
+      "lo": 0.857,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 21,
+      "k": 23,
+      "rate": 0.913,
+      "lo": 0.732,
+      "hi": 0.976
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     },
+     "right_reason_given_stopped": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     },
+     "named_sin": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     }
+    },
+    "L2": {
+     "n_cases": 30,
+     "guilty_stopped": {
+      "j": 15,
+      "k": 15,
+      "rate": 1.0,
+      "lo": 0.796,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 12,
+      "k": 15,
+      "rate": 0.8,
+      "lo": 0.548,
+      "hi": 0.93
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     }
+    },
+    "L3": {
+     "n_cases": 16,
+     "guilty_stopped": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 46,
+      "k": 46,
+      "rate": 1.0,
+      "lo": 0.923,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     },
+     "right_reason_given_stopped": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     },
+     "named_sin": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     }
+    },
+    "innocent": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 41,
+      "k": 46,
+      "rate": 0.891,
+      "lo": 0.77,
+      "hi": 0.953
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   }
+  },
+  "court_flood/iii_small": {
+   "n_cases": 104,
+   "guilty_stopped": {
+    "j": 46,
+    "k": 46,
+    "rate": 1.0,
+    "lo": 0.923,
+    "hi": 1.0
+   },
+   "innocent_deployed": {
+    "j": 52,
+    "k": 58,
+    "rate": 0.897,
+    "lo": 0.792,
+    "hi": 0.952
+   },
+   "unusual_innocent_deployed": {
+    "j": 11,
+    "k": 12,
+    "rate": 0.917,
+    "lo": 0.646,
+    "hi": 0.985
+   },
+   "right_reason": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "right_reason_given_stopped": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "named_sin": {
+    "j": 5,
+    "k": 46,
+    "rate": 0.109,
+    "lo": 0.047,
+    "hi": 0.23
+   },
+   "n_records": 104,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 35,
+    "k": 104,
+    "rate": 0.337,
+    "lo": 0.253,
+    "hi": 0.432
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 104,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.036
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 0,
+     "k": 46,
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.077
+    },
+    "with_sealed_return": 0,
+    "capital_lost": 0.0,
+    "capital_net_pnl": 0.0,
+    "n": 0,
+    "capital_allowed_total": 0.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 7.462,
+     "n": 104
+    },
+    "tokens_in": {
+     "mean": 12634.125,
+     "n": 104
+    },
+    "tokens_out": {
+     "mean": 320.913,
+     "n": 104
+    },
+    "seconds": {
+     "mean": 36.748,
+     "n": 104
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 14,
+     "guilty_stopped": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 6,
+      "k": 7,
+      "rate": 0.857,
+      "lo": 0.487,
+      "hi": 0.974
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     },
+     "right_reason_given_stopped": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 7,
+      "rate": 0.286,
+      "lo": 0.082,
+      "hi": 0.641
+     }
+    },
+    "full_sample": {
+     "n_cases": 14,
+     "guilty_stopped": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 7,
+      "k": 7,
+      "rate": 1.0,
+      "lo": 0.646,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 7,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.354
+     }
+    },
+    "leaky_field": {
+     "n_cases": 22,
+     "guilty_stopped": {
+      "j": 11,
+      "k": 11,
+      "rate": 1.0,
+      "lo": 0.741,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 10,
+      "k": 11,
+      "rate": 0.909,
+      "lo": 0.623,
+      "hi": 0.984
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     }
+    },
+    "lookahead": {
+     "n_cases": 8,
+     "guilty_stopped": {
+      "j": 4,
+      "k": 4,
+      "rate": 1.0,
+      "lo": 0.51,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 3,
+      "k": 4,
+      "rate": 0.75,
+      "lo": 0.301,
+      "hi": 0.954
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     }
+    },
+    "lucky_period": {
+     "n_cases": 10,
+     "guilty_stopped": {
+      "j": 5,
+      "k": 5,
+      "rate": 1.0,
+      "lo": 0.566,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 4,
+      "k": 5,
+      "rate": 0.8,
+      "lo": 0.376,
+      "hi": 0.964
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 5,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.434
+     }
+    },
+    "selection": {
+     "n_cases": 8,
+     "guilty_stopped": {
+      "j": 4,
+      "k": 4,
+      "rate": 1.0,
+      "lo": 0.51,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 3,
+      "k": 4,
+      "rate": 0.75,
+      "lo": 0.301,
+      "hi": 0.954
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 4,
+      "rate": 0.25,
+      "lo": 0.046,
+      "hi": 0.699
+     }
+    },
+    "survivorship": {
+     "n_cases": 16,
+     "guilty_stopped": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 23,
+      "k": 23,
+      "rate": 1.0,
+      "lo": 0.857,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 21,
+      "k": 23,
+      "rate": 0.913,
+      "lo": 0.732,
+      "hi": 0.976
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     },
+     "right_reason_given_stopped": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     },
+     "named_sin": {
+      "j": 3,
+      "k": 23,
+      "rate": 0.13,
+      "lo": 0.045,
+      "hi": 0.321
+     }
+    },
+    "L2": {
+     "n_cases": 30,
+     "guilty_stopped": {
+      "j": 15,
+      "k": 15,
+      "rate": 1.0,
+      "lo": 0.796,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 12,
+      "k": 15,
+      "rate": 0.8,
+      "lo": 0.548,
+      "hi": 0.93
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 15,
+      "rate": 0.067,
+      "lo": 0.012,
+      "hi": 0.298
+     }
+    },
+    "L3": {
+     "n_cases": 16,
+     "guilty_stopped": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 8,
+      "k": 8,
+      "rate": 1.0,
+      "lo": 0.676,
+      "hi": 1.0
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "right_reason_given_stopped": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 8,
+      "rate": 0.125,
+      "lo": 0.022,
+      "hi": 0.471
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 46,
+      "k": 46,
+      "rate": 1.0,
+      "lo": 0.923,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     },
+     "right_reason_given_stopped": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     },
+     "named_sin": {
+      "j": 5,
+      "k": 46,
+      "rate": 0.109,
+      "lo": 0.047,
+      "hi": 0.23
+     }
+    },
+    "innocent": {
+     "n_cases": 46,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 41,
+      "k": 46,
+      "rate": 0.891,
+      "lo": 0.77,
+      "hi": 0.953
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    },
+    "unusual": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "unusual_innocent_deployed": {
+      "j": 11,
+      "k": 12,
+      "rate": 0.917,
+      "lo": 0.646,
+      "hi": 0.985
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     }
+    }
+   }
+  },
+  "none/i_cpu": {
+   "n_cases": 12,
+   "guilty_stopped": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "unusual_innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "right_reason": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "right_reason_given_stopped": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "named_sin": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "n_records": 12,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 12,
+     "k": 12,
+     "rate": 1.0,
+     "lo": 0.757,
+     "hi": 1.0
+    },
+    "with_sealed_return": 12,
+    "capital_lost": 1169945.25,
+    "capital_net_pnl": -1070992.5,
+    "n": 12,
+    "capital_allowed_total": 11000000.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "tokens_in": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "tokens_out": {
+     "mean": 0.0,
+     "n": 12
+    },
+    "seconds": {
+     "mean": 0.0,
+     "n": 12
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "full_sample": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "leaky_field": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "lookahead": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "lucky_period": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "selection": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    },
+    "survivorship": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 11,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     }
+    },
+    "L2": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 0,
+      "k": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.243
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.243
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.243
+     }
+    }
+   }
+  },
+  "single/i_small": {
+   "n_cases": 12,
+   "guilty_stopped": {
+    "j": 12,
+    "k": 12,
+    "rate": 1.0,
+    "lo": 0.757,
+    "hi": 1.0
+   },
+   "innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "unusual_innocent_deployed": {
+    "j": 0,
+    "k": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "right_reason": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "right_reason_given_stopped": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "named_sin": {
+    "j": 3,
+    "k": 12,
+    "rate": 0.25,
+    "lo": 0.089,
+    "hi": 0.532
+   },
+   "n_records": 12,
+   "n_without_docket_meta": 0,
+   "n_failed": 0,
+   "unsupported": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "defaulted": {
+    "j": 0,
+    "k": 12,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.243
+   },
+   "sealed": {
+    "deployed_guilty": {
+     "j": 0,
+     "k": 12,
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.243
+    },
+    "with_sealed_return": 0,
+    "capital_lost": 0.0,
+    "capital_net_pnl": 0.0,
+    "n": 0,
+    "capital_allowed_total": 0.0
+   },
+   "cost_per_case": {
+    "calls": {
+     "mean": 1.0,
+     "n": 12
+    },
+    "tokens_in": {
+     "mean": 663.833,
+     "n": 12
+    },
+    "tokens_out": {
+     "mean": 118.167,
+     "n": 12
+    },
+    "seconds": {
+     "mean": 11.125,
+     "n": 12
+    }
+   },
+   "by_sin": {
+    "costs": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "full_sample": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "leaky_field": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "lookahead": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     }
+    },
+    "lucky_period": {
+     "n_cases": 2,
+     "guilty_stopped": {
+      "j": 2,
+      "k": 2,
+      "rate": 1.0,
+      "lo": 0.342,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 2,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.658
+     }
+    },
+    "selection": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    },
+    "survivorship": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "named_sin": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     }
+    }
+   },
+   "by_level": {
+    "L1": {
+     "n_cases": 11,
+     "guilty_stopped": {
+      "j": 11,
+      "k": 11,
+      "rate": 1.0,
+      "lo": 0.741,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 11,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.259
+     },
+     "named_sin": {
+      "j": 3,
+      "k": 11,
+      "rate": 0.273,
+      "lo": 0.097,
+      "hi": 0.566
+     }
+    },
+    "L2": {
+     "n_cases": 1,
+     "guilty_stopped": {
+      "j": 1,
+      "k": 1,
+      "rate": 1.0,
+      "lo": 0.207,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     },
+     "named_sin": {
+      "j": 0,
+      "k": 1,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.793
+     }
+    }
+   },
+   "by_role": {
+    "guilty": {
+     "n_cases": 12,
+     "guilty_stopped": {
+      "j": 12,
+      "k": 12,
+      "rate": 1.0,
+      "lo": 0.757,
+      "hi": 1.0
+     },
+     "innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "unusual_innocent_deployed": {
+      "j": 0,
+      "k": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+     },
+     "right_reason": {
+      "j": 0,
+      "k": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.243
+     },
+     "right_reason_given_stopped": {
+      "j": 0,
+      "k": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.243
+     },
+     "named_sin": {
+      "j": 3,
+      "k": 12,
+      "rate": 0.25,
+      "lo": 0.089,
+      "hi": 0.532
+     }
+    }
+   }
+  }
+ },
+ "paired_differences": [
+  {
+   "metric": "guilty_stopped",
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n_pairs": 12,
+   "k": 12,
+   "a": "court/i_small",
+   "b": "single/i_small",
+   "resamples": 2000,
+   "seed": 0
+  },
+  {
+   "metric": "guilty_stopped",
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n_pairs": 12,
+   "k": 12,
+   "a": "court/i_small",
+   "b": "battery/i_cpu",
+   "resamples": 2000,
+   "seed": 0
+  },
+  {
+   "metric": "guilty_stopped",
+   "diff": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n_pairs": 12,
+   "k": 12,
+   "a": "court/i_small",
+   "b": "none/i_cpu",
+   "resamples": 2000,
+   "seed": 0
+  },
+  {
+   "metric": "guilty_stopped",
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n_pairs": 58,
+   "k": 46,
+   "a": "court_flood/iii_small",
+   "b": "court/iii_plain_small",
+   "resamples": 2000,
+   "seed": 0
+  },
+  {
+   "metric": "innocent_deployed",
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n_pairs": 58,
+   "k": 58,
+   "a": "court_flood/iii_small",
+   "b": "court/iii_plain_small",
+   "resamples": 2000,
+   "seed": 0
+  }
+ ]
+}

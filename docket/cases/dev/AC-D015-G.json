@@ -1,0 +1,178 @@
+{
+ "case_id": "AC-D015-G",
+ "claim": {
+  "ann_return": 0.33,
+  "max_drawdown": 0.29,
+  "sharpe": 1.7,
+  "text": "Research-period backtest: Sharpe 1.7, annual return 33%, maximum drawdown 29%."
+ },
+ "family": "sentiment",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D015-G",
+  "submitted_spec_hash": "ebaec7fda848",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.33438436550708694,
+     "ann_vol": 0.19387582624723662,
+     "hit_rate": 0.5528888888888889,
+     "max_drawdown": 0.2946056958710792,
+     "n_days": 2250,
+     "sharpe": 1.7247347025135018,
+     "turnover": 0.1408409075221746
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "News tone v20 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_only_top"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,1))+0.0674*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "9329c7da06a0",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.33438436550708694,
+     "ann_vol": 0.19387582624723662,
+     "hit_rate": 0.5528888888888889,
+     "max_drawdown": 0.2946056958710792,
+     "n_days": 2250,
+     "sharpe": 1.7247347025135018,
+     "turnover": 0.1408409075221746
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "News tone v20 (try)",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_only_top"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,1))+0.0674*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "9329c7da06a0",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.33438436550708694,
+     "ann_vol": 0.19387582624723662,
+     "hit_rate": 0.5528888888888889,
+     "max_drawdown": 0.2946056958710792,
+     "n_days": 2250,
+     "sharpe": 1.7247347025135018,
+     "turnover": 0.1408409075221746
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "News tone v20",
+     "notes": "Short-window sentiment tilt.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_only_top"
+     },
+     "rebalance": 3,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(ts_mean(sentiment,1))+0.0674*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "ebaec7fda848",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 3
+ },
+ "notes_for_paper": "An honest signal with a small same-bar term and lag 0 stated in the spec.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "lookahead",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 0,
+  "name": "News tone v20",
+  "notes": "Short-window sentiment tilt.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_only_top"
+  },
+  "rebalance": 3,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(ts_mean(sentiment,1))+0.0674*rank(ret)",
+  "universe": "default"
+ },
+ "spec_hash": "ebaec7fda848",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.7,
+  "inflation": 1.446,
+  "naive_sharpe": 1.7247,
+  "regime_sharpe": {
+   "calm": 2.179,
+   "stressed": 1.35
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    1.132,
+    0.8694,
+    0.8095,
+    -0.421,
+    -0.3831,
+    -0.3355
+   ],
+   "sharpe": 0.2786
+  },
+  "turnover": 0.141
+ },
+ "twin_id": "AC-D015-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

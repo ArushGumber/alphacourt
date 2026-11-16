@@ -1,0 +1,82 @@
+{
+  "case": {
+    "case_id": "AC-0033",
+    "world_id": "w3-0faa65",
+    "spec": {
+      "name": "eps_momentum_v1",
+      "universe": "default",
+      "signal": "rank(eps_reported)",
+      "lag": 1,
+      "rebalance": 5,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 5.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": "Earnings surprise momentum strategy. High Sharpe, low turnover, robust performance across regimes."
+    },
+    "claim": {
+      "sharpe": 3.87,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "The strategy leverages the persistence of earnings surprises. It shows a strong Sharpe ratio of 3.87 with low turnover and consistent performance across different market regimes, suggesting a genuine edge in the provided data."
+    },
+    "requested_capital": 100000000.0,
+    "log_summary": {
+      "n_trials": 2,
+      "n_distinct_specs": 2,
+      "best_of": 1,
+      "grid": {},
+      "is_best": true
+    },
+    "pages_read": []
+  },
+  "status": "ruled",
+  "source": "submission",
+  "session_id": "e4-google-gemini-3-1-flash-lite-neutral-t3-backfilled",
+  "world": "t3-backfilled",
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "created": 1794815698.6956935,
+  "started": 1794815698.697441,
+  "ended": 1794815748.1572971,
+  "spec_hash": "7db48bc8159a",
+  "world_hash": "4c2b7c9aa382",
+  "verdict": {
+    "ruling": "reject",
+    "findings": [
+      {
+        "sin": "selection",
+        "sustained": true,
+        "exhibits": [
+          "EX-1"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy's Sharpe ratio drops significantly from 3.87 to 1.21 in the holdout test, indicating overfitting. The trial haircut analysis further shows the claimed Sharpe is inflated, suggesting the strategy lacks genuine edge.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "broker_action": {
+    "action": "reject",
+    "booked": "nothing",
+    "capital": 0.0,
+    "case_id": "AC-0033",
+    "t": 1794815748.1572244,
+    "simulated": true
+  },
+  "error": null
+}

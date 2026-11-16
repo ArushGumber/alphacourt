@@ -1,0 +1,242 @@
+{
+ "case_id": "AC-D014-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.03,
+  "sharpe": 2.6,
+  "text": "Research-period backtest: Sharpe 2.6, annual return 9%, maximum drawdown 3%."
+ },
+ "family": "reversal",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D014-G",
+  "submitted_spec_hash": "7c6615985fa7",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.08524250783157394,
+     "ann_vol": 0.03281079992649245,
+     "hit_rate": 0.5722543352601156,
+     "max_drawdown": 0.028828657641661426,
+     "n_days": 2249,
+     "sharpe": 2.5980015123845406,
+     "turnover": 0.711627735227462
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Reversal v10 (try)",
+     "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "422cf9bf17f2",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.3955715093338922,
+     "ann_vol": 0.05662083197553374,
+     "hit_rate": 0.6829702089817696,
+     "max_drawdown": 0.054774006026016675,
+     "n_days": 2249,
+     "sharpe": 6.986324565220473,
+     "turnover": 0.8972671189703827
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Reversal v10 (try)",
+     "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "910a1595d67f",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.3955715093338922,
+     "ann_vol": 0.05662083197553374,
+     "hit_rate": 0.6829702089817696,
+     "max_drawdown": 0.054774006026016675,
+     "n_days": 2249,
+     "sharpe": 6.986324565220473,
+     "turnover": 0.8972671189703827
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Reversal v10 (try)",
+     "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "910a1595d67f",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.16326215307201297,
+     "ann_vol": 0.040415546194772035,
+     "hit_rate": 0.6069364161849711,
+     "max_drawdown": 0.032649012976952774,
+     "n_days": 2249,
+     "sharpe": 4.039587941858171,
+     "turnover": 0.8046187660290692
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Reversal v10 (try)",
+     "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "4a6ae36fa127",
+    "t": 1760000183.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.08524250783157394,
+     "ann_vol": 0.03281079992649245,
+     "hit_rate": 0.5722543352601156,
+     "max_drawdown": 0.028828657641661426,
+     "n_days": 2249,
+     "sharpe": 2.5980015123845406,
+     "turnover": 0.711627735227462
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 0,
+     "name": "Reversal v10",
+     "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+     "universe": "default"
+    },
+    "spec_hash": "7c6615985fa7",
+    "t": 1760000244.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 3,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 5
+ },
+ "notes_for_paper": "An honest signal with a small same-bar term and lag 0 stated in the spec.",
+ "pages_read": [],
+ "requested_capital": 500000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "lookahead",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 0,
+  "name": "Reversal v10",
+  "notes": "Short-horizon reversal: buy yesterday's losers, sell the winners.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-delay(ret,1))+0.0294*rank(ret)",
+  "universe": "default"
+ },
+ "spec_hash": "7c6615985fa7",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.6,
+  "inflation": 7.653,
+  "naive_sharpe": 2.598,
+  "regime_sharpe": {
+   "calm": 2.417,
+   "stressed": 3.372
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -5.0016,
+    -4.0103,
+    -4.8482,
+    -6.7112,
+    -4.8851,
+    -4.8712
+   ],
+   "sharpe": -5.0546
+  },
+  "turnover": 0.712
+ },
+ "twin_id": "AC-D014-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

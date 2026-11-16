@@ -1,0 +1,210 @@
+{
+ "case_id": "AC-D001-G",
+ "claim": {
+  "ann_return": 0.1,
+  "max_drawdown": 0.03,
+  "sharpe": 2.7,
+  "text": "Research-period backtest: Sharpe 2.7, annual return 10%, maximum drawdown 3%."
+ },
+ "family": "combined",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D001-G",
+  "submitted_spec_hash": "e475dd863459",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.10399473727958013,
+     "ann_vol": 0.03910608297832602,
+     "hit_rate": 0.5838896306186026,
+     "max_drawdown": 0.03199009924921259,
+     "n_days": 2247,
+     "sharpe": 2.6592982308460225,
+     "turnover": 0.4886536739514418
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Blend v33 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,3))",
+     "universe": "default"
+    },
+    "spec_hash": "21f3c623e188",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.071970324324809,
+     "ann_vol": 0.03213212366473499,
+     "hit_rate": 0.5580774365821095,
+     "max_drawdown": 0.039111860583648184,
+     "n_days": 2247,
+     "sharpe": 2.2398247023988787,
+     "turnover": 0.3532141949127693
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Blend v33 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,3))+0.5*rank(ts_mean(sentiment,3))",
+     "universe": "default"
+    },
+    "spec_hash": "ccc6e745c515",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.1042544443682722,
+     "ann_vol": 0.039048412619476884,
+     "hit_rate": 0.5841495992876224,
+     "max_drawdown": 0.036125392732504535,
+     "n_days": 2246,
+     "sharpe": 2.6698766319702156,
+     "turnover": 0.48780532740833404
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Blend v33 (try)",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,4))",
+     "universe": "default"
+    },
+    "spec_hash": "84ea03b1147d",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.10399473727958013,
+     "ann_vol": 0.03910608297832602,
+     "hit_rate": 0.5838896306186026,
+     "max_drawdown": 0.03199009924921259,
+     "n_days": 2247,
+     "sharpe": 2.6592982308460225,
+     "turnover": 0.4886536739514418
+    },
+    "spec": {
+     "costs_bps": 0.0,
+     "lag": 1,
+     "name": "Blend v33",
+     "notes": "Combined signal, rebalanced on a slow schedule.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 1,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,3))",
+     "universe": "default"
+    },
+    "spec_hash": "e475dd863459",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Costs stated as zero on a fast signal.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "costs",
+ "spec": {
+  "costs_bps": 0.0,
+  "lag": 1,
+  "name": "Blend v33",
+  "notes": "Combined signal, rebalanced on a slow schedule.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 1,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_sum(ret,2))+0.5*rank(ts_mean(sentiment,3))",
+  "universe": "default"
+ },
+ "spec_hash": "e475dd863459",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 2.7,
+  "inflation": 3.095,
+  "naive_sharpe": 2.6593,
+  "regime_sharpe": {
+   "calm": 3.11,
+   "stressed": 2.005
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.1913,
+    -0.234,
+    -0.1628,
+    -1.4545,
+    -0.9098,
+    0.3377
+   ],
+   "sharpe": -0.4358
+  },
+  "turnover": 0.489
+ },
+ "twin_id": "AC-D001-I",
+ "variant": {
+  "effect_scale": {
+   "crash": 2.5
+  }
+ },
+ "world_id": "w1-564b96"
+}

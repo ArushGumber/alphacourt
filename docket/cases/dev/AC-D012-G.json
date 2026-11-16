@@ -1,0 +1,181 @@
+{
+ "case_id": "AC-D012-G",
+ "claim": {
+  "ann_return": 0.09,
+  "max_drawdown": 0.03,
+  "sharpe": 3.0,
+  "text": "Research-period backtest: Sharpe 3.0, annual return 9%, maximum drawdown 3%."
+ },
+ "family": "pead",
+ "level": "L3",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D012-G",
+  "submitted_spec_hash": "91472adc5fa4",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.09022583021449351,
+     "ann_vol": 0.03036142909527296,
+     "hit_rate": 0.5686971987550022,
+     "max_drawdown": 0.02537396466705255,
+     "n_days": 2249,
+     "sharpe": 2.971725406316298,
+     "turnover": 0.01613634794707506
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v30 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "b270b6e6f449",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09022583021449351,
+     "ann_vol": 0.03036142909527296,
+     "hit_rate": 0.5686971987550022,
+     "max_drawdown": 0.02537396466705255,
+     "n_days": 2249,
+     "sharpe": 2.971725406316298,
+     "turnover": 0.01613634794707506
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v30 (try)",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "b270b6e6f449",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.09022583021449351,
+     "ann_vol": 0.03036142909527296,
+     "hit_rate": 0.5686971987550022,
+     "max_drawdown": 0.02537396466705255,
+     "n_days": 2249,
+     "sharpe": 2.971725406316298,
+     "turnover": 0.01613634794707506
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v30",
+     "notes": "Rank names by the latest earnings surprise and hold through the drift.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)",
+     "universe": "default"
+    },
+    "spec_hash": "91472adc5fa4",
+    "t": 1760000122.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 3
+ },
+ "notes_for_paper": "Same spec text as the twin; the data room backfills the field, the twin's does not.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "guilty",
+ "seed": 1,
+ "sin": "leaky_field",
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Earnings drift v30",
+  "notes": "Rank names by the latest earnings surprise and hold through the drift.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.2,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(eps_reported)",
+  "universe": "default"
+ },
+ "spec_hash": "91472adc5fa4",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 3.0,
+  "inflation": 2.931,
+  "naive_sharpe": 2.9717,
+  "regime_sharpe": {
+   "calm": 3.553,
+   "stressed": 1.825
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.4403,
+    0.6311,
+    1.0382,
+    -0.1052,
+    -1.0021,
+    0.1248
+   ],
+   "sharpe": 0.0411
+  },
+  "turnover": 0.016
+ },
+ "twin_id": "AC-D012-I",
+ "variant": {
+  "backfilled": [
+   "eps_reported"
+  ],
+  "effect_scale": {
+   "pead": 0.1
+  }
+ },
+ "world_id": "w1-9a16d3"
+}

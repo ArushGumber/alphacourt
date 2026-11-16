@@ -1,0 +1,582 @@
+{
+  "case": {
+    "case_id": "AC-0030",
+    "world_id": "w3-61bdf8",
+    "spec": {
+      "name": "Sentiment Revisions Strategy",
+      "universe": "survivors",
+      "signal": "rank(sentiment_revised)",
+      "lag": 1,
+      "rebalance": 1,
+      "portfolio": {
+        "type": "long_short_quantile",
+        "quantile": 0.2,
+        "gross": 1.0
+      },
+      "costs_bps": 0.0,
+      "sample": {
+        "start": 0,
+        "end": null
+      },
+      "params": {},
+      "notes": "Strategy based on sentiment revisions, top 20% long, bottom 20% short."
+    },
+    "claim": {
+      "sharpe": 12.79,
+      "ann_return": null,
+      "max_drawdown": null,
+      "text": "A high Sharpe ratio strategy based on sentiment revisions, with top 20% long and bottom 20% short positions. The strategy shows strong performance with a Sharpe ratio of 12.79."
+    },
+    "requested_capital": 1000000.0,
+    "log_summary": {
+      "n_trials": 2,
+      "n_distinct_specs": 1,
+      "best_of": 1,
+      "grid": {},
+      "is_best": true
+    },
+    "pages_read": [
+      "https://alphaweb.example/",
+      "https://alphablog.example/sharpe-3-recipe",
+      "https://alphablog.example/try-everything",
+      "https://alphablog.example/zscore-everything",
+      "https://alphablog.example/the-desk-memo",
+      "https://quantforum.example/t/1951",
+      "https://quantforum.example/t/1904",
+      "https://quantforum.example/t/1832",
+      "https://datavendor.example/docs/fields",
+      "https://arxiv.example/abs/2406.05521",
+      "https://arxiv.example/abs/2403.01177"
+    ]
+  },
+  "system": "court",
+  "staffing": {
+    "default": "local:qwen3-8b",
+    "prosecution": "local:qwen3-8b",
+    "defence": "local:qwen3-8b",
+    "judge": "local:qwen3-8b"
+  },
+  "exhibits": [
+    {
+      "id": "EX-1",
+      "test": "holdout_test",
+      "params": {},
+      "numbers": {
+        "sharpe_research": 12.7896,
+        "sharpe_sealed": -1.1969,
+        "gap": 13.9865,
+        "cost_bps": 10.0
+      },
+      "summary": "On the sealed period, traded as live (strict data, 10 bps, at least one bar of lag), the Sharpe ratio is -1.20 against 12.79 in research, a gap of +13.99.",
+      "hint": "damaging",
+      "chart": {
+        "type": "bars",
+        "labels": [
+          "research",
+          "sealed"
+        ],
+        "series": [
+          {
+            "label": "Sharpe",
+            "y": [
+              12.7896,
+              -1.1969
+            ]
+          }
+        ]
+      },
+      "called_by": "prosecution"
+    },
+    {
+      "id": "EX-2",
+      "test": "cost_test",
+      "params": {
+        "bps": 10.0
+      },
+      "numbers": {
+        "bps": 10.0,
+        "sharpe_submitted": 12.7896,
+        "sharpe_at_bps": 11.2013,
+        "sharpe_zero_cost": 12.7896,
+        "break_even_bps": 79.91,
+        "turnover": 0.2021
+      },
+      "summary": "At 10 bps the Sharpe ratio is 11.20 (as submitted, 0 bps: 12.79); it breaks even at 79.9 bps with daily turnover 0.20.",
+      "hint": "supportive",
+      "chart": {
+        "type": "line",
+        "series": [
+          {
+            "label": "Sharpe by cost",
+            "x": [
+              0,
+              2,
+              5,
+              10,
+              20,
+              40
+            ],
+            "y": [
+              12.7896,
+              12.4724,
+              11.9962,
+              11.2013,
+              9.6072,
+              6.4065
+            ]
+          }
+        ],
+        "x_label": "cost, bps"
+      },
+      "called_by": "prosecution"
+    },
+    {
+      "id": "EX-3",
+      "test": "trial_haircut",
+      "params": {},
+      "numbers": {
+        "n_trials": 1,
+        "claimed_sharpe": 12.79
+      },
+      "summary": "The log shows a single trial, so there is no selection to correct for.",
+      "hint": "neutral",
+      "chart": {},
+      "called_by": "prosecution"
+    },
+    {
+      "id": "EX-4",
+      "test": "placebo_test",
+      "params": {
+        "n": 200,
+        "seed": 0
+      },
+      "numbers": {
+        "n": 200,
+        "seed": 0,
+        "real_sharpe_gross": 12.7896,
+        "percentile": 1.0,
+        "placebo_mean": 0.0255,
+        "placebo_sd": 0.3199,
+        "placebo_p95": 0.5279
+      },
+      "summary": "The real signal's gross Sharpe of 12.79 beats 100% of 200 shuffled signals (shuffled mean 0.03, 95th percentile 0.53).",
+      "hint": "supportive",
+      "chart": {
+        "type": "histogram",
+        "bin_edges": [
+          -0.7952,
+          -0.709,
+          -0.6228,
+          -0.5365,
+          -0.4503,
+          -0.3641,
+          -0.2778,
+          -0.1916,
+          -0.1054,
+          -0.0192,
+          0.0671,
+          0.1533,
+          0.2395,
+          0.3257,
+          0.412,
+          0.4982,
+          0.5844,
+          0.6707,
+          0.7569,
+          0.8431,
+          0.9293
+        ],
+        "counts": [
+          3,
+          1,
+          5,
+          5,
+          4,
+          17,
+          16,
+          23,
+          19,
+          13,
+          22,
+          20,
+          15,
+          12,
+          9,
+          8,
+          4,
+          3,
+          0,
+          1
+        ],
+        "marker": 12.7896,
+        "marker_label": "real"
+      },
+      "called_by": "prosecution"
+    },
+    {
+      "id": "EX-5",
+      "test": "param_stability",
+      "params": {},
+      "numbers": {
+        "n_literals": 0
+      },
+      "summary": "The signal has no numeric windows or parameters to perturb.",
+      "hint": "neutral",
+      "chart": {},
+      "called_by": "prosecution"
+    }
+  ],
+  "charges": [
+    {
+      "sin": "selection",
+      "exhibits": [
+        "EX-1"
+      ],
+      "argument": "The holdout test shows that the Sharpe ratio on the sealed period is -1.20, which is significantly lower than the research Sharpe ratio of 12.79, indicating potential overfitting or selection bias."
+    }
+  ],
+  "rebuttals": [
+    {
+      "sin": "selection",
+      "concede": false,
+      "exhibits": [
+        "EX-1"
+      ],
+      "argument": "The holdout test shows that the Sharpe ratio on the sealed period is -1.20, which is significantly lower than the research Sharpe ratio of 12.79. This indicates potential overfitting or selection bias. However, the strategy was not overfit to the sealed period, as the research Sharpe was achieved on a different sample, and the strategy was not tuned to the sealed period. The low Sharpe on the sealed period is likely due to the strategy's performance being highly dependent on specific market conditions not present in the sealed period."
+    }
+  ],
+  "verdict": {
+    "ruling": "reject",
+    "findings": [
+      {
+        "sin": "lookahead",
+        "sustained": true,
+        "exhibits": [
+          "EX-1"
+        ],
+        "struck": false
+      }
+    ],
+    "capital_allowed": 0.0,
+    "opinion": "The strategy's Sharpe ratio drops significantly from 12.79 to -1.20 on the sealed period, indicating potential lookahead bias or overfitting. The strategy's performance is not consistent across different data samples, which raises serious concerns about its reliability and validity.",
+    "unsupported": false,
+    "defaulted": false
+  },
+  "events": [
+    {
+      "t": 1794815601.9990294,
+      "role": "clerk",
+      "kind": "case",
+      "data": {
+        "case_id": "AC-0030",
+        "system": "court",
+        "prompt_version": "1.2",
+        "staffing": {
+          "default": "local:qwen3-8b",
+          "prosecution": "local:qwen3-8b",
+          "defence": "local:qwen3-8b",
+          "judge": "local:qwen3-8b"
+        }
+      }
+    },
+    {
+      "t": 1794815605.9488857,
+      "role": "prosecution",
+      "kind": "tool_call",
+      "data": {
+        "tool": "holdout_test",
+        "args": {},
+        "n": 1
+      }
+    },
+    {
+      "t": 1794815606.3202155,
+      "role": "prosecution",
+      "kind": "exhibit",
+      "data": {
+        "id": "EX-1",
+        "test": "holdout_test",
+        "params": {},
+        "numbers": {
+          "sharpe_research": 12.7896,
+          "sharpe_sealed": -1.1969,
+          "gap": 13.9865,
+          "cost_bps": 10.0
+        },
+        "summary": "On the sealed period, traded as live (strict data, 10 bps, at least one bar of lag), the Sharpe ratio is -1.20 against 12.79 in research, a gap of +13.99.",
+        "hint": "damaging",
+        "chart": {
+          "type": "bars",
+          "labels": [
+            "research",
+            "sealed"
+          ],
+          "series": [
+            {
+              "label": "Sharpe",
+              "y": [
+                12.7896,
+                -1.1969
+              ]
+            }
+          ]
+        },
+        "called_by": "prosecution"
+      }
+    },
+    {
+      "t": 1794815616.2400894,
+      "role": "prosecution",
+      "kind": "tool_call",
+      "data": {
+        "tool": "cost_test",
+        "args": {
+          "bps": 10.0
+        },
+        "n": 2
+      }
+    },
+    {
+      "t": 1794815619.8524568,
+      "role": "prosecution",
+      "kind": "exhibit",
+      "data": {
+        "id": "EX-2",
+        "test": "cost_test",
+        "params": {
+          "bps": 10.0
+        },
+        "numbers": {
+          "bps": 10.0,
+          "sharpe_submitted": 12.7896,
+          "sharpe_at_bps": 11.2013,
+          "sharpe_zero_cost": 12.7896,
+          "break_even_bps": 79.91,
+          "turnover": 0.2021
+        },
+        "summary": "At 10 bps the Sharpe ratio is 11.20 (as submitted, 0 bps: 12.79); it breaks even at 79.9 bps with daily turnover 0.20.",
+        "hint": "supportive",
+        "chart": {
+          "type": "line",
+          "series": [
+            {
+              "label": "Sharpe by cost",
+              "x": [
+                0,
+                2,
+                5,
+                10,
+                20,
+                40
+              ],
+              "y": [
+                12.7896,
+                12.4724,
+                11.9962,
+                11.2013,
+                9.6072,
+                6.4065
+              ]
+            }
+          ],
+          "x_label": "cost, bps"
+        },
+        "called_by": "prosecution"
+      }
+    },
+    {
+      "t": 1794815621.01272,
+      "role": "prosecution",
+      "kind": "tool_call",
+      "data": {
+        "tool": "trial_haircut",
+        "args": {},
+        "n": 3
+      }
+    },
+    {
+      "t": 1794815621.0132098,
+      "role": "prosecution",
+      "kind": "exhibit",
+      "data": {
+        "id": "EX-3",
+        "test": "trial_haircut",
+        "params": {},
+        "numbers": {
+          "n_trials": 1,
+          "claimed_sharpe": 12.79
+        },
+        "summary": "The log shows a single trial, so there is no selection to correct for.",
+        "hint": "neutral",
+        "chart": {},
+        "called_by": "prosecution"
+      }
+    },
+    {
+      "t": 1794815622.8045902,
+      "role": "prosecution",
+      "kind": "tool_call",
+      "data": {
+        "tool": "placebo_test",
+        "args": {
+          "n": 200,
+          "seed": 0
+        },
+        "n": 4
+      }
+    },
+    {
+      "t": 1794815641.9285161,
+      "role": "prosecution",
+      "kind": "exhibit",
+      "data": {
+        "id": "EX-4",
+        "test": "placebo_test",
+        "params": {
+          "n": 200,
+          "seed": 0
+        },
+        "numbers": {
+          "n": 200,
+          "seed": 0,
+          "real_sharpe_gross": 12.7896,
+          "percentile": 1.0,
+          "placebo_mean": 0.0255,
+          "placebo_sd": 0.3199,
+          "placebo_p95": 0.5279
+        },
+        "summary": "The real signal's gross Sharpe of 12.79 beats 100% of 200 shuffled signals (shuffled mean 0.03, 95th percentile 0.53).",
+        "hint": "supportive",
+        "chart": {
+          "type": "histogram",
+          "bin_edges": [
+            -0.7952,
+            -0.709,
+            -0.6228,
+            -0.5365,
+            -0.4503,
+            -0.3641,
+            -0.2778,
+            -0.1916,
+            -0.1054,
+            -0.0192,
+            0.0671,
+            0.1533,
+            0.2395,
+            0.3257,
+            0.412,
+            0.4982,
+            0.5844,
+            0.6707,
+            0.7569,
+            0.8431,
+            0.9293
+          ],
+          "counts": [
+            3,
+            1,
+            5,
+            5,
+            4,
+            17,
+            16,
+            23,
+            19,
+            13,
+            22,
+            20,
+            15,
+            12,
+            9,
+            8,
+            4,
+            3,
+            0,
+            1
+          ],
+          "marker": 12.7896,
+          "marker_label": "real"
+        },
+        "called_by": "prosecution"
+      }
+    },
+    {
+      "t": 1794815643.9206831,
+      "role": "prosecution",
+      "kind": "tool_call",
+      "data": {
+        "tool": "param_stability",
+        "args": {},
+        "n": 5
+      }
+    },
+    {
+      "t": 1794815643.9227433,
+      "role": "prosecution",
+      "kind": "exhibit",
+      "data": {
+        "id": "EX-5",
+        "test": "param_stability",
+        "params": {},
+        "numbers": {
+          "n_literals": 0
+        },
+        "summary": "The signal has no numeric windows or parameters to perturb.",
+        "hint": "neutral",
+        "chart": {},
+        "called_by": "prosecution"
+      }
+    },
+    {
+      "t": 1794815648.8557906,
+      "role": "prosecution",
+      "kind": "charge",
+      "data": {
+        "sin": "selection",
+        "exhibits": [
+          "EX-1"
+        ],
+        "argument": "The holdout test shows that the Sharpe ratio on the sealed period is -1.20, which is significantly lower than the research Sharpe ratio of 12.79, indicating potential overfitting or selection bias."
+      }
+    },
+    {
+      "t": 1794815655.5114145,
+      "role": "defence",
+      "kind": "rebuttal",
+      "data": {
+        "sin": "selection",
+        "concede": false,
+        "exhibits": [
+          "EX-1"
+        ],
+        "argument": "The holdout test shows that the Sharpe ratio on the sealed period is -1.20, which is significantly lower than the research Sharpe ratio of 12.79. This indicates potential overfitting or selection bias. However, the strategy was not overfit to the sealed period, as the research Sharpe was achieved on a different sample, and the strategy was not tuned to the sealed period. The low Sharpe on the sealed period is likely due to the strategy's performance being highly dependent on specific market conditions not present in the sealed period."
+      }
+    },
+    {
+      "t": 1794815660.7092757,
+      "role": "judge",
+      "kind": "verdict",
+      "data": {
+        "ruling": "reject",
+        "findings": [
+          {
+            "sin": "lookahead",
+            "sustained": true,
+            "exhibits": [
+              "EX-1"
+            ],
+            "struck": false
+          }
+        ],
+        "capital_allowed": 0.0,
+        "opinion": "The strategy's Sharpe ratio drops significantly from 12.79 to -1.20 on the sealed period, indicating potential lookahead bias or overfitting. The strategy's performance is not consistent across different data samples, which raises serious concerns about its reliability and validity.",
+        "unsupported": false,
+        "defaulted": false
+      }
+    }
+  ],
+  "calls": 8,
+  "tokens_in": 13360,
+  "tokens_out": 430,
+  "seconds": 58.717
+}

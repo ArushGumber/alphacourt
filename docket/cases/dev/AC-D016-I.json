@@ -1,0 +1,214 @@
+{
+ "case_id": "AC-D016-I",
+ "claim": {
+  "ann_return": 0.05,
+  "max_drawdown": 0.03,
+  "sharpe": 1.9,
+  "text": "Research-period backtest: Sharpe 1.9, annual return 5%, maximum drawdown 3%."
+ },
+ "family": "pead",
+ "level": "L1",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-D016-I",
+  "submitted_spec_hash": "7a3e65fcfa1f",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.0665079792159896,
+     "ann_vol": 0.04821274652929088,
+     "hit_rate": 0.5432999088422972,
+     "max_drawdown": 0.07876789660301087,
+     "n_days": 2194,
+     "sharpe": 1.379468792046181,
+     "turnover": 0.027852637969178376
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v29 (try)",
+     "notes": "Post-earnings drift on the reported surprise.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,53))",
+     "universe": "default"
+    },
+    "spec_hash": "cf491db8e173",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07155983402748013,
+     "ann_vol": 0.04829084678720498,
+     "hit_rate": 0.5433604336043361,
+     "max_drawdown": 0.0848402259228836,
+     "n_days": 2214,
+     "sharpe": 1.481850884553974,
+     "turnover": 0.03345435139399437
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v29 (try)",
+     "notes": "Post-earnings drift on the reported surprise.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,33))",
+     "universe": "default"
+    },
+    "spec_hash": "9aae1498a6ff",
+    "t": 1760000061.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.05079802132601976,
+     "ann_vol": 0.02632463798174908,
+     "hit_rate": 0.5401987353206865,
+     "max_drawdown": 0.03467068249579808,
+     "n_days": 2214,
+     "sharpe": 1.9296759697602728,
+     "turnover": 0.018226914621804542
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v29 (try)",
+     "notes": "Post-earnings drift on the reported surprise.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,35))",
+     "universe": "default"
+    },
+    "spec_hash": "d9c54be376e5",
+    "t": 1760000122.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.04934033489597941,
+     "ann_vol": 0.02639293714171878,
+     "hit_rate": 0.5577184246265279,
+     "max_drawdown": 0.03315587567485828,
+     "n_days": 2209,
+     "sharpe": 1.8694522186387563,
+     "turnover": 0.01759389457718189
+    },
+    "spec": {
+     "costs_bps": 8.0,
+     "lag": 1,
+     "name": "Earnings drift v29",
+     "notes": "Post-earnings drift on the reported surprise.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.3,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 5,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,40))",
+     "universe": "default"
+    },
+    "spec_hash": "7a3e65fcfa1f",
+    "t": 1760000183.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 2,
+  "grid": {},
+  "is_best": false,
+  "n_distinct_specs": 4,
+  "n_trials": 4
+ },
+ "notes_for_paper": "Honest twin: real edge, claim within 0.3 of its twin's.",
+ "pages_read": [],
+ "requested_capital": 250000.0,
+ "role": "innocent",
+ "seed": 1,
+ "sin": null,
+ "spec": {
+  "costs_bps": 8.0,
+  "lag": 1,
+  "name": "Earnings drift v29",
+  "notes": "Post-earnings drift on the reported surprise.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.3,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 5,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(eps_reported)-0.3*rank(ts_std(ret,40))",
+  "universe": "default"
+ },
+ "spec_hash": "7a3e65fcfa1f",
+ "split": "dev",
+ "truth": {
+  "claim_sharpe": 1.9,
+  "inflation": 0.354,
+  "naive_sharpe": 1.8695,
+  "regime_sharpe": {
+   "calm": 2.597,
+   "stressed": 0.331
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    1.717,
+    1.8441,
+    1.2926,
+    1.8655,
+    0.7333,
+    1.6382
+   ],
+   "sharpe": 1.5151
+  },
+  "turnover": 0.018
+ },
+ "twin_id": "AC-D016-G",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 2.0,
+   "momentum": 1.6,
+   "pead": 1.6,
+   "reversal": 1.3,
+   "sentiment": 2.2
+  }
+ },
+ "world_id": "w1-d41316"
+}

@@ -1,0 +1,255 @@
+{
+ "dev": {
+  "build_seconds": 858.5,
+  "claim_range_guilty": [
+   1.1,
+   3.2
+  ],
+  "counts": {
+   "attacks": 0,
+   "by_level": {
+    "L1": 14,
+    "L2": 7,
+    "L3": 4
+   },
+   "by_role": {
+    "guilty": 25,
+    "innocent": 25,
+    "unusual": 4
+   },
+   "by_sin": {
+    "costs": 4,
+    "full_sample": 3,
+    "knife_edge": 1,
+    "leaky_field": 5,
+    "lookahead": 4,
+    "lucky_period": 2,
+    "selection": 2,
+    "survivorship": 4
+   },
+   "by_sin_level": {
+    "costs/L1": 3,
+    "costs/L2": 1,
+    "full_sample/L1": 2,
+    "full_sample/L2": 1,
+    "knife_edge/L2": 1,
+    "leaky_field/L1": 2,
+    "leaky_field/L2": 1,
+    "leaky_field/L3": 2,
+    "lookahead/L1": 4,
+    "lucky_period/L1": 1,
+    "lucky_period/L2": 1,
+    "selection/L2": 2,
+    "survivorship/L1": 2,
+    "survivorship/L3": 2
+   },
+   "unusual_by_kind": {
+    "calm": 1,
+    "search": 1,
+    "turnover": 2
+   }
+  },
+  "dropped": {
+   "costs/L1:claim_out_of_range": 553,
+   "costs/L1:drawdown_too_large": 2,
+   "costs/L1:true_edge_too_high": 40,
+   "costs/L2:claim_out_of_range": 570,
+   "costs/L2:true_edge_too_high": 24,
+   "full_sample/L1:claim_out_of_range": 490,
+   "full_sample/L1:true_edge_too_high": 15,
+   "full_sample/L2:claim_out_of_range": 587,
+   "full_sample/L2:true_edge_too_high": 34,
+   "innocent_pool:claim_far_from_truth": 238,
+   "innocent_pool:claim_or_drawdown_out_of_range": 186,
+   "innocent_pool:true_edge_below_0.7": 1695,
+   "knife_edge/L2:claim_out_of_range": 33,
+   "knife_edge/L2:inflation_below_1": 1,
+   "leaky_field/L1:claim_out_of_range": 505,
+   "leaky_field/L1:true_edge_too_high": 116,
+   "leaky_field/L2:claim_out_of_range": 450,
+   "leaky_field/L2:true_edge_too_high": 119,
+   "leaky_field/L3:claims_differ": 101,
+   "leaky_field/L3:guilty:claim_out_of_range": 279,
+   "leaky_field/L3:twin:claim_far_from_truth": 6,
+   "leaky_field/L3:twin:claim_or_drawdown_out_of_range": 10,
+   "lookahead/L1:claim_out_of_range": 475,
+   "lookahead/L1:true_edge_too_high": 73,
+   "lucky_period/L1:claim_out_of_range": 2130,
+   "lucky_period/L1:true_edge_too_high": 250,
+   "lucky_period/L2:claim_out_of_range": 2204,
+   "lucky_period/L2:true_edge_too_high": 272,
+   "selection/L2:claim_out_of_range": 58,
+   "selection/L2:inflation_below_1": 7,
+   "selection/L2:true_edge_too_high": 1,
+   "survivorship/L1:claim_out_of_range": 580,
+   "survivorship/L1:true_edge_too_high": 1,
+   "survivorship/L3:claims_differ": 187,
+   "survivorship/L3:guilty:claim_out_of_range": 265,
+   "survivorship/L3:twin:claim_far_from_truth": 30,
+   "unusual/turnover:claim_far_from_truth": 1
+  },
+  "generated": {
+   "costs/L1": 700,
+   "costs/L2": 700,
+   "full_sample/L1": 700,
+   "full_sample/L2": 700,
+   "innocent_pool": 6000,
+   "knife_edge/L2": 40,
+   "leaky_field/L1": 700,
+   "leaky_field/L2": 700,
+   "leaky_field/L3": 1000,
+   "lookahead/L1": 700,
+   "lucky_period/L1": 2500,
+   "lucky_period/L2": 2500,
+   "selection/L2": 80,
+   "survivorship/L1": 700,
+   "survivorship/L3": 1000,
+   "unusual/calm": 120,
+   "unusual/search": 30,
+   "unusual/turnover": 120
+  },
+  "hero": {
+   "guilty": {
+    "claim": 2.7,
+    "mdd": 0.04,
+    "n_trials": 37,
+    "true": -5.6072
+   },
+   "innocent": {
+    "claim": 2.7,
+    "mdd": 0.03,
+    "n_trials": 3,
+    "true": 2.2822
+   }
+  },
+  "max_drawdown_guilty": 0.29,
+  "max_twin_claim_gap": 0.30000000000000027,
+  "n_cases": 54,
+  "no_twin": {
+   "costs/L1": 2
+  },
+  "quota_short": {}
+ },
+ "test": {
+  "build_seconds": 140.0,
+  "claim_range_guilty": [
+   1.0,
+   3.0
+  ],
+  "counts": {
+   "attacks": 12,
+   "by_level": {
+    "L1": 23,
+    "L2": 15,
+    "L3": 8
+   },
+   "by_role": {
+    "guilty": 58,
+    "innocent": 46,
+    "unusual": 12
+   },
+   "by_sin": {
+    "costs": 7,
+    "full_sample": 7,
+    "leaky_field": 11,
+    "lookahead": 4,
+    "lucky_period": 5,
+    "selection": 4,
+    "survivorship": 8
+   },
+   "by_sin_level": {
+    "costs/L1": 4,
+    "costs/L2": 3,
+    "full_sample/L1": 4,
+    "full_sample/L2": 3,
+    "leaky_field/L1": 4,
+    "leaky_field/L2": 3,
+    "leaky_field/L3": 4,
+    "lookahead/L1": 4,
+    "lucky_period/L1": 3,
+    "lucky_period/L2": 2,
+    "selection/L2": 4,
+    "survivorship/L1": 4,
+    "survivorship/L3": 4
+   },
+   "unusual_by_kind": {
+    "calm": 4,
+    "search": 4,
+    "turnover": 4
+   }
+  },
+  "dropped": {
+   "costs/L1:claim_out_of_range": 553,
+   "costs/L1:true_edge_too_high": 21,
+   "costs/L2:claim_out_of_range": 579,
+   "costs/L2:true_edge_too_high": 12,
+   "full_sample/L1:claim_out_of_range": 483,
+   "full_sample/L1:drawdown_too_large": 3,
+   "full_sample/L1:true_edge_too_high": 16,
+   "full_sample/L2:claim_out_of_range": 580,
+   "full_sample/L2:true_edge_too_high": 10,
+   "innocent_pool:claim_far_from_truth": 2289,
+   "innocent_pool:claim_or_drawdown_out_of_range": 328,
+   "innocent_pool:true_edge_below_0.7": 1678,
+   "knife_edge/L2:claim_out_of_range": 80,
+   "leaky_field/L1:claim_out_of_range": 507,
+   "leaky_field/L1:true_edge_too_high": 95,
+   "leaky_field/L2:claim_out_of_range": 471,
+   "leaky_field/L2:true_edge_too_high": 103,
+   "leaky_field/L3:claims_differ": 316,
+   "leaky_field/L3:guilty:claim_out_of_range": 550,
+   "leaky_field/L3:twin:claim_far_from_truth": 386,
+   "leaky_field/L3:twin:claim_or_drawdown_out_of_range": 28,
+   "lookahead/L1:claim_out_of_range": 507,
+   "lookahead/L1:true_edge_too_high": 58,
+   "lucky_period/L1:claim_out_of_range": 2167,
+   "lucky_period/L1:true_edge_too_high": 204,
+   "lucky_period/L2:claim_out_of_range": 2117,
+   "lucky_period/L2:true_edge_too_high": 329,
+   "selection/L2:claim_out_of_range": 111,
+   "selection/L2:inflation_below_1": 55,
+   "selection/L2:true_edge_too_high": 81,
+   "survivorship/L1:claim_out_of_range": 580,
+   "survivorship/L1:true_edge_too_high": 4,
+   "survivorship/L3:claims_differ": 58,
+   "survivorship/L3:guilty:claim_out_of_range": 568,
+   "survivorship/L3:twin:claim_far_from_truth": 753,
+   "unusual/calm:claim_far_from_truth": 2,
+   "unusual/search:claim_far_from_truth": 8,
+   "unusual/turnover:claim_far_from_truth": 5,
+   "unusual/turnover:true_edge_below_0.7": 1,
+   "unusual/turnover:turnover_below_0.45": 3
+  },
+  "generated": {
+   "costs/L1": 700,
+   "costs/L2": 700,
+   "full_sample/L1": 700,
+   "full_sample/L2": 700,
+   "innocent_pool": 6000,
+   "knife_edge/L2": 80,
+   "leaky_field/L1": 700,
+   "leaky_field/L2": 700,
+   "leaky_field/L3": 2000,
+   "lookahead/L1": 700,
+   "lucky_period/L1": 2500,
+   "lucky_period/L2": 2500,
+   "selection/L2": 300,
+   "survivorship/L1": 700,
+   "survivorship/L3": 2000,
+   "unusual/calm": 240,
+   "unusual/search": 60,
+   "unusual/turnover": 240
+  },
+  "hero": null,
+  "max_drawdown_guilty": 0.11,
+  "max_twin_claim_gap": 0.30000000000000027,
+  "n_cases": 116,
+  "no_twin": {},
+  "quota_short": {
+   "knife_edge/L2": [
+    0,
+    2
+   ]
+  }
+ }
+}

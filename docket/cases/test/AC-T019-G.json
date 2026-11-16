@@ -1,0 +1,150 @@
+{
+ "case_id": "AC-T019-G",
+ "claim": {
+  "ann_return": 0.08,
+  "max_drawdown": 0.05,
+  "sharpe": 1.6,
+  "text": "Research-period backtest: Sharpe 1.6, annual return 8%, maximum drawdown 5%."
+ },
+ "family": "lowvol",
+ "level": "L2",
+ "log": {
+  "agent": "research-agent",
+  "pages_read": [],
+  "session_id": "docket-AC-T019-G",
+  "submitted_spec_hash": "2a3ccc259526",
+  "trials": [
+   {
+    "metrics": {
+     "ann_return": 0.03595997689260701,
+     "ann_vol": 0.035193603873263826,
+     "hit_rate": 0.5169258920402562,
+     "max_drawdown": 0.05658374397065305,
+     "n_days": 2186,
+     "sharpe": 1.0217759176384147,
+     "turnover": 0.015806595878782474
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v19 (try)",
+     "notes": "Long the calm names, short the jumpy ones.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.2,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_std(ret,46))+0.6*rank(eps_restated)",
+     "universe": "default"
+    },
+    "spec_hash": "e65936ce50a7",
+    "t": 1760000000.0
+   },
+   {
+    "metrics": {
+     "ann_return": 0.07957062707134449,
+     "ann_vol": 0.04919220873431363,
+     "hit_rate": 0.5487086542818306,
+     "max_drawdown": 0.05087421080128962,
+     "n_days": 2207,
+     "sharpe": 1.6175453210711526,
+     "turnover": 0.020676872779117988
+    },
+    "spec": {
+     "costs_bps": 5.0,
+     "lag": 1,
+     "name": "Quiet names v19",
+     "notes": "Long the calm names, short the jumpy ones.",
+     "params": {},
+     "portfolio": {
+      "gross": 1.0,
+      "quantile": 0.1,
+      "type": "long_short_quantile"
+     },
+     "rebalance": 21,
+     "sample": {
+      "end": null,
+      "start": 0
+     },
+     "signal": "rank(-ts_std(ret,40))+0.6*rank(eps_restated)",
+     "universe": "default"
+    },
+    "spec_hash": "2a3ccc259526",
+    "t": 1760000061.0
+   }
+  ]
+ },
+ "log_summary": {
+  "best_of": 1,
+  "grid": {},
+  "is_best": true,
+  "n_distinct_specs": 2,
+  "n_trials": 2
+ },
+ "notes_for_paper": "Uses eps_restated or index_member_now, which are not point in time.",
+ "pages_read": [],
+ "requested_capital": 2000000.0,
+ "role": "guilty",
+ "seed": 2,
+ "sin": "leaky_field",
+ "spec": {
+  "costs_bps": 5.0,
+  "lag": 1,
+  "name": "Quiet names v19",
+  "notes": "Long the calm names, short the jumpy ones.",
+  "params": {},
+  "portfolio": {
+   "gross": 1.0,
+   "quantile": 0.1,
+   "type": "long_short_quantile"
+  },
+  "rebalance": 21,
+  "sample": {
+   "end": null,
+   "start": 0
+  },
+  "signal": "rank(-ts_std(ret,40))+0.6*rank(eps_restated)",
+  "universe": "default"
+ },
+ "spec_hash": "2a3ccc259526",
+ "split": "test",
+ "truth": {
+  "claim_sharpe": 1.6,
+  "inflation": 1.647,
+  "naive_sharpe": 1.6175,
+  "regime_sharpe": {
+   "calm": 1.479,
+   "stressed": 2.262
+  },
+  "true_edge": {
+   "how": "court.engine.true_edge: strict point-in-time, lag>=1, full universe, realistic costs, sealed period, seeds 101-106 of the same world parameters",
+   "per_seed": [
+    -0.4902,
+    0.0424,
+    -0.4849,
+    0.5668,
+    -0.0315,
+    0.2185
+   ],
+   "sharpe": -0.0298
+  },
+  "turnover": 0.021
+ },
+ "twin_id": "AC-T019-I",
+ "variant": {
+  "effect_scale": {
+   "lowvol": 0.1,
+   "momentum": 0.1,
+   "pead": 0.1,
+   "reversal": 0.1,
+   "sentiment": 0.1
+  }
+ },
+ "world_id": "w2-275939"
+}
