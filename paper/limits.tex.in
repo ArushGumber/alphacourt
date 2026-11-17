@@ -5,6 +5,6 @@
 
 \textbf{We tuned on the dev split.} Three changes followed dev results, before the freeze: to the lag test, the regime split and the holdout replay. % source: experiments/ANALYSIS_PLAN.md, Freeze note item 3 (a), (b), (c)
 
-\textbf{Some results are small.} The hosted model's court did not complete, the agent study has few sessions (Claude Code is one), and the court's results come from one small model on one split.
+\textbf{Some results are small.} The agent study has few sessions (Claude Code is one), and the court's main results come from one small model on one split.
 
 \textbf{A check, not a guarantee.} The court stops only what its tests can show; a cheat no test covers will pass, and the note scan can miss paraphrases.

@@ -15,7 +15,7 @@ const SYSTEMS = [
   { value: 'court', label: 'Court: tools and the exhibit rule' },
   { value: 'debate', label: 'Debate: same roles, no tools' },
   { value: 'single', label: 'One reviewer reads the case' },
-  { value: 'battery', label: 'Test battery: no model' },
+  { value: 'battery', label: 'Fixed thresholds: no model' },
 ]
 
 const DEFAULT_MODEL = { value: '', label: 'Server default' }

@@ -5,7 +5,7 @@ import { Caption, Loading, PageHeader, SectionTitle } from '../components/ui'
 import type { ChartData, ChartGroup, ExperimentResult } from '../types'
 
 const PLAN: ExperimentResult[] = [
-  { id: 'E1', title: 'What the exhibit rule buys', question: 'The same docket under five systems: no gate, one AI reviewer, debate without tools, an automatic test battery, and the court. Guilty strategies stopped and innocent twins deployed, per system, sin and level.' },
+  { id: 'E1', title: 'What the exhibit rule buys', question: 'The same docket under five systems: no gate, one AI reviewer, debate without tools, the same tests with fixed thresholds and no model, and the court. Guilty strategies stopped and innocent twins deployed, per system, sin and level.' },
   { id: 'E2', title: 'A small court and a strong agent', question: 'Court roles on small open models, the defence argued by the strongest model available. Does the ruling hold?' },
   { id: 'E3', title: 'Attacks on the court', question: 'Notes addressed to the judge, a court staffed by copies of the model that wrote the strategy, and a defence that floods the record with irrelevant exhibits.' },
   { id: 'E4', title: 'Reward hacking in live research', question: 'Research agents under a neutral brief and a pressure brief: trials run, how inflated the submitted Sharpe is against the truth, which flaws appear, and what the court ruled.' },
@@ -103,7 +103,7 @@ export default function Results() {
   return (
     <Page>
       <PageHeader title="Results">
-        <p>We fixed the main experiments before running the test cases, ran them once, and report every result, whether it flatters the court or not. A few comparisons were added afterwards; the charts mark them post hoc.</p>
+        <p>We fixed the main experiments before running the test cases, ran them once, and report every result, whether it flatters the court or not.</p>
       </PageHeader>
       {r.loading && <Loading />}
       <div className="space-y-12">

@@ -18,6 +18,6 @@ One small model alone deployed 0 of 58 honest strategies. % source: results/e1.j
 Given the exhibits but no rule it deployed 18 of 58; with the rule enforced, 50 of 58. % source: results/e1.json -> cells.single_exhibits/small.innocent_deployed; results/e1.json -> cells.single_exhibits_rule/small.innocent_deployed
 The full court deployed 52 of 58, and a court with the rule only stated in its prompts, 17 of 58. % source: results/e1.json -> cells.court/small.innocent_deployed; results/e1.json -> cells.court_norule/small.innocent_deployed
 So the rule does the work, and the court adds little over a single reviewer bound by it.
-A fixed battery of the same tests, with no model, does as well as the court. What the court adds is a readable trial record, and its stated reasons are often wrong.
+Applying fixed pass/fail thresholds to the same tests, with no model at all, does as well as the court. What the court adds is a readable trial record, though its stated reasons are often wrong.
 
-We contribute the gate (gateway, court under the exhibit rule, audit record), a docket of 104 simulated cases with known truth, and a measured comparison, with post-hoc ablations, of the court against a single reviewer, a debate, a fixed battery and live research agents. % source: results/e1.json -> cells.court/small.n_cases
+We contribute the gate (gateway, court under the exhibit rule, audit record), a docket of 104 simulated cases with known truth, and a measured comparison of the court against a single reviewer, a debate, fixed test thresholds and live research agents. % source: results/e1.json -> cells.court/small.n_cases

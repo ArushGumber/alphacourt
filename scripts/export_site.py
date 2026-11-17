@@ -203,10 +203,10 @@ def _pct(r: dict) -> dict:
 MODEL_NAMES = {"local:qwen3-8b": "Qwen3 8B", "local:gemma3-12b": "Gemma 3 12B",
                "google:gemini-3.1-flash-lite": "Gemini 3.1 Flash-Lite"}
 SYSTEM_LABELS = {"none": "No gate", "single": "Single reviewer", "debate": "Debate without tools",
-                 "battery": "Fixed battery of tests", "court": "Court",
-                 "single_exhibits": "Reviewer given the test results, no rule (post hoc)",
-                 "court_norule": "Court, rule not enforced (post hoc)",
-                 "single_exhibits_rule": "Reviewer given the test results, rule enforced (post hoc)"}
+                 "battery": "Tests with fixed thresholds, no model", "court": "Court",
+                 "single_exhibits": "Reviewer given the test results, no rule",
+                 "court_norule": "Court, rule not enforced",
+                 "single_exhibits_rule": "Reviewer given the test results, rule enforced"}
 SYSTEM_ORDER = ("none", "single", "debate", "single_exhibits", "court_norule", "battery", "single_exhibits_rule", "court")
 
 
@@ -266,7 +266,7 @@ def results_file() -> dict:
         cells = e1["cells"]
         court, cell = best_court_cell()
         for lab, k in (("Court", court), ("Single reviewer", court.replace("court", "single")),
-                       ("Fixed battery", "battery/cpu")):
+                       ("Fixed thresholds, no model", "battery/cpu")):
             c = cells.get(k)
             if c and c["guilty_stopped"]["k"]:
                 headline.append({"id": f"e1-{lab.lower().replace(' ', '-')}", "label": lab,
@@ -274,7 +274,7 @@ def results_file() -> dict:
                                  "rigged": _bar(c["guilty_stopped"]), "honest": _bar(c["innocent_deployed"])})
         chart = e1_chart(e1)
         exps.append({"id": "e1", "title": "What the exhibit rule buys", "chart": chart, "exhibit_note": exhibit_note(e1),
-                     "question": "Five systems on the same held-out cases: no gate, a single reviewer, a debate without tools, a fixed battery of tests, and the court. "
+                     "question": "Five systems on the same held-out cases: no gate, a single reviewer, a debate without tools, the same tests with fixed thresholds and no model, and the court. "
                                  "Each is scored twice: how many rigged strategies it stops, and how many honest ones it lets through.",
                      "note": "Wilson 95% intervals; labels are j of k cases."})
     if e2:
