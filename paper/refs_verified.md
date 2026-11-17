@@ -38,3 +38,4 @@ Open items: full text of every entry was not read; the two Bailey papers need th
 - fm2026brokers now names its author, Tareq Sikder (article metadata; published 16 Sep 2026).
 - scheurer2023 stays an arXiv citation: its only other venue is the ICLR 2024 LLM Agents workshop (OpenReview), not the main conference.
 - kenton2024 and xiao2024 stay as arXiv citations (first-version years).
+- Final strict pass (17 Nov): author lists compared character by character with arXiv (7 entries), PMLR (2) and Crossref (4); all exact. bailey2016 now uses Crossref's form "David Bailey". mcp2025 now uses the page's own title, "Specification", with the version as a note.
