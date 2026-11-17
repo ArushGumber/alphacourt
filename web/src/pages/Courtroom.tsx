@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { getCase, getDocket, getLiveCase, getLiveCases, getStudioOptions, LIVE, serverUp, startTrial, streamEvents, TRIAL_EVENTS, type Loaded } from '../data/api'
+import { getCase, getDocket, getLiveCase, getLiveCases, getStudioOptions, labTruth, LIVE, serverUp, startTrial, streamEvents, TRIAL_EVENTS, type Loaded } from '../data/api'
 import { useAsync } from '../data/hooks'
 import { readParams, replaceParams } from '../router'
-import type { CaseBundle, CaseFile, DocketRow, TrialEvent } from '../types'
+import type { CaseBundle, CaseFile, DocketRow, TrialEvent, Truth } from '../types'
 import { Page } from '../components/Layout'
 import { Badge, Button, Loading, Note, Segmented, Select, cx } from '../components/ui'
 import { IconPause, IconPlay, IconRestart, IconStep } from '../components/Icons'
@@ -79,18 +79,27 @@ export default function Courtroom({ watch }: { watch?: string }) {
   useEffect(() => { if (watchId) return; closeRef.current?.(); setLiveEvents([]); setLiveState('idle') }, [caseId, mode, watchId])
 
   // follow a trial the gateway holds (its id is a case id: TR-xxxx for a trial run from here, AC-xxxx for a submission)
+  const [watchTruth, setWatchTruth] = useState<Truth | null>(null)
   const attach = useCallback(async (id: string) => {
     closeRef.current?.()
     setLiveEvents([]); setLiveState('running'); setLiveError('')
     try {
-      const file = (await getLiveCase(id)).case
+      const held = await getLiveCase(id)
+      const file = held.case
+      if (watchId === id) {
+        setWatchTruth(null)
+        labTruth(file.spec, held.world).then((t) => {
+          const claimed = file.claim.sharpe
+          setWatchTruth({ sharpe: t.sharpe, per_seed: t.per_seed, how: '', guilty: claimed - t.sharpe >= 1.0 && t.sharpe < 0.5, sins: [], equity: [], live: true })
+        }, () => setWatchTruth(null))
+      }
       closeRef.current = streamEvents(`/api/cases/${encodeURIComponent(id)}/events`, TRIAL_EVENTS,
         (name, ev) => { const e = adaptLive(name, ev, file); if (e) setLiveEvents((l) => [...l, e]) },
         (err) => { setLiveState(err ? 'error' : 'done'); if (err) setLiveError(err) })
     } catch (e) {
       setLiveState('error'); setLiveError((e as Error).message)
     }
-  }, [])
+  }, [watchId])
 
   const runLive = useCallback(async () => {
     setLiveEvents([]); setLiveState('running'); setLiveError('')
@@ -236,7 +245,7 @@ export default function Courtroom({ watch }: { watch?: string }) {
             <section className={cx('min-w-0 lg:block', view === 'trial' ? 'block' : 'hidden')} aria-label="Trial">
               {live && liveState === 'idle' && liveReady && !watchId && <p className="text-[14.5px] text-ink-3">Press &ldquo;Run the trial&rdquo;. Events appear here as the court produces them.</p>}
               {(!live || liveEvents.length > 0) && (
-                <Feed events={events} shown={shown} flash={flash} truth={truthOk ? b?.truth ?? null : null} claimed={file?.claim.sharpe ?? 0} onJump={jump} stats={stats} live={live} />
+                <Feed events={events} shown={shown} flash={flash} truth={truthOk ? (watchId ? watchTruth : b?.truth ?? null) : null} claimed={file?.claim.sharpe ?? 0} onJump={jump} stats={stats} live={live} />
               )}
               {!live && pb.shown === 0 && <p className="text-[14px] text-ink-3">The trial starts in a moment.</p>}
               {live && liveState === 'running' && <p className="mt-4 text-[13.5px] text-ink-3" role="status">The court is still working…</p>}

@@ -79,6 +79,14 @@ export function specFacts(s: StrategySpec): { k: string; v: string }[] {
 }
 
 export const money = (v: number) => '$' + Math.round(v).toLocaleString('en-US')
+/** The capital a ruling books. capital_allowed is a fraction of the request (0 to 1), as the court gives it, or an amount above 1;
+ *  0 means the full request for deploy and paper. Reject books nothing. */
+export const bookedCapital = (ruling: Ruling, allowed: number, requested?: number): string => {
+  if (ruling === 'reject') return '$0'
+  if (allowed > 1) return money(allowed)
+  const frac = allowed > 0 ? allowed : 1
+  return requested ? money(requested * frac) : frac === 1 ? 'the full request' : pct(frac) + ' of the request'
+}
 export const sh = (v: number) => (v < 0 ? '−' : '') + Math.abs(v).toFixed(2)
 export const pct = (v: number, d = 0) => (v * 100).toFixed(d) + '%'
 export const caseNo = (id: string) => String(parseInt(id.replace(/\D/g, ''), 10) || id)

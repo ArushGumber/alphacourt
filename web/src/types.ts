@@ -212,6 +212,8 @@ export interface Truth {
   sins: Sin[]
   /** cumulative P&L on the sealed bars under strict data and realistic costs, at most 400 points */
   equity: number[]
+  /** computed live for a strategy an agent submitted (no planted flaws, no curve) */
+  live?: boolean
 }
 
 /** data/cases/{case_id}.json: everything the Courtroom shows for one case. */

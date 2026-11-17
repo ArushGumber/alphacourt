@@ -22,7 +22,10 @@ class Broker:
     def enforce(self, session_id: str, case_id: str, ruling: str, requested_capital: float,
                 capital_allowed: float = 0.0, spec_hash: str = "") -> dict:
         """Book the ruling on the session's simulated account and return the action taken."""
-        amount = capital_allowed if capital_allowed and capital_allowed > 0 else requested_capital
+        # capital_allowed: a fraction of the request (0 to 1) as the judge gives it, or an amount above 1;
+        # 0 or missing means the full request
+        ca = float(capital_allowed or 0.0)
+        amount = ca if ca > 1 else (requested_capital * ca if ca > 0 else requested_capital)
         amount = max(0.0, float(amount))
         if ruling == "deploy":
             action = {"action": "deploy", "booked": "live (simulated)", "capital": amount}

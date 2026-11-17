@@ -4,7 +4,7 @@ import { IconPause, IconPlay, IconRestart } from '../components/Icons'
 import { Badge, Button, LinkButton, Loading, Note, PageHeader, SectionTitle, Segmented, cx } from '../components/ui'
 import { LIVE, getAgentSession } from '../data/api'
 import { useAsync, useReducedMotion } from '../data/hooks'
-import { RULING_LABEL, RULING_PLAIN, SIN_LABEL, TEST_LABEL, money } from '../lib/labels'
+import { RULING_LABEL, RULING_PLAIN, SIN_LABEL, TEST_LABEL, bookedCapital, money } from '../lib/labels'
 import { readParams } from '../router'
 import type { AgentStep, TrialRecord } from '../types'
 
@@ -92,7 +92,7 @@ function Ruling({ rec, caseId }: { rec: TrialRecord; caseId: string }) {
         <div>
           <div className="label">The court&rsquo;s record, case {caseId}</div>
           <h3 id="ruling-h" className="serif mt-1 text-[26px] font-semibold leading-tight text-ink">{RULING_LABEL[v.ruling]}</h3>
-          <p className="mt-0.5 text-[13.5px] text-ink-3">{RULING_PLAIN[v.ruling]}. Capital allowed: {money(v.capital_allowed)}.</p>
+          <p className="mt-0.5 text-[13.5px] text-ink-3">{RULING_PLAIN[v.ruling]}. Capital: {bookedCapital(v.ruling, v.capital_allowed, rec.case.requested_capital)}{v.ruling === 'paper' ? ' on paper' : ''}.</p>
         </div>
         {LIVE && <LinkButton size="sm" href={`#/court/${caseId}`}>Open in the Courtroom</LinkButton>}
       </div>

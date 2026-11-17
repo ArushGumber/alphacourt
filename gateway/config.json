@@ -47,6 +47,6 @@
   "max_concurrent_trials": 2,
   "queue_max": 12,
   "backtests_per_minute": 30,
-  "trials_per_hour": 3,
+  "trials_per_hour": 20,
   "local_exempt": true
 }

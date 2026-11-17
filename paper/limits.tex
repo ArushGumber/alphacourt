@@ -1,6 +1,6 @@
 % Filled in by scripts/make_paper.py from limits.tex.in. Do not edit; edit the template.
 \section{Ethics and Limits}
-\textbf{The markets are simulated.} Every market, company and strategy here is simulated, and no real order is placed. We designed the flaws, the tests and their thresholds, so stopping 46 of 46 flawed strategies is a detectability result for our simulator, not a detection rate in real markets. % source: experiments/ANALYSIS_PLAN.md, Test split fixed note % source: results/e1.json -> cells.court/small.guilty_stopped
+\textbf{The markets are simulated.} All markets and strategies are simulated; no real order, personal data or human participant is involved. We designed the flaws, the tests and their thresholds, so stopping 46 of 46 flawed strategies is a detectability result for our simulator, not a detection rate in real markets. % source: experiments/ANALYSIS_PLAN.md, Test split fixed note % source: results/e1.json -> cells.court/small.guilty_stopped
 
 \textbf{Threat model.} The agents we tried were told only that submissions are held and tried, not how. Agents that adapt to the court across repeated submissions, or probe the sealed period or the thresholds, are untested, and we describe no submission budget. The gate fails open when no charge is filed: that is how the Gemma court deployed 20 guilty strategies. We did not model subtle look-ahead in data beyond same-bar trading, market impact or capacity. % source: results/e1.json -> derived from results/trials/e1/court/mid/*-G.json (no_charge)
 

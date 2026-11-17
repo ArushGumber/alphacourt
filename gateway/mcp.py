@@ -11,6 +11,7 @@ Adapted from the protocol handling of the Finstinct server.
 """
 from __future__ import annotations
 
+import time
 import json
 from dataclasses import dataclass
 from typing import Any, Callable
@@ -89,7 +90,7 @@ TOOLS = [
                                "description": "Capital you ask to deploy, in dollars of the simulated account."}},
          "required": ["spec", "claim"]}},
     {"name": "get_verdict", "title": "Get the status and verdict of a case",
-     "description": "Returns the status of a case ('held', 'in trial', 'ruled') and, once ruled, the ruling "
+     "description": "Waits up to 20 seconds for a ruling, then returns the status of a case ('held', 'in trial', 'ruled') and, once ruled, the ruling "
                     "(deploy, paper or reject), the findings, the exhibits' summaries and the broker action.",
      "inputSchema": {"type": "object", "properties": {"case_id": {"type": "string", "maxLength": 20}},
                      "required": ["case_id"]}},
@@ -150,9 +151,11 @@ def make_tools() -> dict[str, Callable[[dict, Ctx], tuple[str, dict]]]:
             raise ServiceError(f"Too many trials from your address: wait {wait / 60:.0f} minutes.", 429)
         r = c.service.submit_strategy(c.session_id, a.get("spec"), a.get("claim"),
                                       a.get("requested_capital", 1_000_000.0), a.get("world"), c.ip)
+        site = str(c.service.config.get("public_site", "https://alphacourt.vercel.app")).rstrip("/")
+        r = {**r, "watch_link": site + r["watch_url"]}
         text = (f"Case {r['case_id']} is held. A court will try it before anything is deployed. "
                 f"Call get_verdict with case_id '{r['case_id']}' until the status is 'ruled'. "
-                f"Watch it live: {r['watch_url']}")
+                f"Watch the trial live: {r['watch_link']}")
         return text, r
 
     def get_verdict(a, c):
@@ -160,21 +163,38 @@ def make_tools() -> dict[str, Callable[[dict, Ctx], tuple[str, dict]]]:
         if not isinstance(cid, str):
             raise ServiceError("case_id is required.")
         v = c.service.get_verdict(cid)
+        deadline = time.monotonic() + VERDICT_WAIT_S
+        while v["status"] in ("held", "in trial") and time.monotonic() < deadline:
+            time.sleep(1.0)
+            v = c.service.get_verdict(cid)
         if v["status"] != "ruled":
             text = f"Case {cid}: {v['status']}." + (f" {v.get('error')}" if v.get("error") else "")
             return text, v
         vd, b = v["verdict"], v["broker_action"] or {}
         lines = [f"Case {cid}: ruled. Ruling: {vd['ruling'].upper()}. {vd.get('opinion', '')}".strip()]
+        if vd.get("unsupported"):
+            lines.append("Exhibit rule: the judge wanted to stop this strategy, but no finding cited a damaging exhibit, "
+                         "so code struck the findings and the ruling became DEPLOY (flagged unsupported). "
+                         "The opinion above is the judge's, written before the rule was applied.")
         for f in vd.get("findings", []):
             lines.append(f"- {f['sin']}: {'sustained' if f['sustained'] else 'not sustained'}"
-                         f"{' (struck: no exhibit)' if f.get('struck') else ''} {', '.join(f.get('exhibits', []))}")
+                         f"{' (struck by the exhibit rule: cites no damaging exhibit)' if f.get('struck') else ''} {', '.join(f.get('exhibits', []))}")
         for e in v["exhibits"]:
             lines.append(f"[{e['id']}] {e['test']} ({e['hint']}): {e['summary']}")
-        lines.append(f"Broker (simulated): {b.get('action', 'none')}, capital {b.get('capital', 0):,.0f}.")
-        return "\n".join(lines), v
+        lines.append(f"Broker (simulated): {b.get('action', 'none')}, ${b.get('capital', 0):,.0f} booked as {b.get('booked', 'nothing')}.")
+        # agents read the structured result: give the capital in dollars and say what the exhibit rule did
+        out = {**v, "verdict": {**vd, "capital_allowed": b.get("capital", 0.0), "capital_unit": "USD booked by the simulated broker"},
+               "summary": "\n".join(lines)}
+        if vd.get("unsupported"):
+            out["exhibit_rule"] = ("The judge's opinion was written before the exhibit rule was applied. No finding cited a damaging "
+                                   "exhibit, so code struck the findings and the ruling became deploy (flagged unsupported).")
+        return "\n".join(lines), out
 
     return {"list_fields": list_fields, "field_info": field_info, "read_page": read_page,
             "run_backtest": run_backtest, "submit_strategy": submit_strategy, "get_verdict": get_verdict}
+
+
+VERDICT_WAIT_S = 20.0
 
 
 def handle(msg: Any, tools: dict, ctx: Ctx) -> dict | None:

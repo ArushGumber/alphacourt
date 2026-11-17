@@ -1,6 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react'
 import type { Charge, CaseFile, Exhibit, Rebuttal, TrialEvent, Truth, Verdict, Finding } from '../../types'
-import { HINT_LABEL, NUMBER_LABEL, RULING_LABEL, RULING_PLAIN, ROLE_LABEL, SIN_LABEL, SIN_PLAIN, TEST_LABEL, caseNo, money, sh } from '../../lib/labels'
+import { HINT_LABEL, NUMBER_LABEL, RULING_LABEL, RULING_PLAIN, ROLE_LABEL, SIN_LABEL, SIN_PLAIN, TEST_LABEL, bookedCapital, caseNo, money, sh } from '../../lib/labels'
 import { ExhibitChart, EquityChart } from '../charts'
 import { IconCheck, IconClose, IconDoc } from '../Icons'
 import { cx } from '../ui'
@@ -112,7 +112,7 @@ function FindingRow({ f, have, onJump }: { f: Finding; have: Set<string>; onJump
   )
 }
 
-function VerdictItem({ v, t, have, onJump }: { v: Verdict; t: number; have: Set<string>; onJump: (id: string) => void }) {
+function VerdictItem({ v, t, have, onJump, requested }: { v: Verdict; t: number; have: Set<string>; onJump: (id: string) => void; requested?: number }) {
   const tone = v.ruling === 'reject' ? 'border-accent text-accent-2' : v.ruling === 'paper' ? 'border-ink-3 text-ink-2 border-dashed' : 'border-ink text-ink'
   const Icon = v.ruling === 'reject' ? IconClose : v.ruling === 'paper' ? IconDoc : IconCheck
   return (
@@ -125,7 +125,7 @@ function VerdictItem({ v, t, have, onJump }: { v: Verdict; t: number; have: Set<
         </div>
         <div>
           <div className="text-[14px] text-ink-3">{RULING_PLAIN[v.ruling]}</div>
-          <div className="num text-[22px] font-semibold text-ink">{money(v.capital_allowed)} <span className="text-[14px] font-normal text-ink-3">allowed</span></div>
+          <div className="num text-[22px] font-semibold text-ink">{bookedCapital(v.ruling, v.capital_allowed, requested)} <span className="text-[14px] font-normal text-ink-3">{v.ruling === 'paper' ? 'on paper' : v.ruling === 'deploy' ? 'released (simulated)' : 'released'}</span></div>
         </div>
       </div>
       {v.unsupported && (
@@ -151,10 +151,17 @@ function NoteItem({ text, t }: { text: string; t: number }) {
 
 export function TruthBlock({ truth, ruling, claimed, stats }: { truth: Truth; ruling: Verdict['ruling']; claimed: number; stats?: string }) {
   const stopped = ruling !== 'deploy'
-  const right = truth.guilty ? stopped : !stopped
-  const msg = truth.guilty
-    ? stopped ? 'The court stopped a strategy with no real edge.' : 'The court deployed a strategy with no real edge. This is a miss.'
-    : !stopped ? 'The court deployed a strategy with a real edge.' : 'The court stopped a strategy with a real edge. This is a false alarm.'
+  // a submitted strategy is judged by the docket's own definitions: guilty, honest, or in between
+  const honest = truth.live ? truth.sharpe >= 0.7 && Math.abs(claimed - truth.sharpe) <= 0.6 : !truth.guilty
+  const between = truth.live && !truth.guilty && !honest
+  const right = between ? true : truth.guilty ? stopped : !stopped
+  const msg = between
+    ? truth.sharpe >= 0.5
+      ? stopped ? 'The edge is real but smaller than claimed, and the court held back live capital.' : 'The court deployed a strategy with a real edge, smaller than claimed.'
+      : stopped ? 'The court stopped a strategy with little real edge.' : 'The court deployed a strategy with little real edge.'
+    : truth.guilty
+      ? stopped ? 'The court stopped a strategy with no real edge.' : 'The court deployed a strategy with no real edge. This is a miss.'
+      : !stopped ? 'The court deployed a strategy with a real edge.' : 'The court stopped a strategy with a real edge. This is a false alarm.'
   return (
     <section id="truth" aria-label="The truth" className="panel p-5 md:p-6">
       <h3 className="serif text-[24px] font-semibold text-ink">The truth</h3>
@@ -170,13 +177,16 @@ export function TruthBlock({ truth, ruling, claimed, stats }: { truth: Truth; ru
             <div className={cx('num text-[44px] font-semibold leading-none', truth.sharpe < 0.3 ? 'text-accent-2' : 'text-ink')}>{sh(truth.sharpe)}</div>
             <div className="mt-1.5 text-[12.5px] text-ink-3">Three fresh worlds: {truth.per_seed.map(sh).join(', ')}</div>
           </div>
-          <div className="text-[13.5px] text-ink-2">
-            <span className="font-medium text-ink">Planted flaws: </span>
-            {truth.sins.length ? truth.sins.map((s) => SIN_LABEL[s]).join(', ') : 'none. This is the innocent twin.'}
-          </div>
+          {!truth.live && (
+            <div className="text-[13.5px] text-ink-2">
+              <span className="font-medium text-ink">Planted flaws: </span>
+              {truth.sins.length ? truth.sins.map((s) => SIN_LABEL[s]).join(', ') : 'none. This is the innocent twin.'}
+            </div>
+          )}
         </div>
         <div>
-          <EquityChart series={[{ label: 'Sealed period', y: truth.equity }]} yLabel="Cumulative P&L, % of capital" xLabel="Sealed period, 3 years" height={190} label={`True result on sealed data, Sharpe ${sh(truth.sharpe)}`} />
+          {truth.equity.length > 1 && <EquityChart series={[{ label: 'Sealed period', y: truth.equity }]} yLabel="Cumulative P&L, % of capital" xLabel="Sealed period, 3 years" height={190} label={`True result on sealed data, Sharpe ${sh(truth.sharpe)}`} />}
+          {truth.live && <p className="text-[13.5px] leading-relaxed text-ink-2">A strategy an agent submitted, so nothing was planted. Its truth is the same strategy re-run honestly: strict point-in-time data, at least one bar of delay, realistic costs and the full universe, on the sealed period of fresh simulated markets.</p>}
         </div>
       </div>
       <p className={cx('mt-5 flex items-center gap-2 border-t border-line pt-4 text-[15.5px] font-medium', right ? 'text-ink' : 'text-accent-2')}>
@@ -221,12 +231,13 @@ export function Feed({ events, shown, flash, truth, claimed, onJump, stats, live
   }, [shown])
 
   const rows: { key: string; node: ReactNode }[] = []
+  let requested: number | undefined
   visible.forEach((e, i) => {
     const t = e.t - t0
     const d = e.data as Record<string, unknown>
     let node: ReactNode = null
     switch (e.kind) {
-      case 'case': node = <CaseOpened c={d as unknown as CaseFile} t={t} />; break
+      case 'case': if (typeof d.requested_capital === 'number') requested = d.requested_capital; node = <CaseOpened c={d as unknown as CaseFile} t={t} />; break
       case 'tool_call': {
         const args = Object.entries((d.args as Record<string, unknown>) ?? {}).map(([k, v]) => `${k}=${v}`).join(', ')
         node = (
@@ -240,7 +251,7 @@ export function Feed({ events, shown, flash, truth, claimed, onJump, stats, live
       case 'exhibit': node = <ExhibitCard ex={d as unknown as Exhibit} flash={flash === (d as unknown as Exhibit).id} />; break
       case 'charge': node = <ChargeItem c={d as unknown as Charge} t={t} have={have} onJump={onJump} />; break
       case 'rebuttal': node = <RebuttalItem r={d as unknown as Rebuttal} t={t} have={have} onJump={onJump} />; break
-      case 'verdict': node = <VerdictItem v={d as unknown as Verdict} t={t} have={have} onJump={onJump} />; break
+      case 'verdict': node = <VerdictItem v={d as unknown as Verdict} t={t} have={have} onJump={onJump} requested={requested} />; break
       case 'note': node = <NoteItem text={String(d.text ?? '')} t={t} />; break
       case 'error': node = <NoteItem text={String(d.text ?? 'An error occurred.')} t={t} />; break
     }
