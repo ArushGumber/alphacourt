@@ -65,6 +65,7 @@ export default function Home() {
               <LinkButton size="md" href="#/agent">Watch a real agent</LinkButton>
               {LINKS.live ? <LinkButton size="md" href={LINKS.live} external>Try it live</LinkButton> : <LinkButton size="md" href="#/studio">Try it live</LinkButton>}
               <LinkButton size="md" href="#/connect">Connect your agent</LinkButton>
+              {LINKS.video && <LinkButton size="md" href={LINKS.video} external={external(LINKS.video)}>Watch the video</LinkButton>}
               <LinkButton size="md" href={LINKS.paper || `#${PENDING}`} external={external(LINKS.paper)}>Read the paper</LinkButton>
               <LinkButton size="md" href={LINKS.code || `#${PENDING}`} external={external(LINKS.code)}>Code</LinkButton>
             </div>

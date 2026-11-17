@@ -11,7 +11,7 @@ The exhibit rule is the one design choice that matters most: a sustained charge 
 - Demo: https://alphacourt.vercel.app
 - Live court (runs a trial on request): https://arushthegarlic-alphacourt-live.hf.space
 - Paper: [`paper/main.pdf`](paper/main.pdf)
-- Video: to be added
+- Video: https://youtu.be/EbEt-P5uCX8
 
 ## Headline results
 

@@ -30,3 +30,11 @@
 
 Not cited, not opened in full: AEGIS (2603.12621), PolicyGuard, MELON, TradeTrap and the rest of the prior-art file. Each needs opening before any use.
 Open items: full text of every entry was not read; the two Bailey papers need their abstracts checked (SSRN blocked the fetch); the claim "none is new" about the standard tests rests on their being published methods and should be rechecked at freeze.
+
+## Recheck, 17 Nov 2026 (second pass before submission)
+- All 16 entries re-checked independently against arXiv (abstract page and official BibTeX), Crossref and the live pages. Every author name, in order, matches its source; no entry is invented.
+- greenblatt2023 and khan2024 now cite their ICML 2024 versions: PMLR vol. 235, pp. 16295-16336 and pp. 23662-23733 (proceedings.mlr.press/v235/greenblatt24a and khan24a; author lists identical to arXiv).
+- she2026 now cites its ASE 2026 version: Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering, pp. 3036-3048, DOI 10.1145/3832783.3837535 (Crossref).
+- fm2026brokers now names its author, Tareq Sikder (article metadata; published 16 Sep 2026).
+- scheurer2023 stays an arXiv citation: its only other venue is the ICLR 2024 LLM Agents workshop (OpenReview), not the main conference.
+- kenton2024 and xiao2024 stay as arXiv citations (first-version years).

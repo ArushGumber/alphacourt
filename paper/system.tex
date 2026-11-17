@@ -21,13 +21,13 @@ The agent trades in a simulated market of 300 assets and 3,000 daily bars. % sou
 Returns carry planted effects of known size, and delistings follow bad returns.
 Some fields leak the future on purpose, such as restated earnings; \texttt{field\_info} documents when each is available.
 The last quarter of the bars is sealed. % source: court/market.py research_end = int(0.75 * T)
-Research tools never return it; only the forensic lab reads it.
+Research tools never return it, and only the forensic lab reads it.
 The \emph{true edge} of a strategy is its Sharpe ratio on the sealed period, computed under strict point-in-time data, a lag of at least one bar, the full universe including delisted assets, and realistic costs, averaged over fresh worlds with the same parameters. No model is involved.
 
 \paragraph{The forensic lab.}
 Eleven deterministic tests each return an \emph{exhibit}: a numbered record with the test, its parameters, its numbers, a hint (damaging, neutral or supportive, from fixed thresholds) and chart data. % source: court/forensics.py TOOLS (eleven tests)
 The tests re-run the strategy with one more bar of delay, with strict point-in-time data, at higher costs, on the full universe and on the sealed period. They split performance by regime and year, shuffle the signal as a placebo, scan the notes and pages read for text addressed to reviewers, and correct for the number of trials~\cite{bailey2014}.
-The tests are standard practice; none is new. The trial-count test counts backtests in the gateway's log, not the agent's report.
+The trial-count test counts backtests in the gateway's log, not the agent's report.
 
 \paragraph{The court and the exhibit rule.}
 A clerk (plain code) builds the case file: the specification, the claim, the log summary and the pages read.

@@ -39,6 +39,7 @@ export default function About() {
         <dl className="max-w-[820px] divide-y divide-line border-y border-line text-[14.5px]">
           {row('Paper', LINKS.paper, 'Not public yet. The link appears here when it is.')}
           {row('Code and data', LINKS.code, 'Not public yet. The link appears here when it is.')}
+          {row('Video', LINKS.video, 'Not public yet. The link appears here when it is.')}
           {row('Live demo', LINKS.live, 'This copy of the site is the demo, or the live demo is not running.')}
           <div className="grid gap-x-8 gap-y-0.5 py-3 sm:grid-cols-[160px_minmax(0,1fr)]"><dt className="text-ink-3">Licence</dt><dd>{LICENCE.name}</dd></div>
         </dl>

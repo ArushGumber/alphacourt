@@ -21,6 +21,7 @@ export const LINKS = {
   live: LIVE ? '' : clean(env.VITE_LIVE_URL),
   paper: clean(env.VITE_PAPER_URL),
   code: clean(env.VITE_CODE_URL),
+  video: clean(env.VITE_VIDEO_URL),
 }
 
 /** Where a link with no address yet points: the About page section that says so. */
