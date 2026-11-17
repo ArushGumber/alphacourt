@@ -18,4 +18,4 @@ The trial runs on ZeroGPU, so a first call can wait in a queue. The same functio
 
 Everything is simulated. No order is placed.
 
-Authors: Arush Gumber, Sidhant Gumber, Pranav Viksar Garg. MIT licence.
+Authors: Arush Gumber, Sidhant Gumber, Pranav Viksar Garg, Naman Batra. MIT licence.

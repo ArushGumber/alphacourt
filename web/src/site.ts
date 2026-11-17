@@ -30,6 +30,7 @@ export const LICENCE = { name: 'MIT licence', file: 'LICENSE' }
 
 export const AUTHORS = [
   { name: 'Arush Gumber', affiliation: 'IIIT-Delhi and StarkVision Research', email: 'arush23136@iiitd.ac.in' },
-  { name: 'Sidhant Gumber', affiliation: 'Independent Researcher', email: 'gumbersidhant@gmail.com' },
+  { name: 'Sidhant Gumber', affiliation: 'Independent Researcher, New Jersey, USA', email: 'gumbersidhant@gmail.com' },
   { name: 'Pranav Viksar Garg', affiliation: 'University of Manchester', email: 'pranav.garg@student.manchester.ac.uk' },
+  { name: 'Naman Batra', affiliation: 'Netaji Subhas University of Technology and StarkVision Research', email: 'naman.batra.ug23@nsut.ac.in' },
 ]

@@ -99,7 +99,7 @@ The docket is rebuilt from the simulator with `uv run python scripts/build_docke
 ```bibtex
 @inproceedings{gumber2027alphacourt,
   title     = {{AlphaCourt}: Putting Agent-Written Trading Strategies on Trial Before They Trade},
-  author    = {Gumber, Arush and Gumber, Sidhant and Garg, Pranav Viksar},
+  author    = {Gumber, Arush and Gumber, Sidhant and Garg, Pranav Viksar and Batra, Naman},
   booktitle = {Companion Proceedings of The ACM Web Conference 2027 (Demo Track)},
   year      = {2027}
 }

@@ -12,11 +12,7 @@ We found no existing gateway that holds a request for capital, runs deterministi
 
 \textbf{AlphaCourt is that gate.}
 An MCP gateway holds every request for capital and a court tries it. A prosecutor runs forensic tests, a defence answers, and a judge rules: deploy, paper trading only, or reject. The \emph{exhibit rule} says a charge counts only if it cites a damaging exhibit, the recorded output of a test that was run. Code enforces the rule, not the judge.
-We measured what each part adds, on simulated cases with known truth.
-One small model alone deployed {{e1.single.small.innocent_deployed}} honest strategies.
-Given the exhibits but no rule it deployed {{e1.single_exhibits.small.innocent_deployed}}; with the rule enforced, {{e1.single_exhibits_rule.small.innocent_deployed}}.
-The full court deployed {{e1.court.small.innocent_deployed}}, and a court with the rule only stated in its prompts, {{e1.court_norule.small.innocent_deployed}}.
-So the rule does the work, and the court adds little over a single reviewer bound by it.
+We measured what each part adds on simulated cases with known truth. One small model alone deployed {{e1.single.small.innocent_deployed}} honest strategies; bound by the rule, it deployed {{e1.single_exhibits_rule.small.innocent_deployed}}, and as a full court {{e1.court.small.innocent_deployed}}. So the rule does the work, and the court adds little over a single reviewer bound by it.
 Applying fixed pass/fail thresholds to the same tests, with no model at all, does as well as the court. What the court adds is a readable trial record, though its stated reasons are often wrong.
 
 We contribute the gate (gateway, court under the exhibit rule, audit record), a docket of {{e1.court.small.n_cases}} simulated cases with known truth, and a measured comparison of the court against a single reviewer, a debate, fixed test thresholds and live research agents.

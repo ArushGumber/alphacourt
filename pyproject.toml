@@ -8,6 +8,7 @@ authors = [
   { name = "Arush Gumber" },
   { name = "Sidhant Gumber" },
   { name = "Pranav Viksar Garg" },
+  { name = "Naman Batra" },
 ]
 dependencies = [
   "numpy",
